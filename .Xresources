@@ -1,0 +1,91 @@
+XTerm*termName: xterm-256color
+! utf8-Einstellungen des Systems übernehmen!
+XTerm*locale: true
+XTerm*faceNameDoublesize: WenQuanYi Bitmap Song:antialias=true
+!XTerm*foreground: rgb:BB/BB/BB
+!XTerm*background: rgb:22/22/22
+!#002B36
+XTerm*foreground: rgb:00/88/00
+XTerm*background: rgb:00/2B/36
+!XTerm*faceName: Terminus
+XTerm*faceName: DejaVu Sans Mono
+XTerm*faceSize: 12
+!XTerm*initialFont: 2
+!
+!folgendes damit emacs ALT benutzen kann
+XTerm*metaSendsEscape: true
+Xft.dpi: 96
+Xft.lcdfilter: lcddefault
+Xft.antialias: true
+Xft.hinting:true
+Xft.hintstyle: hintfull
+Xft.rgba: rgb
+*customization: -color
+
+! terminal colors ------------------------------------------------------------
+
+! tangoesque scheme
+*background: #111111
+*foreground: #babdb6
+! Black (not tango) + DarkGrey
+*color0:  #000000
+*color8:  #555753
+! DarkRed + Red
+*color1:  #ff6565
+*color9:  #ff8d8d
+! DarkGreen + Green
+*color2:  #93d44f
+*color10: #c8e7a8
+! DarkYellow + Yellow
+*color3:  #eab93d
+*color11: #ffc123
+! DarkBlue + Blue
+*color4:  #204a87
+*color12: #3465a4
+! DarkMangenta + Mangenta
+*color5:  #ce5c00
+*color13: #f57900
+!DarkCyan + Cyan (both not tango)
+*color6:  #89b6e2
+*color14: #46a4ff
+! LightGrey + White
+*color7:  #cccccc
+*color15: #ffffff
+
+!{{{ XTERM
+xterm*internalBorder:        0
+xterm*loginShell:         true
+xterm*scrollBar:         false
+xterm*cursorBlink:       false
+!xterm*geometry:         80x26
+xterm*saveLines:         65535
+xterm*dynamicColors:        on
+xterm*highlightSelection: true
+! Appearance
+xterm*utf8:            2
+!xterm*eightBitInput:   true
+!xterm*font:        -xos4-terminus-medium-*-*-*-12-*-*-*-*-*-iso8859-2
+!xterm*boldFont:    -xos4-terminus-bold-*-*-*-12-*-*-*-*-*-iso8859-2
+xterm*cursorColor: #DCDCCC
+! Zenburn -> Zenburn-blue
+xterm*background:  #002B36
+!xterm*background:  #3f3f3f
+!xterm*foreground:  #dcdccc
+xterm*foreground:  #839496
+xterm*color0:      #1E2320
+xterm*color1:      #705050
+xterm*color2:      #60b48a
+xterm*color3:      #dfaf8f
+xterm*color4:      #506070
+xterm*color5:      #dc8cc3
+xterm*color6:      #8cd0d3
+xterm*color7:      #dcdccc
+xterm*color8:      #709080
+xterm*color9:      #dca3a3
+xterm*color10:     #c3bf9f
+xterm*color11:     #f0dfaf
+xterm*color12:     #94bff3
+xterm*color13:     #ec93d3
+xterm*color14:     #93e0e3
+xterm*color15:     #ffffff
+!}}}
