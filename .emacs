@@ -16,6 +16,8 @@
  '(ansi-color-names-vector ["#002b36" "#dc322f" "#859900" "#b58900" "#268bd2" "#d33682" "#2aa198" "#839496"])
  '(blink-cursor-mode nil)
  '(compilation-message-face (quote default))
+ '(menu-bar-mode nil)
+ '(cua-mode t nil (cua-base))
  '(custom-enabled-themes (quote (solarized-dark)))
  '(custom-safe-themes (quote ("d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
  '(fci-rule-color "#073642")
@@ -31,7 +33,8 @@
  '(org-latex-classes (quote (("koma-article" "\\documentclass{scrartcl} [NO-DEFAULT-PACKAGES]" ("\\section{%s}" . "\\section*{%s}") ("\\subsection{%s}" . "\\subsection*{%s}") ("\\subsubsection{%s}" . "\\subsubsection*{%s}") ("\\paragraph{%s}" . "\\paragraph*{%s}") ("\\subparagraph{%s}" . "\\subparagraph*{%s}")) ("article" "\\documentclass[11pt]{article}" ("\\section{%s}" . "\\section*{%s}") ("\\subsection{%s}" . "\\subsection*{%s}") ("\\subsubsection{%s}" . "\\subsubsection*{%s}") ("\\paragraph{%s}" . "\\paragraph*{%s}") ("\\subparagraph{%s}" . "\\subparagraph*{%s}")) ("report" "\\documentclass[11pt]{report}" ("\\part{%s}" . "\\part*{%s}") ("\\chapter{%s}" . "\\chapter*{%s}") ("\\section{%s}" . "\\section*{%s}") ("\\subsection{%s}" . "\\subsection*{%s}") ("\\subsubsection{%s}" . "\\subsubsection*{%s}")) ("book" "\\documentclass[11pt]{book}" ("\\part{%s}" . "\\part*{%s}") ("\\chapter{%s}" . "\\chapter*{%s}") ("\\section{%s}" . "\\section*{%s}") ("\\subsection{%s}" . "\\subsection*{%s}") ("\\subsubsection{%s}" . "\\subsubsection*{%s}")) ("beamer" "\\documentclass{beamer}" org-beamer-sectioning))))
  '(org-latex-table-caption-above nil)
  '(package-archives (quote (("gnu" . "http://elpa.gnu.org/packages/") ("melpa" . "http://melpa.milkbox.net/packages/"))))
- '(safe-local-variable-values (quote ((reftex-default-bibliography "/home/rtb/Dokumente/mag/mag.bib") (TeX-master . "mag") (zotero-collection . #("1" 0 1 (name "Magister"))))))
+ '(safe-local-variable-values (quote ((org-export-allow-bind-keywords . t) (export-with-reveal . t) (zotero-collection . #("5" 0 1 (name "Magister"))) (reftex-default-bibliography "/home/rtb/Dokumente/mag/mag.bib") (TeX-master . "mag") (zotero-collection . #("1" 0 1 (name "Magister"))))))
+ '(save-place t nil (saveplace))
  '(syslog-debug-face (quote ((t :background unspecified :foreground "#2aa198" :weight bold))))
  '(syslog-error-face (quote ((t :background unspecified :foreground "#dc322f" :weight bold))))
  '(syslog-hour-face (quote ((t :background unspecified :foreground "#859900"))))
@@ -46,11 +49,11 @@
  '(vc-annotate-very-old-color nil)
  '(weechat-color-list (quote (unspecified "#002b36" "#073642" "#990A1B" "#dc322f" "#546E00" "#859900" "#7B6000" "#b58900" "#00629D" "#268bd2" "#93115C" "#d33682" "#00736F" "#2aa198" "#839496" "#657b83"))))
 
-(require 'ibus)
+;;(require 'ibus)
   ;; Turn on ibus-mode automatically after loading .emacs
-  (add-hook 'after-init-hook 'ibus-mode-on)
+  ;;(add-hook 'after-init-hook 'ibus-mode-on)
   ;; Choose your key to toggle input status:
-  (global-set-key (kbd "C-\\") 'ibus-toggle)
+  ;;(global-set-key (kbd "C-\\") 'ibus-toggle)
 ;Or if you use emacsclient, replace init-hook line by these:
   ;(add-hook 'after-make-frame-functions
     ;(lambda (new-frame)
@@ -111,7 +114,8 @@
 
 (add-hook 'after-init-hook #'global-flycheck-mode)
 
-(add-to-list 'load-path "~/.emacs.d/plugins/evil-org-mode") (require 'evil-org)
+(add-to-list 'load-path "~/.emacs.d/plugins/evil-org-mode")
+(require 'evil-org)
 (put 'dired-find-alternate-file 'disabled nil)
 
 ;;; C-c as general purpose escape key sequence.
@@ -156,7 +160,7 @@
 (setq-default TeX-master t)
 (setq reftex-default-bibliography
             (quote
-                     ("/home/rtb/Dokumente/mag/mag.bib")))
+                     ("/home/rtb/doks/mag/mag.bib")))
 
 (defun na-org-mode-reftex-setup ()
     (interactive)
@@ -175,6 +179,18 @@
                                     "texi2dvi --pdf --clean --verbose --batch %f"
                                     "texi2dvi --pdf --clean --verbose --batch %f")))
 (require 'ox-latex)
+(require 'ox-html5slide)
+(require 'ox-reveal)
+(defvar export-with-reveal nil)
+
+(defun export-with-reveal-or-html ()
+  (interactive)
+  (if (or export-with-reveal (file-exists-p "reveal.js"))
+      (call-interactively 'org-reveal-export-to-html)
+    (call-interactively 'org-export-as-html)))
+
+(org-defkey org-mode-map [f5] 'export-with-reveal-or-html)
+
 (setq org-export-latex-listings t)
 ;(add-to-list 'org-latex-classes
           ;'("koma-article"
@@ -282,13 +298,14 @@
 
 (add-to-list 'org-latex-classes
              '("cn-article"
-               "\\documentclass[11pt,a4paper]{article}
+               "\\documentclass[12pt,a4paper,twoside]{report}
 \\usepackage[babel,german=guillemets]{csquotes}
 \\usepackage[xetex,colorlinks=false,CJKbookmarks=true,linkcolor=blue,urlcolor=blue,menucolor=blue]{hyperref}
-\\usepackage[xindy={language=german-duden, codepage=utf8}, style=altlist, section, numberedsection=autolabel, nopostdot]{glossaries}
+\\usepackage[xindy={language=german-duden, codepage=utf8}, style=altlist, section, numberedsection=false, toc, nopostdot]{glossaries}
 \\usepackage[xindy, splitindex]{imakeidx}
 \\usepackage{graphicx}
 \\usepackage{xcolor}
+\\usepackage{appendix}
 \\usepackage{xunicode}
 \\usepackage[indentfirst=false]{xeCJK}
 \\usepackage{lmodern}
@@ -315,6 +332,7 @@
 \\usepackage{metalogo}
 \\defaultfontfeatures{Mapping=tex-text}
 \\usepackage{fontspec}
+\\usepackage{emptypage}
 \\setCJKmainfont[Scale=1]{Adobe Song Std}   % 设置缺省中文字体
 \\setmainfont{Linux Libertine} 
 \\setsansfont[BoldFont=WenQuanYi Zen Hei Sharp]{AR PL UKai CN}
@@ -341,13 +359,22 @@ marginparsep=7pt, marginparwidth=.6in}
 \\definecolor{buildin}{RGB}{127,159,127}%深铅绿
 \\punctstyle{kaiming}
 \\title{}
-\\fancyfoot[C]{\\bfseries\\thepage}
-\\fancyhead[LE,RO]{\\rightmark}
-\\fancyhead[LO,RE]{\\leftmark}
-\\pagestyle{fancy}
+
+\\pagestyle{fancyplain}
+\\makeatletter
+\\renewcommand{\\sectionmark}[1]{\\markright{\\thesection~~#1}}
+\\renewcommand{\\chaptermark}[1]{\\markboth{\\if@mainmatter\\thechapter~~\\fi#1}{}}
+\\makeatother
+
+\\fancyhf{}
+\\fancyhead[LO,RE]{\\fancyplain{}{\\thepage}}
+\\fancyhead[RO]{\\fancyplain{}{\\itshape\\nouppercase  \\leftmark}}
+\\fancyhead[LE]{\\fancyplain{}{\\itshape\\nouppercase  \\rightmark}}
+\\fancyfoot[C]{}
 \\tolerance=1000
 [NO-DEFAULT-PACKAGES]
 [NO-PACKAGES]"
+("\\chapter{%s}" . "\\chapter*{%s}")
 ("\\section{%s}" . "\\section*{%s}")
 ("\\subsection{%s}" . "\\subsection*{%s}")
 ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
@@ -417,11 +444,83 @@ marginparsep=7pt, marginparwidth=.6in}
 
 (defadvice org-latex-export-to-pdf (before check-fileSave/longlines-off
 					   activate compile)
-"for calling the latex-export it is necessary to switch off longlines and save the file"
-(save-buffer)
-(if (and (boundp 'longlines-mode) longlines-mode)
-	    (longlines-mode 0)
-    ))
+  "for calling the latex-export it is necessary to switch off longlines and save the file"
+  (save-buffer)
+  (if (and (boundp 'longlines-mode) longlines-mode)
+      (longlines-mode 0)))
+
+(defadvice org-latex-export-to-pdf (after longlines-on
+					   activate compile)
+  "switch back to longlines-mode after pdf processing"
+      (longlines-mode 1))
+
+(defadvice org-reveal-export-to-html (before check-fileSave
+					   activate compile)
+  "for calling the latex-export it is necessary to switch off longlines and save the file"
+  (save-buffer))
+
+;;(add-to-list 'load-path "~/emacs.d/darkroom/")
+;;(require 'darkroom-mode)
+(require 'smooth-scrolling)
+
+;; koma-letter
+(add-to-list 'load-path "~/.emacs.d/plugins/")
+(eval-after-load 'ox '(require 'ox-koma-letter))
+
+(eval-after-load 'ox-koma-letter
+  '(progn
+     (add-to-list 'org-latex-classes
+                  '("my-letter"
+                    "\\documentclass[ngerman,12pt]\{scrlttr2\}
+     \\usepackage{fontspec}
+     \\usepackage[xetex,colorlinks=false,CJKbookmarks=true,linkcolor=blue,urlcolor=blue,menucolor=blue]{hyperref}
+     \\usepackage[babel,german=guillemets]{csquotes}
+     \\usepackage[ngerman]{babel}
+     \\setkomavar{frombank}{(1234)\\,567\\,890}
+     \[NO-DEFAULT-PACKAGES]
+     \[NO-PACKAGES]
+     \[NO-EXTRA]"))
+
+     (setq org-koma-letter-default-class "my-letter")))
+
+;; http://uweziegenhagen.de/?p=2801
+(global-auto-revert-mode t)
+
+;; just answer Emacs' question with 'y' or 'n' instead of 'yes'or 'no'
+(defalias 'yes-or-no-p 'y-or-n-p)
+(add-hook 'after-init-hook 'global-company-mode)
+
+
+(defun my-save-word ()
+  (interactive)
+  (let ((current-location (point))
+         (word (flyspell-get-word)))
+    (when (consp word)    
+      (flyspell-do-correct 'save nil (car word) current-location (cadr word) (caddr word) current-location))))
+
+(global-set-key (kbd "C-i") 'my-save-word)
+
+; save the original format line
+(defvar original-mode-line nil
+  "Original mode line, saved for later restoration")
+
+(defun toggle-mode-line ()
+  "make the menu-line empty or restore it"
+    (interactive)
+    (if (null original-mode-line)
+	(progn
+	    (setq original-mode-line mode-line-format)
+	    (setq mode-line-format nil))
+      (progn
+	(setq mode-line-format original-mode-line)
+	(setq original-mode-line nil))))
+
+(defadvice toggle-mode-line (after toggle-mode-line/redraw-display
+					   activate compile)
+  "strangely: running toggle-mode-line with f5 artefacts appear when not redraw-display"
+  (redraw-display))
+
+(global-set-key (kbd "<S-f5>") 'toggle-mode-line)
 
 (provide '.emacs)
 ;;; .emacs ends here
