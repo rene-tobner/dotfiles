@@ -87,7 +87,14 @@
 ;; does compute!!! :-))))
 (evil-leader/set-key 
   "x" 'org-latex-export-to-pdf
-  "e" 'evil-end-of-line)
+  "e" 'evil-end-of-line
+  "a" 'evil-beginning-of-line
+  "f" 'ido-find-file
+  "<SPC>" 'ido-switch-buffer
+  "c" 'other-window
+  "s" 'evil-search-forward
+  "v" 'eval-last-sexp
+)
 
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 (add-to-list 'load-path "~/.emacs.d/evil") ; only without ELPA/el-get
