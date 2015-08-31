@@ -1,19 +1,3 @@
-XTerm*termName: xterm-256color
-! utf8-Einstellungen des Systems übernehmen!
-XTerm*locale: true
-XTerm*faceNameDoublesize: WenQuanYi Bitmap Song:antialias=true
-!XTerm*foreground: rgb:BB/BB/BB
-!XTerm*background: rgb:22/22/22
-!#002B36
-XTerm*foreground: rgb:00/88/00
-XTerm*background: rgb:00/2B/36
-!XTerm*faceName: Terminus
-XTerm*faceName: DejaVu Sans Mono
-XTerm*faceSize: 12
-!XTerm*initialFont: 2
-!
-!folgendes damit emacs ALT benutzen kann
-XTerm*metaSendsEscape: true
 Xft.dpi: 96
 Xft.lcdfilter: lcddefault
 Xft.antialias: true
@@ -21,38 +5,25 @@ Xft.hinting:true
 Xft.hintstyle: hintfull
 Xft.rgba: rgb
 *customization: -color
-
-! terminal colors ------------------------------------------------------------
-
-! tangoesque scheme
-*background: #111111
-*foreground: #babdb6
-! Black (not tango) + DarkGrey
-*color0:  #000000
-*color8:  #555753
-! DarkRed + Red
-*color1:  #ff6565
-*color9:  #ff8d8d
-! DarkGreen + Green
-*color2:  #93d44f
-*color10: #c8e7a8
-! DarkYellow + Yellow
-*color3:  #eab93d
-*color11: #ffc123
-! DarkBlue + Blue
-*color4:  #204a87
-*color12: #3465a4
-! DarkMangenta + Mangenta
-*color5:  #ce5c00
-*color13: #f57900
-!DarkCyan + Cyan (both not tango)
-*color6:  #89b6e2
-*color14: #46a4ff
-! LightGrey + White
-*color7:  #cccccc
-*color15: #ffffff
+!für FontForge, hoffentlich sieht die Schrift jetzt besser aus..
+Gdraw.ScreenWidthPixels: 1920 
+!Gdraw.ScreenWidthCentimeters: 27.3
 
 !{{{ XTERM
+!XTerm*termName: xterm-256color
+! utf8-Einstellungen des Systems übernehmen!
+XTerm*locale: true
+XTerm*faceNameDoublesize: WenQuanYi Bitmap Song:antialias=true
+!XTerm*foreground: rgb:BB/BB/BB
+!XTerm*background: rgb:22/22/22
+!#002B36
+!XTerm*faceName: Terminus
+XTerm*faceName: DejaVu Sans Mono Book
+XTerm*faceSize: 14
+!XTerm*initialFont: 2
+!
+!folgendes damit emacs ALT benutzen kann
+XTerm*metaSendsEscape: true
 xterm*internalBorder:        0
 xterm*loginShell:         true
 xterm*scrollBar:         false
@@ -64,28 +35,154 @@ xterm*highlightSelection: true
 ! Appearance
 xterm*utf8:            2
 !xterm*eightBitInput:   true
-!xterm*font:        -xos4-terminus-medium-*-*-*-12-*-*-*-*-*-iso8859-2
-!xterm*boldFont:    -xos4-terminus-bold-*-*-*-12-*-*-*-*-*-iso8859-2
+xterm*font:        -xos4-terminus-medium-*-*-*-12-*-*-*-*-*-iso8859-2
+xterm*boldFont:    -xos4-terminus-bold-*-*-*-12-*-*-*-*-*-iso8859-2
 xterm*cursorColor: #DCDCCC
 ! Zenburn -> Zenburn-blue
 xterm*background:  #002B36
 !xterm*background:  #3f3f3f
 !xterm*foreground:  #dcdccc
 xterm*foreground:  #839496
-xterm*color0:      #1E2320
-xterm*color1:      #705050
-xterm*color2:      #60b48a
-xterm*color3:      #dfaf8f
-xterm*color4:      #506070
-xterm*color5:      #dc8cc3
-xterm*color6:      #8cd0d3
-xterm*color7:      #dcdccc
-xterm*color8:      #709080
-xterm*color9:      #dca3a3
-xterm*color10:     #c3bf9f
-xterm*color11:     #f0dfaf
-xterm*color12:     #94bff3
-xterm*color13:     #ec93d3
-xterm*color14:     #93e0e3
-xterm*color15:     #ffffff
 !}}}
+
+! Solarized color scheme for the X Window System
+!
+! http://ethanschoonover.com/solarized
+
+
+! Common
+
+#define S_yellow #b58900
+#define S_orange #cb4b16
+#define S_red #dc322f
+#define S_magenta #d33682
+#define S_violet #6c71c4
+#define S_blue #268bd2
+#define S_cyan #2aa198
+#define S_green #859900
+
+
+! Dark
+
+#define S_base03 #002b36
+#define S_base02 #073642
+#define S_base01 #586e75
+#define S_base00 #657b83
+#define S_base0 #839496
+#define S_base1 #93a1a1
+#define S_base2 #eee8d5
+#define S_base3 #fdf6e3
+
+
+! Light
+
+! #define S_base03 #fdf6e3
+! #define S_base02 #eee8d5
+! #define S_base01 #93a1a1
+! #define S_base00 #839496
+! #define S_base0 #657b83
+! #define S_base1 #586e75
+! #define S_base2 #073642
+! #define S_base3 #002b36
+!
+! To only apply colors to your terminal, for example, prefix
+! the color assignment statement with its name. Example:
+!
+! URxvt*background: S_base03
+Emacs*.background: #002b36
+Emacs*.foreground: #839496
+Xmessage*background: #002b36
+Xmessage*foreground: #839496
+URxvt*colorUL: #859900
+URxvt*colorBD: #268bd2
+URxvt*color1: #dc322f
+URxvt*color9: #cb4b16
+URxvt*color2: #859900
+URxvt*color3: #b58900
+URxvt*color4: #268bd2
+URxvt*color5: #d33682
+URxvt*color13: #6c71c4
+URxvt*color6: #2aa198
+URxvt*background: #002b36
+URxvt*foreground: #839496
+URxvt*fadeColor: #002b36
+URxvt*cursorColor: #93a1a1
+URxvt*pointerColorBackground: #586e75
+URxvt*pointerColorForeground: #93a1a1
+URxvt*scrollColor: #657b83
+URxvt*borderColor: #002b36
+URxvt*color0: #073642
+URxvt*color8: #839496
+URxvt*color10: #586e75
+URxvt*color11: #657b83
+URxvt*color12: #839496
+URxvt*color14: #93a1a1
+URxvt*color7: #eee8d5
+URxvt*color15: #fdf6e3
+
+!URxvt*background: S_base03
+!URxvt*foreground: S_base0
+!URxvt*fading: 40
+!URxvt*fadeColor: S_base03
+!URxvt*cursorColor: S_base1
+!URxvt*pointerColorBackground: S_base01
+!URxvt*pointerColorForeground: S_base1
+!mit rxvt-unicode-256color hat der Cursor *immer* geblinkt
+!URxvt.termName: screen-256color
+!URxvt.termName: xterm-256color
+!URxvt.termName: rxvt-unicode-256color
+
+URxvt*charClass: 33:48,35:48,37:48,43:48,45-57:48,64:48,95:48,126:48
+
+!URxvt*color0: S_base02
+!URxvt*color1: S_red
+!URxvt*color2: S_green
+!URxvt*color3: S_yellow
+!URxvt*color4: S_blue
+!URxvt*color5: S_magenta
+!URxvt*color6: S_cyan
+!URxvt*color7: S_base2
+!URxvt*color8: S_base03
+!URxvt*color9: S_orange
+!URxvt*color10: S_base01
+!URxvt*color11: S_base00
+!URxvt*color12: S_base0
+!URxvt*color13: S_violet
+!URxvt*color14: S_base1
+!URxvt*color15: S_base3
+URxvt.intensityStyles: true 
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+URxvt.saveLines: 3000
+URxvt.scrollBar: false
+URxvt.secondaryScroll: true
+URxvt.font: xft:Bitstream Vera Sans Mono:pixelsize=17,xft:WenQuanYi Micro Hei Mono:antialias=true
+URxvt.perl-ext-common: default,matcher
+URxvt.urlLauncher: firefox
+URxvt.matcher.button: 1
+URxvt.tabbed.saveLines: 1000
+URxvt.tabbed.scrollBar: false
+URxvt.tabbed.tabbar-fg: 3
+URxvt.tabbed.tabbar-bg: 0
+URxvt.tabbed.tab-fg: 0
+URxvt.tabbed.tab-bg: 1
+URxvt.tabbed.secondaryScroll: true
+URxvt.tabbed.font: xft:Bitstream Vera Sans Mono:pixelsize=12
+URxvt*inheritPixmap: true 
+URxvt*shading: 70
+URxvt*cursorBlink: false
+URxvt*cursorUnderline: 1
+URxvt.keysym.Control-period: \033.
+URxvt.keysym.Control-comma: \033,
+URxvt.clipboard.autocopy: true
+
+Emacs*.cursorBlink: off
+Emacs*.FontBackend: xft
+Emacs*.menuBar: off
+Emacs*.toolBar: -1
+Emacs*.verticalScrollBars: off
+Emacs*.borderWidth: 0
+Emacs*.internalBorder: 3
+Emacs*menubar.margin: 0
+Emacs*shadowThickness: 1
+

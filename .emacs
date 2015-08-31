@@ -1,173 +1,792 @@
+;;; package: --- summary
+
+;;; Commentary:
+;;;    Blablub
+
+;;; Code:
+
+;; muss aufgerufen werden, sonst funktioniert load-theme nicht?!
 (package-initialize)
-
-
-;(require 'color-theme)
-;(require 'org-install)
-;(require 'org-exp)
-;;(require 'org-atom)
-;;(require 'org-exp-bibtex)
-;;(require 'org-latex)
-
+;; (byte-recompile-directory (expand-file-name "~/.emacs.d") 0)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(ansi-color-names-vector ["#002b36" "#dc322f" "#859900" "#b58900" "#268bd2" "#d33682" "#2aa198" "#839496"])
+ '(ansi-color-faces-vector
+   [default bold shadow italic underline bold bold-italic bold])
+ '(ansi-color-names-vector
+   ["#073642" "#dc322f" "#859900" "#b58900" "#268bd2" "#d33682" "#2aa198" "#657b83"])
+ '(ansi-term-color-vector
+   [unspecified "#1F1611" "#660000" "#144212" "#EFC232" "#5798AE" "#BE73FD" "#93C1BC" "#E6E1DC"] t)
+ '(auto-hscroll-mode t)
+ '(blink-cursor-interval 2)
  '(blink-cursor-mode nil)
+ '(bmkp-last-as-first-bookmark-file "~/.emacs.d/bookmarks")
+ '(centered-window-mode nil)
+ '(column-number-mode t)
  '(compilation-message-face (quote default))
- '(menu-bar-mode nil)
- '(cua-mode t nil (cua-base))
- '(custom-enabled-themes (quote (solarized-dark)))
- '(custom-safe-themes (quote ("d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
- '(fci-rule-color "#073642")
- '(global-hl-line-mode t)
+ '(custom-enabled-themes (quote (deep-thought)))
+ '(custom-safe-themes
+   (quote
+    ("0c29db826418061b40564e3351194a3d4a125d182c6ee5178c237a7364f0ff12" "4f2ede02b3324c2f788f4e0bad77f7ebc1874eff7971d2a2c9b9724a50fb3f65" "e008d9149dd39b249d4f8a9b5c1362d8f85bd11e9c08454e5728fbf0fcc11690" "c537bf460334a1eca099e05a662699415f3971b438972bed499c5efeb821086b" "7b7ef508f9241c01edaaff3e0d6f03588a6f4fddb1407a995a7a333b29e327b5" "f15a7ce08b9e13553c1f230678e9ceb5b372f8da26c9fb815eb20df3492253b7" "a27c00821ccfd5a78b01e4f35dc056706dd9ede09a8b90c6955ae6a390eb1c1e" "a0fdc9976885513b03b000b57ddde04621d94c3a08f3042d1f6e2dbc336d25c7" "e3c90203acbde2cf8016c6ba3f9c5300c97ddc63fcb78d84ca0a144d402eedc6" "8022cea21aa4daca569aee5c1b875fbb3f3248a5debc6fc8cf5833f2936fbb22" "cab317d0125d7aab145bc7ee03a1e16804d5abdfa2aa8738198ac30dc5f7b569" "b3775ba758e7d31f3bb849e7c9e48ff60929a792961a2d536edec8f68c671ca5" "58c6711a3b568437bab07a30385d34aacf64156cc5137ea20e799984f4227265" "2e1f802a1a0e64be3e8340e1ddf6b1ac92d5cae69d5d01bff01f6520fa0509ec" "6d906da85461c423a797b082dac60289c5ecb6020e36cb7c2f4e889b112ba418" "4cfad7896ff2993dafce390a729a573d794568af181100fe789f0314684347df" "c56d90af9285708041991bbc780a073182cbe91721de17c6e7a8aac1380336b3" "b9183de9666c3a16a7ffa7faaa8e9941b8d0ab50f9aaba1ca49f2f3aec7e3be9" "0ed983facae99849805b2f7be926561cb58474eb18e5296d9bb3ad7f9b088a5b" "e80932ca56b0f109f8545576531d3fc79487ca35a9a9693b62bf30d6d08c9aaf" "f66d14168cbbc5bb16f44b95e181c8e66ecd92dd11c42837edb49a94bea96f51" "ce965ad1ab1febba3a3b813376bb3bc197aa8138da2d157d118966e60ad7672f" "5523e2938d77a075377c748cf5255ddf3ad9bf336cf5b0d313ce42f0cf9e3da9" "0dfa1e8661e71b0ea99d72657ed2f8091733f260eebfb3df36fb6f04aaf91faa" "aaabb08b44f70837bb81e5f8765fbc7320aa9f194e191f7cf6991c05ab6e0bdd" "4d69ca4daa84a4fe422fc9fcdf371ea68ac78160ed8b114ee83980c26c192571" "056cc49d7892609356495b9d84cda7a3a4c4907a24fe1005be0286315e5e743a" "a5b08a032ccc87e2dcee0c6593ec7ddfb1e404484c0b31913272465411ed985f" "8a0d67242cfe61abd626f852820daf01a6c43a9a60ae1d089acd93a5d66c0aae" "cb7a467df3ac296e83871a441d397ff58dbc58cb421af058c90d36ca89a6fa60" "94a9bdbc38f38c479dd49f12576160a1f5354144b88ef92f5d5f88aa196b89ea" "8917968eb3da797036c303eb03102248447953d479e33ef91aea1eabf33f5741" "dce1c195114880942abf49757ccbcffcf28a11c64e89e7065dbcbf0d6de84926" "299164bc6ba7b154403cf90a305b38a0c5cf6d6fd8c2074bb6163ae213773484" "c96831947ff9377cec694b3510c2fa3eec9cdf58ac1c58a711450d38284a51a3" "08269693f826b4dac039e70700a469c204ad54ac98b06ea3a512b2ce239852c9" "6915f9b0d1aed1121e9f47725cae7f2f7e7128716afad8ec511d8519693e0df0" "3ec7e0747a871644d2a5ae7af865d9fbb9ca38245af35aad43b6b75490b7ce3f" "cc0dbb53a10215b696d391a90de635ba1699072745bf653b53774706999208e3" "08851585c86abcf44bb1232bced2ae13bc9f6323aeda71adfa3791d6e7fea2b6" "39dd7106e6387e0c45dfce8ed44351078f6acd29a345d8b22e7b8e54ac25bac4" "868f73b5cf78e72ca2402e1d48675e49cc9a9619c5544af7bf216515d22b58e7" "8f1cedf54f137f71382e3367e1843d10e173add99abe3a5f7d3285f5cc18f1a9" "2a86b339554590eb681ecf866b64ce4814d58e6d093966b1bf5a184acf78874d" "4e262566c3d57706c70e403d440146a5440de056dfaeb3062f004da1711d83fc" "c5a044ba03d43a725bd79700087dea813abcb6beb6be08c7eb3303ed90782482" "ef08e77c67344f23154fd8cb9f3b8b1b4bb1799c0bf9d05dfd4b792557e0e401" "4cf3221feff536e2b3385209e9b9dc4c2e0818a69a1cdb4b522756bcdf4e00a4" "4c41d3e6fb19438b23899ffcb64cec224f995866911974f274b9c3771630ae96" "c14901c2292ec32e2718ec0324bf238dc2fe72466de3800977ad46a4cf32034a" "130dde3591d54f11db5f5c78185556b5b122b18d4e1dbaf9251666587e440b57" "5beea8d4fc82da6bc88094f2faa22750096c90674e4156d7a9ead6b9c0392b26" "aba5c6a53bd439fd531d9c91a7a50228c90ce40926225047f81b03f11ad05c51" "6d637708c89f256c7de050148ad75acb8b1cd653ae23e175542e27cdccb99d43" "3b0ac518cb44e09dbde90f828ae3ec97d69a164b825bc31b8eeb43c4ceb87656" "456ac8176c7c01680384356cbdc568a7683d1bada9c83ae3d7294809ddda4014" "c87cc60d01cf755375759d165c1d60d9586c6a31f0b5437a0378c2a93cfc8407" "ed5af4af1d148dc4e0e79e4215c85e7ed21488d63303ddde27880ea91112b07e" "1177fe4645eb8db34ee151ce45518e47cc4595c3e72c55dc07df03ab353ad132" "7bf64a1839bf4dbc61395bd034c21204f652185d17084761a648251041b70233" "62c9339d5cac3a49688abb34e98f87a6ee82003a11251f12e0ada1788090c40f" "cbef37d6304f12fb789f5d80c2b75ea01465e41073c30341dc84c6c0d1eb611d" "8cf56691a70156f611ac86d0bbcbc7dee7673df195de5918f34bfdc6814ffd39" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" "a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" "756597b162f1be60a12dbd52bab71d40d6a2845a3e3c2584c6573ee9c332a66e" "6a37be365d1d95fad2f4d185e51928c789ef7a4ccf17e7ca13ad63a8bf5b922f" "e26780280b5248eb9b2d02a237d9941956fc94972443b0f7aeec12b5c15db9f3" "c7359bd375132044fe993562dfa736ae79efc620f68bab36bd686430c980df1c" "c4e6fe8f5728a5d5fd0e92538f68c3b4e8b218bcfb5e07d8afff8731cc5f3df0" "e16a771a13a202ee6e276d06098bc77f008b73bbac4d526f160faa2d76c1dd0e" "53c542b560d232436e14619d058f81434d6bbcdc42e00a4db53d2667d841702e" "1989847d22966b1403bab8c674354b4a2adf6e03e0ffebe097a6bd8a32be1e19" "bf648fd77561aae6722f3d53965a9eb29b08658ed045207fe32ffed90433eb52" "ce79400f46bd76bebeba655465f9eadf60c477bd671cbcd091fe871d58002a88" "0ebe0307942b6e159ab794f90a074935a18c3c688b526a2035d14db1214cf69c" "33c5a452a4095f7e4f6746b66f322ef6da0e770b76c0ed98a438e76c497040bb" "9bcb8ee9ea34ec21272bb6a2044016902ad18646bd09fdd65abae1264d258d89" "90b5269aefee2c5f4029a6a039fb53803725af6f5c96036dee5dc029ff4dff60" "7d4d00a2c2a4bba551fcab9bfd9186abe5bfa986080947c2b99ef0b4081cb2a6" "a774c5551bc56d7a9c362dca4d73a374582caedb110c201a09b410c0ebbb5e70" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
+ '(default-input-method "chinese-py")
+ '(electric-indent-mode nil)
+ '(electric-pair-mode t)
+ '(fci-rule-character-color "#452E2E")
+ '(fci-rule-color "#073642" t)
+ '(fringe-mode 0 nil (fringe))
+ '(global-auto-highlight-symbol-mode nil)
+ '(global-hl-line-mode nil)
+ '(help-window-select t)
  '(highlight-changes-colors (quote ("#d33682" "#6c71c4")))
- '(highlight-tail-colors (quote (("#073642" . 0) ("#546E00" . 20) ("#00736F" . 30) ("#00629D" . 50) ("#7B6000" . 60) ("#8B2C02" . 70) ("#93115C" . 85) ("#073642" . 100))))
+ '(highlight-symbol-foreground-color "#93a1a1")
+ '(highlight-tail-colors
+   (quote
+    (("#073642" . 0)
+     ("#546E00" . 20)
+     ("#00736F" . 30)
+     ("#00629D" . 50)
+     ("#7B6000" . 60)
+     ("#8B2C02" . 70)
+     ("#93115C" . 85)
+     ("#073642" . 100))))
  '(ibus-python-shell-command-name "python2")
  '(ido-mode (quote both) nil (ido))
  '(inhibit-startup-screen t)
- '(longlines-show-hard-newlines nil)
+ '(lazy-highlight-cleanup nil)
+ '(linum-format " %5i ")
+ '(linum-relative-current-symbol ">>")
+ '(magit-diff-use-overlays nil)
+ '(main-line-color1 "#191919")
+ '(main-line-color2 "#111111")
+ '(menu-bar-mode nil)
  '(nyan-mode nil)
- '(org-agenda-files (quote ("~/Dokumente/mag/mag.org")))
- '(org-latex-classes (quote (("koma-article" "\\documentclass{scrartcl} [NO-DEFAULT-PACKAGES]" ("\\section{%s}" . "\\section*{%s}") ("\\subsection{%s}" . "\\subsection*{%s}") ("\\subsubsection{%s}" . "\\subsubsection*{%s}") ("\\paragraph{%s}" . "\\paragraph*{%s}") ("\\subparagraph{%s}" . "\\subparagraph*{%s}")) ("article" "\\documentclass[11pt]{article}" ("\\section{%s}" . "\\section*{%s}") ("\\subsection{%s}" . "\\subsection*{%s}") ("\\subsubsection{%s}" . "\\subsubsection*{%s}") ("\\paragraph{%s}" . "\\paragraph*{%s}") ("\\subparagraph{%s}" . "\\subparagraph*{%s}")) ("report" "\\documentclass[11pt]{report}" ("\\part{%s}" . "\\part*{%s}") ("\\chapter{%s}" . "\\chapter*{%s}") ("\\section{%s}" . "\\section*{%s}") ("\\subsection{%s}" . "\\subsection*{%s}") ("\\subsubsection{%s}" . "\\subsubsection*{%s}")) ("book" "\\documentclass[11pt]{book}" ("\\part{%s}" . "\\part*{%s}") ("\\chapter{%s}" . "\\chapter*{%s}") ("\\section{%s}" . "\\section*{%s}") ("\\subsection{%s}" . "\\subsection*{%s}") ("\\subsubsection{%s}" . "\\subsubsection*{%s}")) ("beamer" "\\documentclass{beamer}" org-beamer-sectioning))))
+ '(org-agenda-files
+   (quote
+    ("~/doks/new_mag/mag.org" "~/Dokumente/mag/mag.org")))
  '(org-latex-table-caption-above nil)
- '(package-archives (quote (("gnu" . "http://elpa.gnu.org/packages/") ("melpa" . "http://melpa.milkbox.net/packages/"))))
- '(safe-local-variable-values (quote ((org-export-allow-bind-keywords . t) (export-with-reveal . t) (zotero-collection . #("5" 0 1 (name "Magister"))) (reftex-default-bibliography "/home/rtb/Dokumente/mag/mag.bib") (TeX-master . "mag") (zotero-collection . #("1" 0 1 (name "Magister"))))))
+ '(package-archives
+   (quote
+    (("gnu" . "http://elpa.gnu.org/packages/")
+     ("melpa" . "http://melpa.milkbox.net/packages/"))))
+ '(pos-tip-background-color "#073642")
+ '(pos-tip-foreground-color "#93a1a1")
+ '(powerline-color1 "#191919")
+ '(powerline-color2 "#111111")
+ '(powerline-default-separator (quote arrow))
+ '(rainbow-html-colors t)
+ '(safe-local-variable-values
+   (quote
+    ((haskell-process-use-ghci . t)
+     (haskell-indent-spaces . 4)
+     (eval when
+           (fboundp
+            (quote rainbow-mode))
+           (rainbow-mode 1))
+     (zotero-collection .
+                        #("4" 0 1
+                          (name "ChinGrammar")))
+     (org-export-allow-bind-keywords . t)
+     (export-with-reveal . t)
+     (zotero-collection .
+                        #("5" 0 1
+                          (name "Magister")))
+     (reftex-default-bibliography "/home/rtb/Dokumente/mag/mag.bib")
+     (TeX-master . "mag")
+     (zotero-collection .
+                        #("1" 0 1
+                          (name "Magister"))))))
  '(save-place t nil (saveplace))
- '(syslog-debug-face (quote ((t :background unspecified :foreground "#2aa198" :weight bold))))
- '(syslog-error-face (quote ((t :background unspecified :foreground "#dc322f" :weight bold))))
+ '(scroll-bar-mode t)
+ '(scss-compile-at-save nil)
+ '(smartrep-mode-line-active-bg (solarized-color-blend "#859900" "#073642" 0.2))
+ '(syslog-debug-face
+   (quote
+    ((t :background unspecified :foreground "#2aa198" :weight bold))))
+ '(syslog-error-face
+   (quote
+    ((t :background unspecified :foreground "#dc322f" :weight bold))))
  '(syslog-hour-face (quote ((t :background unspecified :foreground "#859900"))))
- '(syslog-info-face (quote ((t :background unspecified :foreground "#268bd2" :weight bold))))
+ '(syslog-info-face
+   (quote
+    ((t :background unspecified :foreground "#268bd2" :weight bold))))
  '(syslog-ip-face (quote ((t :background unspecified :foreground "#b58900"))))
  '(syslog-su-face (quote ((t :background unspecified :foreground "#d33682"))))
- '(syslog-warn-face (quote ((t :background unspecified :foreground "#cb4b16" :weight bold))))
+ '(syslog-warn-face
+   (quote
+    ((t :background unspecified :foreground "#cb4b16" :weight bold))))
+ '(tabbar-mode t nil (tabbar))
+ '(tabbar-separator (quote (0.5)))
  '(tool-bar-mode nil)
  '(uniquify-buffer-name-style (quote post-forward) nil (uniquify))
  '(vc-annotate-background nil)
- '(vc-annotate-color-map (quote ((20 . "#dc322f") (40 . "#CF4F1F") (60 . "#C26C0F") (80 . "#b58900") (100 . "#AB8C00") (120 . "#A18F00") (140 . "#989200") (160 . "#8E9500") (180 . "#859900") (200 . "#729A1E") (220 . "#609C3C") (240 . "#4E9D5B") (260 . "#3C9F79") (280 . "#2aa198") (300 . "#299BA6") (320 . "#2896B5") (340 . "#2790C3") (360 . "#268bd2"))))
+ '(vc-annotate-color-map
+   (quote
+    ((20 . "#dc322f")
+     (40 . "#CF4F1F")
+     (60 . "#C26C0F")
+     (80 . "#b58900")
+     (100 . "#AB8C00")
+     (120 . "#A18F00")
+     (140 . "#989200")
+     (160 . "#8E9500")
+     (180 . "#859900")
+     (200 . "#729A1E")
+     (220 . "#609C3C")
+     (240 . "#4E9D5B")
+     (260 . "#3C9F79")
+     (280 . "#2aa198")
+     (300 . "#299BA6")
+     (320 . "#2896B5")
+     (340 . "#2790C3")
+     (360 . "#268bd2"))))
  '(vc-annotate-very-old-color nil)
- '(weechat-color-list (quote (unspecified "#002b36" "#073642" "#990A1B" "#dc322f" "#546E00" "#859900" "#7B6000" "#b58900" "#00629D" "#268bd2" "#93115C" "#d33682" "#00736F" "#2aa198" "#839496" "#657b83"))))
+ '(weechat-color-list
+   (quote
+    (unspecified "#002b36" "#073642" "#990A1B" "#dc322f" "#546E00" "#859900" "#7B6000" "#b58900" "#00629D" "#268bd2" "#93115C" "#d33682" "#00736F" "#2aa198" "#839496" "#657b83")))
+ '(when (not (facep (aref ansi-term-color-vector 0))))
+ '(zotelo-default-translator (quote BibLaTeX)))
 
-;;(require 'ibus)
-  ;; Turn on ibus-mode automatically after loading .emacs
-  ;;(add-hook 'after-init-hook 'ibus-mode-on)
-  ;; Choose your key to toggle input status:
-  ;;(global-set-key (kbd "C-\\") 'ibus-toggle)
-;Or if you use emacsclient, replace init-hook line by these:
-  ;(add-hook 'after-make-frame-functions
-    ;(lambda (new-frame)
-            ;(select-frame new-frame)
-            ;(or ibus-mode (ibus-mode-on))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(default ((t (:inherit nil :stipple nil :background nil :foreground nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 140 :width normal :foundry "unknown" :family "Droid Sans Mono"))))
+ '(ahs-definition-face ((t (:foreground "moccasin" :underline t))))
+ '(ahs-face ((t (:foreground "dark orange"))))
+ '(ahs-plugin-defalt-face ((t (:foreground "magenta"))))
+ '(custom-variable-tag ((t (:foreground "#1057f0" :weight bold))))
+ '(evil-search-highlight-persist-highlight-face ((t (:background "indian red"))))
+ '(fringe ((t (:background "#002b36"))))
+ '(google-translate-translation-face ((t nil)))
+ '(helm-candidate-number ((t (:background "#b58900" :foreground "black"))))
+ '(helm-selection ((t (:background "#206080" :foreground "black"))))
+ '(helm-source-header ((t (:background "#22083397778B" :foreground "#93a1a1" :weight bold :height 1.3 :family "Sans Serif"))))
+ '(linum-relative-current-face ((t (:inherit linum :background "chocolate" :foreground "firebrick" :weight bold))))
+ '(popup-tip-face ((t (:background "chocolate4" :foreground "dark gray"))))
+ '(whitespace-indentation ((t (:background "dark magenta" :foreground "deep sky blue"))))
+ '(whitespace-space-after-tab ((t (:background "dark magenta" :foreground "cyan")))))
 
-(add-to-list 'load-path "~/local/share/emacs/site-lisp/eim")
-(autoload 'eim-use-package "eim" "Another emacs input method")
-;; Tooltip 暂时还不好用
-(setq eim-use-tooltip nil)
 
-(register-input-method
- "eim-wb" "euc-cn" 'eim-use-package
- "五笔" "汉字五笔输入法" "wb.txt")
-(register-input-method
- "eim-py" "euc-cn" 'eim-use-package
- "拼音" "汉字拼音输入法" "py.txt")
+(add-to-list 'default-frame-alist '(font . "Droid Sans Mono 11"))
+;;(set-face-attribute 'default t :font "Droid Sans Mono 14" )
+;;(set-default-font "Droid Sans Mono 10")
 
-;; 用 ; 暂时输入英文
-(require 'eim-extra)
-(global-set-key ";" 'eim-insert-ascii)
+(setq undo-tree-auto-save-history t)
 
-(add-to-list 'load-path "/usr/share/emacs/haskell-mode/")
-(require 'haskell-mode-autoloads)
-(add-to-list 'Info-default-directory-list "/usr/share/emacs/haskell-mode/")
+;; (savehist-mode t)
 
-(add-to-list 'load-path "~/.emacs.d")
-(require 'evil-leader)
-(global-evil-leader-mode)
-(evil-leader/set-leader "ö")
-;; does compute!!! :-))))
-(evil-leader/set-key 
-  "x" 'org-latex-export-to-pdf
-  "e" 'evil-end-of-line
-  "a" 'evil-beginning-of-line
-  "f" 'ido-find-file
-  "<SPC>" 'ido-switch-buffer
-  "c" 'other-window
-  "s" 'evil-search-forward
-  "v" 'eval-last-sexp
-)
+;; für Terminal?!
+(setq-default cursor-type 'hbar)
+;;(setq evil-default-cursor t)
+(setq evil-move-cursor-back nil)
+(show-paren-mode t)
+
+(let ((default-directory "~/.emacs.d/elpa/"))
+  (normal-top-level-add-subdirs-to-load-path))
+
+(let ((default-directory "~/.emacs.d/plugins/"))
+  (normal-top-level-add-subdirs-to-load-path))
 
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
-(add-to-list 'load-path "~/.emacs.d/evil") ; only without ELPA/el-get
-    (require 'evil)
-    (evil-mode 1)
+
+;; sollte in custom stehen:
+(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
+
+(require 'savehist)
+(savehist-mode t)
+(eval-after-load 'company
+  '(progn
+     (define-key company-active-map (kbd "RET") nil)
+     (define-key company-active-map (kbd "ESC") 'company-abort)
+     (setq company-idle-delay 0.125
+           company-minimum-prefix-length 1
+           company-require-match nil
+           company-transformers '(company-sort-by-occurrence)
+           company-dabbrev-ignore-case nil
+           company-dabbrev-downcase nil
+           company-frontends '(company-pseudo-tooltip-unless-just-one-frontend
+                               company-preview-frontend
+                               company-echo-metadata-frontend))))
+;; (add-hook 'after-init-hook 'global-company-mode)
+(eval-after-load 'org-mode
+  '(progn
+     (auto-complete-mode -1)
+     (require 'company)))
+
+(defun xah-new-empty-buffer ()
+  "Open a new empty buffer."
+  (interactive)
+  (let ((buf (generate-new-buffer "untitled")))
+    (switch-to-buffer buf)
+    (funcall (and initial-major-mode))
+    (setq buffer-offer-save t)))
+
+(require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
+(ac-config-default)
+
+(require 'multiple-cursors)
+
+(global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
+
+;; When you want to add multiple cursors not based on continuous lines, but based on
+;; keywords in the buffer, use:
+
+(global-set-key (kbd "M-3") 'mc/mark-next-like-this)
+(global-set-key (kbd "M-4") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
+
+;; First mark the word, then add more cursors.
+
+;; To get out of multiple-cursors-mode, press `<return>` or `C-g`. The latter will
+;; first disable multiple regions before disabling multiple cursors. If you want to
+;; insert a newline in multiple-cursors-mode, use `C-j`.
+
+;; (load-theme 'sanityinc-solarized-dark)
+;; (load-theme 'zenburn)
+;; (load-theme 'base16-tomorrow)
+(load-theme 'ample-zen)
+;; (load-theme 'minimal)
+
+;; Die Unterstreichung von modeline und tabbar war direkt unter der Grundlinie
+;; der Buchstaben; hiermit werden sie besser positioniert!
+(setq x-underline-at-descent-line t)
+
+; show recent files
+(require 'recentf)
+(recentf-mode 1)
+(setq recentf-max-menu-items 1000)
+
+;; does not work: (comint input ring is not saved)
+;; (savehist-mode t)
+;; instead see here: https://oleksandrmanzyuk.wordpress.com/2011/10/23/a-persistent-command-history-in-emacs/ 
+;; there also is an article for ghci completion!! (refound)
+
+(scroll-bar-mode -1)
+(electric-pair-mode)
+(global-set-key (kbd "C-ö") 'other-window)
+
+(require 'evil-leader)
+(global-evil-leader-mode)
+;; german mötäl köyböärd
+(evil-leader/set-leader "ö")
+;; does compute!!! :-))))
+(evil-leader/set-key
+  "x" 'org-latex-export-to-pdf
+  "c" 'mark-sexp
+  "e" 'evil-end-of-visual-line
+  "a" 'evil-beginning-of-visual-line
+  "f" 'ido-find-file
+  ;;"f" 'helm-find-files
+  ;;"<SPC>" 'ido-switch-buffer
+  "<SPC>" 'helm-mini
+  "ö" 'other-window
+  "l" 'evil-search-forward
+  "m" 'evil-search-backward
+  "v" 'eval-last-sexp
+  "9" 'insert-char
+  "j" 'outline-next-visible-heading
+  "k" 'outline-previous-visible-heading
+  "i" 'my-save-word
+  "g" 'my-surround-german-guillemets
+  "d" 'describe-char
+  "q" 'evil-jump-to-tag
+  "t" 'toggle-input-method
+  "r" 'ido-jump-to-tab-group
+  "s" 'evil-search-highlight-persist-remove-all
+  "<" 'tabbar-switch-grouping-method
+)
+
+(require 'evil)
+(evil-mode 1)
+
+(require 'evil-visualstar)
+(global-evil-visualstar-mode)
+
+(require 'helm-config)
+(require 'helm-swoop)
+
+(global-set-key (kbd "M-i") 'helm-swoop)
+(global-set-key (kbd "M-I") 'helm-swoop-back-to-last-point)
+(global-set-key (kbd "C-c M-i") 'helm-multi-swoop)
+(global-set-key (kbd "C-x M-i") 'helm-multi-swoop-all)
+;; (define-key isearch-mode-map (kbd "M-i") 'helm-swoop-from-isearch)
+;; TODO: ob evil-motion-state-map oder diese andere map, die ich in evil-search.el
+;; gefunden habe: funktioniert alles nicht ("attempt minibuffer while in mb" nun)
+(define-key evil-ex-search-keymap (kbd "M-i") 'helm-swoop-from-evil-search)
+
+;;(setq evil-search-module 'evil-search)
+;; modes without evil
+(add-to-list 'evil-emacs-state-modes 'interactive-haskell-mode)
+;; Emacs modes to Motion modes
+(setq evil-motion-state-modes (append evil-emacs-state-modes evil-motion-state-modes))
+;; (setq evil-emacs-state-modes (list 'desktop-menu-mode))
+(setq evil-motion-state-modes (delete 'desktop-menu-mode evil-motion-state-modes))
+(add-to-list 'evil-overriding-maps 'desktop-menu-mode-map)
+
+(evil-add-hjkl-bindings desktop-menu-mode-map)
+;;
+;;(define-key evil-normal-state-map (kbd "C-v") 'evil-visual-block)
+(define-key evil-normal-state-map (kbd "<f3>") 'helm-do-ag)
+(define-key evil-normal-state-map (kbd "C-SPC") 'helm-mini)
+
 (define-key evil-normal-state-map (kbd "C-u") 'evil-scroll-up)
 (define-key evil-normal-state-map (kbd "SPC") 'evil-scroll-down)
 (define-key evil-normal-state-map (kbd "S-SPC") 'evil-scroll-up)
+(define-key evil-motion-state-map (kbd "C-u") 'evil-scroll-up)
+(define-key evil-motion-state-map (kbd "SPC") 'evil-scroll-down)
+(define-key evil-motion-state-map (kbd "S-SPC") 'evil-scroll-up)
 
-(setenv "PATH" (concat (getenv "PATH") ":/home/rtb/.cabal/bin/"))
+(define-key evil-normal-state-map (kbd "j") 'evil-next-visual-line)
+(define-key evil-normal-state-map (kbd "k") 'evil-previous-visual-line)
+(define-key evil-visual-state-map (kbd "j") 'evil-next-visual-line)
+(define-key evil-visual-state-map (kbd "k") 'evil-previous-visual-line)
+(define-key evil-normal-state-map (kbd "C-8") 'evil-switch-to-windows-last-buffer)
+(define-key evil-motion-state-map (kbd "C-8") 'evil-switch-to-windows-last-buffer)
+
+;; Make C-g work like <esc>
+(define-key evil-normal-state-map "\C-g" 'evil-normal-state)
+(define-key evil-visual-state-map "\C-g" 'evil-normal-state)
+(define-key evil-insert-state-map "\C-g" 'evil-normal-state)
+;; (define-key evil-normal-state-map "\C-c" 'evil-normal-state)
+;; (define-key evil-visual-state-map "\C-c" 'evil-normal-state)
+;; (define-key evil-insert-state-map "\C-c" 'evil-normal-state)
+(define-key evil-normal-state-map [escape] 'keyboard-quit)
+(define-key evil-visual-state-map [escape] 'keyboard-quit)
+(define-key minibuffer-local-map [escape] 'abort-recursive-edit)
+(define-key minibuffer-local-ns-map [escape] 'abort-recursive-edit)
+(define-key minibuffer-local-completion-map [escape] 'abort-recursive-edit)
+(define-key minibuffer-local-must-match-map [escape] 'abort-recursive-edit)
+(define-key minibuffer-local-isearch-map [escape] 'abort-recursive-edit)
+
+(define-key evil-insert-state-map "\C-l" 'forward-char)
+;;(add-hook 'dired-mode-hoo
+(defun my-dired-up-directory ()
+  "Take dired up one directory, but behave like dired-find-alternate-file"
+  (interactive)
+  (let ((old (current-buffer)))
+    (dired-up-directory)
+    (kill-buffer old)))
+
+(eval-after-load 'dired
+  '(progn
+    (evil-define-key 'normal dired-mode-map "h" 'my-dired-up-directory)
+    (evil-define-key 'normal dired-mode-map "l" 'dired-find-alternate-file)
+    (evil-define-key 'normal dired-mode-map "o" 'dired-find-file-other-window)
+    (evil-define-key 'normal dired-mode-map "s" 'dired-sort-toggle-or-edit)
+    (evil-define-key 'normal dired-mode-map "t" 'dired-toggle-marks)
+    (evil-define-key 'normal dired-mode-map "m" 'dired-mark)
+    (evil-define-key 'normal dired-mode-map "u" 'dired-unmark)
+    (evil-define-key 'normal dired-mode-map "U" 'dired-unmark-all-marks)
+    (evil-define-key 'normal dired-mode-map "c" 'dired-create-directory)
+    (evil-define-key 'normal dired-mode-map "n" 'evil-search-next)
+    (evil-define-key 'normal dired-mode-map "N" 'evil-search-previous)
+    (evil-define-key 'normal dired-mode-map "q" 'kill-this-buffer)))
+
+;;(require 'dired-sort-map)
+(setq dired-listing-switches "-ABhl  --group-directories-first")
+(setenv "LC_COLLATE" "C")
+(add-hook 'comint-mode-hook
+           (lambda ()
+             (define-key evil-normal-state-local-map (kbd "<up>")   'comint-previous-input)
+             (define-key evil-insert-state-local-map (kbd "<up>")   'comint-previous-input)
+             (define-key evil-normal-state-local-map (kbd "<down>") 'comint-next-input)
+             (define-key evil-insert-state-local-map (kbd "<down>") 'comint-next-input)
+             (define-key comint-mode-map (kbd "C-c C-l") 'helm-comint-input-ring)
+             (define-key comint-mode-map (kbd "<f12>") 'comint-send-eof)
+             (evil-define-key 'normal comint-mode-map (kbd "C-d") 'evil-scroll-down)
+))
+
+
+(defun comint-write-history-on-exit (process event)
+  "Write comint history of PROCESS when EVENT happened to a file specified in buffer local var 'comint-input-ring-file-name' (defined in turn-on-comint-history)."
+  (comint-write-input-ring)
+  (let ((buf (process-buffer process)))
+    (when (buffer-live-p buf)
+      (with-current-buffer buf
+        (insert (format "\nProcess %s %s !!!" process event))))))
+
+(defun turn-on-comint-history ()
+  "Setup comint history.
+
+When comint process started set buffer local var
+'comint-input-ring-file-name', so that a file name is specified to write
+and read from comint history.
+
+That 'comint-input-ring-file-name' is buffer local is determined by the
+4th argument to 'add-hook' below.  And localness is important, because
+otherwise 'comint-write-input-ring' will find mentioned var nil.
+
+As of 29th July 2015 the localness does not seem to be important anymore.
+Should investigate further (TODO)."
+
+  (let ((process (get-buffer-process (current-buffer))))
+    (when process
+      (setq comint-input-ring-file-name
+            (format "~/.emacs.d/inferior-%s-history"
+                    (process-name process)))
+      (comint-read-input-ring)
+      (set-process-sentinel process
+                            #'comint-write-history-on-exit))))
+
+(add-hook 'inf-gf-mode-hook 'turn-on-comint-history)
+
+;; see comint-mode-hook above; this defun here atm not needed
+;; but customs in comint-mode-hook should have an own function like this here
+(defun rtb/scroll-down-ctrl-d ()
+  "Evil scroll down in Comint."
+  (evil-define-key 'normal comint-mode-map (kbd "C-d") 'evil-scroll-down))
+
+
+(require 'neotree)
+(global-set-key [f8] 'neotree-toggle)
+;; when opening neotree switch to dir of current buffer
+(setq neo-smart-open t)
+(add-hook 'neotree-mode-hook
+           (lambda ()
+             ;; DONE: truncate does work now with visual-line disabled
+             (visual-line-mode -1)
+             (setq truncate-lines t)
+             (define-key evil-normal-state-local-map (kbd "TAB") 'neotree-enter)
+             (define-key evil-normal-state-local-map (kbd "SPC") 'neotree-enter)
+             (define-key evil-normal-state-local-map (kbd "l") 'neotree-enter)
+             (define-key evil-normal-state-local-map (kbd "h") 'neotree-enter)
+             (define-key evil-normal-state-local-map (kbd "q") 'neotree-hide)
+             (define-key evil-normal-state-local-map (kbd "RET") 'neotree-enter)
+
+             (define-key evil-normal-state-local-map (kbd "g") 'neotree-refresh)
+             (define-key evil-normal-state-local-map (kbd "A") 'neotree-stretch-toggle)
+             (define-key evil-normal-state-local-map (kbd "u") 'neotree-select-up-node)
+             (define-key evil-normal-state-local-map (kbd "D") 'neotree-select-down-node)
+             (define-key evil-normal-state-local-map (kbd "H") 'neotree-hidden-file-toggle)
+             (define-key evil-normal-state-local-map (kbd "S") 'neotree-select-previous-sibling-node)
+             (define-key evil-normal-state-local-map (kbd "s") 'neotree-select-next-sibling-node)
+             (define-key evil-normal-state-local-map (kbd "C") 'neotree-change-root)
+             (define-key evil-normal-state-local-map (kbd "c") 'neotree-create-node)
+             (define-key evil-normal-state-local-map (kbd "+") 'neotree-create-node)
+             (define-key evil-normal-state-local-map (kbd "d") 'neotree-delete-node)
+             (define-key evil-normal-state-local-map (kbd "r") 'neotree-rename-node)
+))
+
+(setq neo-dont-be-alone nil)
+(setq neo-theme 'arrow)
+
+;; Chinese-Input
+(define-key evil-insert-state-map (kbd "M-SPC") 'toggle-input-method)
+
+;; (define-key evil-insert-state-map "j" #'cofi/maybe-exit)
+
+;; (evil-define-command cofi/maybe-exit ()
+;;   :repeat change
+;;   (interactive)
+;;   (let ((modified (buffer-modified-p)))
+;;     (insert "j")
+;;     (let ((evt (read-event (format "Insert %c to exit insert state" ?k)
+;;                nil 0.5)))
+;;       (cond
+;;        ((null evt) (message ""))
+;;        ((and (integerp evt) (char-equal evt ?k))
+;;     (delete-char -1)
+;;     (set-buffer-modified-p modified)
+;;     (push 'escape unread-command-events))
+;;        (t (setq unread-command-events (append unread-command-events
+;;                           (list evt))))))))
+
+;; esc quits
+;; http://juanjoalvarez.net/es/detail/2014/sep/19/vim-emacsevil-chaotic-migration-guide/
+(defun minibuffer-keyboard-quit ()
+  "Abort recursive edit.
+In Delete Selection mode, if the mark is active, just deactivate it;
+then it takes a second \\[keyboard-quit] to abort the minibuffer."
+  (interactive)
+  (if (and delete-selection-mode transient-mark-mode mark-active)
+      (setq deactivate-mark  t)
+    (when (get-buffer "*Completions*") (delete-windows-on "*Completions*"))
+    (abort-recursive-edit)))
+(define-key evil-normal-state-map [escape] 'keyboard-quit)
+(define-key evil-visual-state-map [escape] 'keyboard-quit)
+(define-key minibuffer-local-map [escape] 'minibuffer-keyboard-quit)
+(define-key minibuffer-local-ns-map [escape] 'minibuffer-keyboard-quit)
+(define-key minibuffer-local-completion-map [escape] 'minibuffer-keyboard-quit)
+(define-key minibuffer-local-must-match-map [escape] 'minibuffer-keyboard-quit)
+(define-key minibuffer-local-isearch-map [escape] 'minibuffer-keyboard-quit)
+(global-set-key [escape] 'evil-exit-emacs-state)
+
+(setq tabbar-use-images nil)
+(load "~/.emacs.d/plugins/tabbar/tabbar-tweak.el")
+
+(global-set-key (kbd "C-,") 'tabbar-backward)
+(global-set-key (kbd "<M-dead-circumflex>") 'other-window)
+(global-set-key (kbd "C-.") 'tabbar-forward)
+
+(define-key evil-normal-state-map (kbd "C-.") 'tabbar-forward)
+(define-key evil-motion-state-map (kbd "C-.") 'tabbar-forward)
+(define-key evil-motion-state-map (kbd "C-,") 'tabbar-backward)
+
+(define-key evil-normal-state-map (kbd "C-p") 'tabbar-backward-group)
+(define-key evil-motion-state-map (kbd "C-p") 'tabbar-backward-group)
+(define-key evil-normal-state-map (kbd "C-n") 'tabbar-forward-group)
+(define-key evil-motion-state-map (kbd "C-n") 'tabbar-forward-group)
+
+(defun rtb/tabbar-buffer-groups-by-dir ()
+       "Put all files in the same directory into the same tab bar"
+       (with-current-buffer (current-buffer)
+          (let ((dir (expand-file-name default-directory)))
+            (cond ;; assign group name until one clause succeeds, so the order is important
+             ((eq major-mode 'dired-mode)
+              (list "Dired"))
+             ((memq major-mode
+                    '(help-mode apropos-mode Info-mode Man-mode))
+              (list "Help"))
+             ((string-match-p "\*edbi.*\*" (buffer-name))
+              (list "edbi"))
+             ((string-match-p "\*.*\*" (buffer-name))
+              (list "Misc"))
+             (t (list dir))))))
+
+;; (defun rtb/tabbar-buffer-groups-working-dirs ()
+;;   "List only real directories by dir -- no internal buffers"
+;;   (with-current-buffer (current-buffer)
+;;     (let ((dir (expand-file-name default-directory)))
+;;         (list dir))))
+;; (setq tabbar-buffer-groups-function 'rtb/tabbar-buffer-groups-working-dirs)
+(setq tabbar-buffer-groups-function 'rtb/tabbar-buffer-groups-by-dir)
+
+(defun tabbar-switch-grouping-method (&optional arg)
+  "Changes grouping method of tabbar to grouping by dir.
+With a prefix arg, changes to grouping by major mode."
+  (interactive "P")
+  (ignore-errors
+    (if arg
+      (setq tabbar-buffer-groups-function 'tabbar-buffer-groups) ;; the default setting
+        (setq tabbar-buffer-groups-function 'rtb/tabbar-buffer-groups-by-dir))))
+
+;; bound in evil-leader
+(defun ido-jump-to-tab-group ()
+  "Jump to a tabbar group."
+  (interactive)
+  (if (< emacs-major-version 24)
+      (ido-common-initialization))
+  (unless (and (featurep 'tabbar)
+               tabbar-mode)
+    (error "Error: tabbar-mode not turned on."))  
+  (set tabbar-tabsets-tabset (tabbar-map-tabsets 'tabbar-selected-tab)) ;; refresh groups
+  (let* ( (groups (mapcar #'(lambda (group)
+                              (format "%s" (cdr group)))
+                          (tabbar-tabs tabbar-tabsets-tabset)))
+          (group-name (ido-completing-read "Groups: " groups)))
+    (mapc #'(lambda (group)
+              (when (string= group-name (format "%s" (cdr group)))
+                  (message "Switch to group '%s', current buffer: %s" (cdr group) (car group))
+                  (switch-to-buffer (car group))))
+          (tabbar-tabs tabbar-tabsets-tabset))))
+
+;; for use in different frames
+(defun ido-switch-tab-group ()
+  "Switch tab groups using ido."
+    (interactive)
+    (let* (
+        (tab-buffer-list (mapcar
+            #'(lambda (b)
+                (with-current-buffer b
+                    (list (current-buffer)
+                        (buffer-name)
+                        (funcall tabbar-buffer-groups-function) )))
+            (funcall tabbar-buffer-list-function)))
+        (groups (delete-dups
+            (mapcar #'(lambda (group)
+            (car (car (cdr (cdr group))))) tab-buffer-list)))
+        (group-name (ido-completing-read "Groups: " groups)) )
+        (catch 'done
+        (mapc
+            #'(lambda (group)
+            (when (equal group-name (car (car (cdr (cdr group)))))
+                (throw 'done (switch-to-buffer (car (cdr group))))))
+            tab-buffer-list) )))
+
+(defun switch-tab-group (group-name)
+  "Switch to a specific tab group."
+  (let ((tab-buffer-list (mapcar
+          #'(lambda (b)
+              (with-current-buffer b
+                (list (current-buffer)
+                      (buffer-name)
+                      (funcall tabbar-buffer-groups-function) )))
+               (funcall tabbar-buffer-list-function))))
+    (catch 'done
+      (mapc
+        #'(lambda (group)
+          (when (equal group-name (format "%s" (car (car (cdr (cdr group))))))
+            (throw 'done (switch-to-buffer (car (cdr group))))))
+        tab-buffer-list) )))
+;; thanks to: http://stackoverflow.com/questions/17914945/tabbar-2-0-custom-function-switching-to-a-specific-tab-group
+;; 
+(defun switch-to-tab-group-dired ()
+"Switch to a predefined existing tab group named `N`."
+    (interactive)
+    (switch-tab-group "Dired"))
+
+(global-set-key (kbd "C-9") 'switch-to-tab-group-dired)
+
+(defun switch-to-tab-group-a ()
+"Switch to a predefined existing tab group named `A`."
+    (interactive)
+    (switch-tab-group "A"))
+
+;;Exit insert mode by pressing j and then j quickly
+;;(setq key-chord-two-keys-delay 0.5)
+;;(key-chord-define evil-insert-state-map "饥渴" 'evil-normal-state)
+;; (key-chord-mode -1)
+;; hallo was gibt es hier denn zu schreiben??
+;; Ich glaube ohne keychord, schreibt es ich um einges besser!
+
+(require 'evil-org)
+
+(require 'surround)
+(global-surround-mode 1)
+;; normal state: ys<textobject>?key
+;; s + ?key
+(setq-default surround-pairs-alist (cons '(?m "»" . "«")
+                                         surround-pairs-alist))
+(setq-default surround-pairs-alist (cons '(?M "\\mq{" . "}")
+                                         surround-pairs-alist))
+(setq-default surround-pairs-alist (cons '(?n "›" . "‹")
+                                         surround-pairs-alist))
+
+; http://ergoemacs.org/emacs/elisp_editing_basics.html
+(defun my-surround-german-guillemets ()
+  "Surround word with german guillemets (chevrons = Möwchen)"
+  (interactive)
+  (search-backward " ")
+  (forward-char 1)
+  (insert "»")
+  (search-forward " ")
+  (backward-char 1)
+  (insert "«"))
+;; working in terminal
 (setq x-select-enable-clipboard t)
+(setq x-select-enable-primary t)
+(setq interprogram-paste-function 'x-selection-value)
+
+(defun copy-to-clipboard ()
+  (interactive)
+  (if (display-graphic-p)
+      (progn
+        (message "Yanked region to x-clipboard!")
+        (call-interactively 'clipboard-kill-ring-save)
+        )
+    (if (region-active-p)
+        (progn
+          (shell-command-on-region (region-beginning) (region-end) "xsel -i -b")
+          (message "Yanked region to clipboard!")
+          (deactivate-mark))
+      (message "No region active; can't yank to clipboard!"))))
+
+(defun paste-from-clipboard ()
+  (interactive)
+  (if (display-graphic-p)
+      (progn
+        (clipboard-yank)
+        (message "graphics active"))
+    (insert (shell-command-to-string "xsel -o -b"))))
+
+;; needed only in shell -- never using shell with emacs...
+;; (global-set-key [f7] 'copy-to-clipboard)
+;; (global-set-key [f6] 'paste-from-clipboard)
+(global-set-key [f6] 'revert-buffer)
+;;no confirm:
+;; (global-set-key [f5] (lambda () (interactive) (revert-buffer nil t)))
+
+;; bringt das hier was?
+;;(define-key global-map (kbd "RET") 'newline-and-indent)
+
+;; occur-mode-goto-occurrence fehlt
+;; http://ergoemacs.org/emacs/emacs_avoid_lambda_in_hook.html
+;; -- stellt sich heraus, dass doch schon Bindings für Evil da sind
+;; -- aber dies erstmal behalten, als HOOK-Beispiel
+;; (defun rtb/occur-with-evil ()
+;;  "necessary functions when entering Occur from Evil"
+;;   (interactive)
+;;  (define-key evil-motion-state-map (kbd "RET") 'occur-mode-goto-occurence)
+;;   )
+;; (add-hook 'ido-setup-hook
+;;           (define-key ido-completion-map "SPC" 'ido-exit-minibuffer))
+
+;; (add-hook 'occur-mode-hook 'rtb/occur-with-evil)
+;;           (define-key evil-motion-state-map "RET" 'occur-mode-goto-occurence)
+
+
+;; (add-hook 'occur-mode-hook
+;;           (lambda ()
+;;             ;;(interactive)
+;;             (define-key evil-motion-state-map (kbd "RET") 'occur-mode-goto-occurrence)
+;;             (define-key evil-motion-state-map (kbd "C-o") 'occur-mode-goto-occurence-other-window)))
+
+
 (setq xterm-mouse-mode t)
-(setq interprogram-paste-function 'x-cut-buffer-or-selection-value)
 
-(add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
-(add-hook 'haskell-mode-hook 'turn-on-haskell-ghci)
-(add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
+;; haskell!
+;; (load "haskell-mode-autoloads")
+(require 'haskell-mode)
+(require 'haskell-debug)
+;;(autoload 'ghc-init "ghc" nil t)
 
-(add-hook 'haskell-mode-hook 
+;; (add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
+;; (add-hook 'haskell-mode-hook 'turn-on-haskell-ghci)
+;;(add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
+;;(add-hook 'haskell-mode-hook 'turn-on-haskell-simple-indent)
+
+(add-hook 'haskell-mode-hook
    (function
     (lambda ()
+      (add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
       (setq haskell-program-name "ghci")
-      (setq haskell-ghci-program-name "ghci"))))
+      (setq haskell-ghci-program-name "ghci")
+      (electric-indent-local-mode -1))))
+      ;;electric-indent-mode war im Haskell mode dafür verantwortlich
+      ;;dass jedesmal bei RET eingerückt wurde
 
-(add-hook 'after-init-hook #'global-flycheck-mode)
+(eval-after-load 'haskell-interactive-mode '(progn
+  (evil-define-key 'normal haskell-interactive-mode-map (kbd "RET") 'haskell-interactive-mode-return)
+  ))
+(eval-after-load 'haskell-mode '(progn
+  (define-key haskell-mode-map (kbd "C-c C-l") 'haskell-process-load-or-reload)
+  (define-key haskell-mode-map (kbd "C-c C-z") 'haskell-interactive-switch)
+  (define-key haskell-mode-map (kbd "C-c C-n C-t") 'haskell-process-do-type)
+  (define-key haskell-mode-map (kbd "C-c C-n C-i") 'haskell-process-do-info)
+  (define-key haskell-mode-map (kbd "C-c C-n C-c") 'haskell-process-cabal-build)
+  (define-key haskell-mode-map (kbd "C-c C-n c") 'haskell-process-cabal)
+  (define-key haskell-mode-map (kbd "SPC") 'haskell-mode-contextual-space)))
+(eval-after-load 'haskell-cabal '(progn
+  (define-key haskell-cabal-mode-map (kbd "C-c C-z") 'haskell-interactive-switch)
+  (define-key haskell-cabal-mode-map (kbd "C-c C-k") 'haskell-interactive-mode-clear)
+  (define-key haskell-cabal-mode-map (kbd "C-c C-c") 'haskell-process-cabal-build)
+  (define-key haskell-cabal-mode-map (kbd "C-c c") 'haskell-process-cabal)))
+;; (require 'inf-haskell)
 
-(add-to-list 'load-path "~/.emacs.d/plugins/evil-org-mode")
-(require 'evil-org)
-(put 'dired-find-alternate-file 'disabled nil)
+;; (require 'company-mode)
 
-;;; C-c as general purpose escape key sequence.
-   ;;;
-   ;(defun my-esc (prompt)
-     ;"Functionality for escaping generally.  Includes exiting Evil insert state and C-g binding. "
-     ;(cond
-      ;;; If we're in one of the Evil states that defines [escape] key, return [escape] so as
-      ;;; Key Lookup will use it.
-      ;((or (evil-insert-state-p) (evil-normal-state-p) (evil-replace-state-p) (evil-visual-state-p)) [escape])
-      ;;; This is the best way I could infer for now to have C-c work during evil-read-key.
-      ;;; Note: As long as I return [escape] in normal-state, I don't need this.
-      ;;;((eq overriding-terminal-local-map evil-read-key-map) (keyboard-quit) (kbd ""))
-      ;(t (kbd "C-g"))))
-   ;(define-key key-translation-map (kbd "C-c") 'my-esc)
-   ;;; Works around the fact that Evil uses read-event directly when in operator state, which
-   ;;; doesn't use the key-translation-map.
-   ;(define-key evil-operator-state-map (kbd "C-c") 'keyboard-quit)
-   ;;; Not sure what behavior this changes, but might as well set it, seeing the Elisp manual's
-   ;;; documentation of it.
-   ;(set-quit-char "C-c")
+;; (add-hook 'interactive-haskell-mode-hook 'ac-haskell-process-setup)
+;; (add-hook 'haskell-interactive-mode-hook 'ac-haskell-process-setup)
+;; (eval-after-load "auto-complete"
+;;   '(add-to-list 'ac-modes 'haskell-interactive-mode))
 
-(define-key evil-insert-state-map "j" #'cofi/maybe-exit)
-
-(evil-define-command cofi/maybe-exit ()
-  :repeat change
-  (interactive)
-  (let ((modified (buffer-modified-p)))
-    (insert "j")
-    (let ((evt (read-event (format "Insert %c to exit insert state" ?k)
-               nil 0.5)))
-      (cond
-       ((null evt) (message ""))
-       ((and (integerp evt) (char-equal evt ?k))
-    (delete-char -1)
-    (set-buffer-modified-p modified)
-    (push 'escape unread-command-events))
-       (t (setq unread-command-events (append unread-command-events
-                          (list evt))))))))
 
 ;; Reftex aktivieren für das Magister-Projekt zumindest!
 (setq-default TeX-master t)
 (setq reftex-default-bibliography
             (quote
-                     ("/home/rtb/doks/mag/mag.bib")))
+                     ("./mag.bib")))
+
+(setq reftex-bibpath-environment-variables
+                '("/home/rtb/doks/new_mag/"))
+
+;; Set the default zotero export method to BibLatex instead of defaulting to BibTeX
+;; Done by custom-stuff at beginning!
+
 
 (defun na-org-mode-reftex-setup ()
     (interactive)
@@ -178,90 +797,49 @@
 
 (add-hook 'org-mode-hook 'na-org-mode-reftex-setup)
 
-;; obwohl die bibtex file von reftx benutzt werden kann, werden die Verweise nicht exportiert
-;(setq org-latex-pdf-process 
-         ;"latexmk -pdflatex='lualatex -shell-escape -interaction nonstopmode' -pdf -f  %f")
-(setq org-latex-pdf-process (quote ("texi2dvi --pdf --clean --verbose --batch %f" 
-                                    "bibtex %b"
-                                    "texi2dvi --pdf --clean --verbose --batch %f"
-                                    "texi2dvi --pdf --clean --verbose --batch %f")))
-(require 'ox-latex)
-(require 'ox-html5slide)
-(require 'ox-reveal)
-(defvar export-with-reveal nil)
-
-(defun export-with-reveal-or-html ()
-  (interactive)
-  (if (or export-with-reveal (file-exists-p "reveal.js"))
-      (call-interactively 'org-reveal-export-to-html)
-    (call-interactively 'org-export-as-html)))
-
-(org-defkey org-mode-map [f5] 'export-with-reveal-or-html)
-
-(setq org-export-latex-listings t)
-;(add-to-list 'org-latex-classes
-          ;'("koma-article"
-             ;"\\documentclass{scrartcl}
-             ;[NO-DEFAULT-PACKAGES]
-             ;[EXTRA]"
-             ;("\\section{%s}" . "\\section*{%s}")
-             ;("\\subsection{%s}" . "\\subsection*{%s}")
-             ;("\\subsubsection{%s}" . "\\subsubsection*{%s}")
-             ;("\\paragraph{%s}" . "\\paragraph*{%s}")
-             ;("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
-;(add-to-list 'org-export-latex-packages-alist
-             ;'(("AUTO" "inputenc" t)))
-;(add-to-list 'org-export-latex-classes
-          ;'("org-article"
-             ;"\\documentclass{org-article}
-             ;[NO-DEFAULT-PACKAGES]
-             ;[PACKAGES]
-             ;[EXTRA]"
-             ;("\\section{%s}" . "\\section*{%s}")
-             ;("\\subsection{%s}" . "\\subsection*{%s}")
-             ;("\\subsubsection{%s}" . "\\subsubsection*{%s}")
-             ;("\\paragraph{%s}" . "\\paragraph*{%s}")
-             ;("\\subparagraph{%s}" . "\\subparagraph*{%s}")))    
-
-;; go to the last change
-;(require 'goto-chg)
-;(global-set-key [(control .)] 'goto-last-change)
-;; M-. can conflict with etags tag search. But C-. can get overwritten
-;; by flyspell-auto-correct-word. And goto-last-change needs a really
-;; fast key.
-;(global-set-key [(meta .)] 'goto-last-change)
-
-; show recent files
-(require 'recentf)
-(recentf-mode 1)
-(setq recentf-max-menu-items 1000)
-
-; save minibuffer history
-(require 'savehist)
-(savehist-mode t)
-
-(add-hook `text-mode-hook 'turn-on-visual-line-mode)
-
-(defun turn-on-visual-line-mode-in-txt ()
-  (when (and (buffer-file-name)
-             (string-match ".txt$" (buffer-file-name)))
-    (turn-on-visual-line-mode)))
-
-(scroll-bar-mode -1)
-
-;; Let the exporter use the -shell-escape option to let latex
-;; execute external programs.
-;; This obviously and can be dangerous to activate!
-
+;; (setq org-latex-pdf-process
+;;       '("xelatex -shell-escape -interaction nonstopmode -output-directory %o %f"
+;;         "biber %b"
+;;         "xelatex -shell-escape -interaction nonstopmode -output-directory %o %f"
+;;         "xelatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
 (setq org-latex-pdf-process
-      '("xelatex -shell-escape -interaction nonstopmode -output-directory %o %f"
-        "biber %f"
-        "xelatex -shell-escape -interaction nonstopmode -output-directory %o %f"
-        "xelatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
-
+      '("xelatex -shell-escape -no-pdf -interaction nonstopmode -output-directory %o %f"
+        "biber %b"
+        "xelatex -shell-escape -no-pdf -interaction nonstopmode -output-directory %o %f"
+        "xdvipdfmx %b"
+        ))
 
 (unless (boundp 'org-latex-classes)
   (setq org-latex-classes nil))
+
+;; '(org-latex-classes
+;;   (quote
+;;    (("koma-article" "\\documentclass{scrartcl} [NO-DEFAULT-PACKAGES]"
+;;      ("\\section{%s}" . "\\section*{%s}")
+;;      ("\\subsection{%s}" . "\\subsection*{%s}")
+;;      ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+;;      ("\\paragraph{%s}" . "\\paragraph*{%s}")
+;;      ("\\subparagraph{%s}" . "\\subparagraph*{%s}"))
+;;     ("article" "\\documentclass[11pt]{article}"
+;;      ("\\section{%s}" . "\\section*{%s}")
+;;      ("\\subsection{%s}" . "\\subsection*{%s}")
+;;      ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+;;      ("\\paragraph{%s}" . "\\paragraph*{%s}")
+;;      ("\\subparagraph{%s}" . "\\subparagraph*{%s}"))
+;;     ("report" "\\documentclass[11pt]{report}"
+;;      ("\\part{%s}" . "\\part*{%s}")
+;;      ("\\chapter{%s}" . "\\chapter*{%s}")
+;;      ("\\section{%s}" . "\\section*{%s}")
+;;      ("\\subsection{%s}" . "\\subsection*{%s}")
+;;      ("\\subsubsection{%s}" . "\\subsubsection*{%s}"))
+;;     ("book" "\\documentclass[11pt]{book}"
+;;      ("\\part{%s}" . "\\part*{%s}")
+;;      ("\\chapter{%s}" . "\\chapter*{%s}")
+;;      ("\\section{%s}" . "\\section*{%s}")
+;;      ("\\subsection{%s}" . "\\subsection*{%s}")
+;;      ("\\subsubsection{%s}" . "\\subsubsection*{%s}"))
+;;     ("beamer" "\\documentclass{beamer}" org-beamer-sectioning))) t)
+
 (add-to-list 'org-latex-classes
              ;; beamer class, for presentations
              '("beamer"
@@ -295,7 +873,7 @@
   commentstyle=\\color{red},
   }\n
   \\usepackage{verbatim}\n
-  \\institute{institute}\n          
+  \\institute{institute}\n
   \\subject{{{{beamersubject}}}}\n"
                ("\\section{%s}" . "\\section*{%s}")
                ("\\begin{frame}[fragile]\\frametitle{%s}"
@@ -311,6 +889,10 @@
 \\usepackage[xindy={language=german-duden, codepage=utf8}, style=altlist, section, numberedsection=false, toc, nopostdot]{glossaries}
 \\usepackage[xindy, splitindex]{imakeidx}
 \\usepackage{graphicx}
+\\usepackage{setspace}
+\\onehalfspacing
+\\usepackage{parskip}
+\\usepackage{enumitem}
 \\usepackage{xcolor}
 \\usepackage{appendix}
 \\usepackage{xunicode}
@@ -321,7 +903,7 @@
 \\usepackage{longtable}
 \\usepackage{float}
 \\usepackage{tikz}
-\\usetikzlibrary{positioning, matrix,fit}
+\\usetikzlibrary{positioning, matrix,fit, arrows.meta}
 \\usepackage{framed}
 \\usepackage{wrapfig}
 \\usepackage{soul}
@@ -333,23 +915,26 @@
 \\usepackage{marvosym}
 \\usepackage{wasysym}
 \\usepackage{latexsym}
-\\usepackage[citestyle=authoryear-comp, bibstyle=authortitle, natbib=true, isbn=false, backend=biber]{biblatex}
+\\usepackage[citestyle=authoryear-ibid, bibstyle=authortitle, natbib=true, isbn=false, backend=biber]{biblatex}
 \\usepackage{fancyhdr}
 \\usepackage{xspace}
 \\usepackage{metalogo}
-\\defaultfontfeatures{Mapping=tex-text}
+\\usepackage{etoolbox}
+\\BeforeBeginEnvironment{Verbatim}{\\def\\baselinestretch{0.7}}
+%\\defaultfontfeatures{Mapping=tex-text}
 \\usepackage{fontspec}
 \\usepackage{emptypage}
+\\usepackage{fancyvrb}
 \\setCJKmainfont[Scale=1]{Adobe Song Std}   % 设置缺省中文字体
-\\setmainfont{Linux Libertine} 
+\\setCJKmonofont[Scale=0.8]{AR PL New Sung Mono}  %xelatex 細明體
+\\setmainfont{Linux Libertine}
 \\setsansfont[BoldFont=WenQuanYi Zen Hei Sharp]{AR PL UKai CN}
-\\setmonofont[Scale=0.8]{Droid Sans}
+\\setmonofont[Scale=0.7]{Droid Sans Mono}
 \\newcommand\\fontnamemono{WenQuanYi Micro Hei} %等宽字体
 \\newfontinstance\\MONO{\\fontnamemono}
 \\newcommand{\\mono}[1]{{\\MONO #1}}
 \\hypersetup{unicode=true}
-\\geometry{a4paper, textwidth=6.5in, textheight=10in,
-marginparsep=7pt, marginparwidth=.6in}
+\\geometry{a4paper, textwidth=6.5in, textheight=10in, marginparsep=7pt, marginparwidth=.6in}
 \\usepackage[font=footnotesize]{caption}
 \\definecolor{foreground}{RGB}{220,220,204}%浅灰
 \\definecolor{background}{RGB}{62,62,62}%浅黑
@@ -374,52 +959,65 @@ marginparsep=7pt, marginparwidth=.6in}
 \\makeatother
 
 \\fancyhf{}
-\\fancyhead[LO,RE]{\\fancyplain{}{\\thepage}}
+\\fancyhead[LO,RE]{\\fancyplain{}{\\itshape\\thepage}}
 \\fancyhead[RO]{\\fancyplain{}{\\itshape\\nouppercase  \\leftmark}}
 \\fancyhead[LE]{\\fancyplain{}{\\itshape\\nouppercase  \\rightmark}}
 \\fancyfoot[C]{}
 \\tolerance=1000
 [NO-DEFAULT-PACKAGES]
 [NO-PACKAGES]"
+
 ("\\chapter{%s}" . "\\chapter*{%s}")
 ("\\section{%s}" . "\\section*{%s}")
 ("\\subsection{%s}" . "\\subsection*{%s}")
 ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
 ("\\paragraph{%s}" . "\\paragraph*{%s}")
-("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+("\\subparagraenumitem{%s}" . "\\subparagraph*{%s}")))
 
-
-(setq org-export-latex-listings t)
+(setq org-latex-listings t)
 ;; Options for \lset command（reference to listing Manual)
-(setq org-export-latex-listings-options
-      '(
-        ("basicstyle" "\\color{foreground}\\small\\mono")           
-        ("keywordstyle" "\\color{function}\\bfseries\\small\\mono") 
-        ("identifierstyle" "\\color{doc}\\small\\mono")
-        ("commentstyle" "\\color{comment}\\small\\itshape")         
-        ("stringstyle" "\\color{string}\\small")                    
-        ("showstringspaces" "false")                                
-        ("numbers" "left")                                          
-        ("numberstyle" "\\color{preprocess}")                       
-        ("stepnumber" "1")                                          
-        ("backgroundcolor" "\\color{background}")                   
-        ("tabsize" "4")                                             
-        ("captionpos" "t")                                          
-        ("breaklines" "true")                                       
-        ("breakatwhitespace" "true")                                
-        ("showspaces" "false")                                      
-        ("columns" "flexible")                                      
-        ("frame" "single")                                          
-        ("frameround" "tttt")                                       
-        ("framesep" "0pt")
-        ("framerule" "8pt")
-        ("rulecolor" "\\color{background}")
-        ("fillcolor" "\\color{white}")
-        ("rulesepcolor" "\\color{comdil}")
-        ("framexleftmargin" "10mm")
-        ))
-;; Make Org use ido-completing-read for most of its completing prompts.
+(setq org-latex-listings-options
+'(
+  ("basicstyle" "\\small\\ttfamily\\singlespacing")
+  ;; ("aboveskip" "-4ex")
+  ("captionpos" "b")
+  ("numbers" "left")
+  ("numberstyle" "\\tiny")
+    ))
+
+;; deprecated variable (not existent anymore)
+;; (setq org-export-latex-listings-options
+;;       '(
+;;         ("basicstyle" "\\color{foreground}\\small\\mono")
+;;         ("keywordstyle" "\\color{function}\\bfseries\\small\\mono")
+;;         ("identifierstyle" "\\color{doc}\\small\\mono")
+;;         ("commentstyle" "\\color{comment}\\small\\itshape")
+;;         ("stringstyle" "\\color{string}\\small")
+;;         ("showstringspaces" "false")
+;;         ("numbers" "left")
+;;         ("numberstyle" "\\color{preprocess}")
+;;         ("stepnumber" "1")
+;;         ("backgroundcolor" "\\color{background}")
+;;         ("tabsize" "4")
+;;         ("captionpos" "t")
+;;         ("breaklines" "true")
+;;         ("breakatwhitespace" "true")
+;;         ("showspaces" "false")
+;;         ("columns" "flexible")
+;;         ("frame" "single")
+;;         ("frameround" "tttt")
+;;         ("framesep" "0pt")
+;;         ("framerule" "8pt")
+;;         ("rulecolor" "\\color{background}")
+;;         ("fillcolor" "\\color{white}")
+;;         ("rulesepcolor" "\\color{comdil}")
+;;         ("framexleftmargin" "10mm")
+;;         ))
+
+;; use ido for org-Mini-Buffer Questions
+;; other comletions with M-TAB!
 (setq org-completion-use-ido t)
+
 ;; 各种Babel语言支持
 (org-babel-do-load-languages
  'org-babel-load-languages
@@ -436,98 +1034,659 @@ marginparsep=7pt, marginparwidth=.6in}
    (latex . t)
    (js . t)
    ))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(default ((t (:family "DejaVu Sans Mono" :foundry "unknown" :slant normal :weight normal :height 143 :width normal)))))
-
-(global-set-key "\M-n" 'other-window)
-(global-set-key (kbd "C-ö") 'longlines-mode)
 
 ;; im TexMode: Problem: _ + x = subscripts x; solution?!
 (eval-after-load "tex-mode" '(fset 'tex-font-lock-suscript 'ignore))
 
-(defadvice org-latex-export-to-pdf (before check-fileSave/longlines-off
-					   activate compile)
-  "for calling the latex-export it is necessary to switch off longlines and save the file"
-  (save-buffer)
-  (if (and (boundp 'longlines-mode) longlines-mode)
-      (longlines-mode 0)))
+;; ox-koma-letter ist direkt in "plugins" drin
+;; (eval-after-load 'ox '(require 'ox-koma-letter))
 
-(defadvice org-latex-export-to-pdf (after longlines-on
-					   activate compile)
-  "switch back to longlines-mode after pdf processing"
-      (longlines-mode 1))
+;; (eval-after-load 'ox-koma-letter
+;;   '(progn
+;;      (add-to-list 'org-latex-classes
+;;                   '("my-letter"
+;;                     "\\documentclass[ngerman,12pt,parskip]\{scrlttr2\}
+;;      \\usepackage{fontspec}
+;;      \\usepackage[xetex,colorlinks=false,CJKbookmarks=true,linkcolor=blue,urlcolor=blue,menucolor=blue]{hyperref}
+;;      \\usepackage[babel,german=guillemets]{csquotes}
+;;      \\usepackage[ngerman]{babel}
+;;      \\setkomavar{frombank}{(1234)\\,567\\,890}
+;;      \[NO-DEFAULT-PACKAGES]
+;;      \[NO-PACKAGES]
+;;      \[NO-EXTRA]"))
 
-(defadvice org-reveal-export-to-html (before check-fileSave
-					   activate compile)
-  "for calling the latex-export it is necessary to switch off longlines and save the file"
-  (save-buffer))
+;;     (setq org-koma-letter-default-class "my-letter")))
 
-;;(add-to-list 'load-path "~/emacs.d/darkroom/")
-;;(require 'darkroom-mode)
-(require 'smooth-scrolling)
-
-;; koma-letter
-(add-to-list 'load-path "~/.emacs.d/plugins/")
-(eval-after-load 'ox '(require 'ox-koma-letter))
-
-(eval-after-load 'ox-koma-letter
-  '(progn
-     (add-to-list 'org-latex-classes
-                  '("my-letter"
-                    "\\documentclass[ngerman,12pt]\{scrlttr2\}
-     \\usepackage{fontspec}
-     \\usepackage[xetex,colorlinks=false,CJKbookmarks=true,linkcolor=blue,urlcolor=blue,menucolor=blue]{hyperref}
-     \\usepackage[babel,german=guillemets]{csquotes}
-     \\usepackage[ngerman]{babel}
-     \\setkomavar{frombank}{(1234)\\,567\\,890}
-     \[NO-DEFAULT-PACKAGES]
-     \[NO-PACKAGES]
-     \[NO-EXTRA]"))
-
-     (setq org-koma-letter-default-class "my-letter")))
+;; (add-to-list 'org-latex-classes
+;;                   '("my-cv2"
+;;                     "\\documentclass[a4paper,11pt]{article}
+;; \\usepackage{fontspec}
+;; \\usepackage[babel,german=guillemets]{csquotes}
+;; \\usepackage[ngerman]{babel}
+;; \\usepackage{fixltx2e}
+;; \\usepackage{graphicx}
+;; \\usepackage{longtable}
+;; \\usepackage{float}
+;; \\usepackage{wrapfig}
+;; \\usepackage{rotating}
+;; \\usepackage[normalem]{ulem}
+;; \\usepackage{amsmath}
+;; \\usepackage{textcomp}
+;; \\usepackage{marvosym}
+;; \\usepackage{wasysym}
+;; \\usepackage{amssymb}
+;; \\usepackage[xetex,colorlinks=false,CJKbookmarks=true,linkcolor=blue,urlcolor=blue,menucolor=blue]{hyperref}
+;; \\tolerance=1000
+;; [NO-DEFAULT-PACKAGES]"
+;;   ("\\section{%s}" . "\\section*{%s}")
+;;   ("\\subsection{%s}" . "\\subsection*{%s}")
+;;   ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+;;   ("\\paragraph{%s}" . "\\paragraph*{%s}")
+;;   ("\\subparagraph{%s}" . "\\subparagraph*{%s}")
+;; ))
 
 ;; http://uweziegenhagen.de/?p=2801
 (global-auto-revert-mode t)
 
 ;; just answer Emacs' question with 'y' or 'n' instead of 'yes'or 'no'
 (defalias 'yes-or-no-p 'y-or-n-p)
-(add-hook 'after-init-hook 'global-company-mode)
+;; using AC now
+;;(add-hook 'after-init-hook 'global-company-mode)
 
 
 (defun my-save-word ()
   (interactive)
   (let ((current-location (point))
          (word (flyspell-get-word)))
-    (when (consp word)    
+    (when (consp word)
       (flyspell-do-correct 'save nil (car word) current-location (cadr word) (caddr word) current-location))))
 
-(global-set-key (kbd "C-i") 'my-save-word)
+(add-hook 'flyspell-mode-hook
+   (function
+    (lambda ()
+      (local-set-key (kbd "M-3") 'my-save-word))))
 
 ; save the original format line
 (defvar original-mode-line nil
-  "Original mode line, saved for later restoration")
+  "Original mode line, saved for later restoration.")
 
 (defun toggle-mode-line ()
-  "make the menu-line empty or restore it"
+  "Make the menu-line empty or restore it."
     (interactive)
     (if (null original-mode-line)
-	(progn
-	    (setq original-mode-line mode-line-format)
-	    (setq mode-line-format nil))
+        (progn
+            (setq original-mode-line mode-line-format)
+            (setq mode-line-format nil))
       (progn
-	(setq mode-line-format original-mode-line)
-	(setq original-mode-line nil))))
+        (setq mode-line-format original-mode-line)
+        (setq original-mode-line nil))))
 
 (defadvice toggle-mode-line (after toggle-mode-line/redraw-display
-					   activate compile)
-  "strangely: running toggle-mode-line with f5 artefacts appear when not redraw-display"
+                                           activate compile)
+  "Strange: running toggle-mode-line with f5 artefacts appear when not `redraw-display'."
   (redraw-display))
 
 (global-set-key (kbd "<S-f5>") 'toggle-mode-line)
 
+;; !!! These two fuck-up helm-swoop!!! (wenn noch kein zweites Window offen ist)
+;; (defadvice split-window-right (after rtb/jump-split-right activate )
+;;   "Overwrite original split-window-right jumping to the newly created window!"
+;;   (other-window 1))
+
+;; (defadvice split-window-below (after rtb/jump-split-below activate )
+;;   "Overwrite original split-window-right jumping to the newly created window!"
+;;   (other-window 1))
+
+
+
+(require 'elm-mode)
+(add-hook 'elm-mode-hook #'elm-oracle-setup-ac)
+;;(autoload 'sqlite-dump "sqlite-dump" nil t)
+;;(modify-coding-system-alist 'file "\\.anki2\\'" 'raw-text-unix)
+;;(add-to-list 'auto-mode-alist '("\\.anki2\\'" . sqlite-dump))
+;;coudn't get back changes into Anki :( unknown format
+;; (require 'company)
+;; (add-to-list 'company-backends 'company-ghc)
+;; (custom-set-variables '(company-ghc-show-info t))
+;; (setenv "PATH"
+;;   (concat
+;;    "/home/rtb/hask/elm/.cabal-sandbox/bin" ":"
+;;    (getenv "PATH")
+;;   )
+;; )
+;; (setq exec-path (append exec-path '("/home/rtb/hask/elm/.cabal-sandbox/bin")))
+;; (setq elm-runtime "/home/rtb/hask/elm/.cabal-sandbox/share/x86_64-linux-ghc-7.8.2/Elm-0.12.3/elm-runtime.js
+;; ")
+;; (add-hook 'elm-mode-hook 'turn-on-elm-indentation)
+(setq elm-build-dir "build")
+(setq elm-cache-dir "cache")
+
+;; grammatical framework
+(autoload 'run-gf "gf" nil t)
+(autoload 'gf-mode "gf" nil t)
+(add-to-list 'auto-mode-alist '("\\.gf\\(\\|e\\|r\\|cm?\\)\\'" . gf-mode))
+(add-to-list 'auto-mode-alist '("\\.cf\\'" . gf-mode))
+(add-to-list 'auto-mode-alist '("\\.ebnf\\'" . gf-mode))
+
+;; new konsole term with gf and current buffer
+(defun gf-buffer-to-konsole ()
+"Send current buffer to gf running in konsole."
+    (interactive)
+    (call-process "konsole"
+                  nil  ;; INFILE
+                  0    ;; DESTINATION: 0 means discard and don't wait
+                  nil  ;; DISPLAY
+                  "--hide-tabbar"
+                  "--hide-menubar"
+                  "--profile" "Bell.profile"
+                  "-e" "gf" "-retain" (buffer-file-name)))
+
+;; new konsole term with gf and current buffer
+(defun gf-nav-dir-gnome-term ()
+"Open gnome-terminal."
+    (interactive)
+    (call-process "gnome-terminal"
+                  nil  ;; INFILE
+                  0    ;; DESTINATION: 0 means discard and don't wait
+                  nil  ;; DISPLAY
+                  ))
+
+;; (add-hook 'gf-mode-hook 
+;;    (function
+;;     (lambda ()
+;;       (add-to-list 'gf-program-args "-retain"))))
+;; (add-to-list 'gf-program-args "-retain")
+
+;; http://emacs.stackexchange.com/questions/9970/is-there-a-command-package-to-pretty-print-based-on-parentheses
+(defun endless/pretty-print-sexp ()
+  "Pretty print the sexp after point.
+This assumes that the following sexp does not
+contain any instance of \"£$comma$£\"."
+  (interactive)
+  (let* ((beg (point))
+         (end (save-excursion
+                (forward-sexp 1)
+                (point-marker))))
+    (while (search-forward "," end 'noerror)
+      (replace-match " £$comma$£ "))
+    (goto-char beg)
+    (let ((data (read (current-buffer))))
+      (delete-region beg (point))
+      (pp data (current-buffer)))
+    (let ((end (point-marker)))
+      (goto-char beg)
+      (while (search-forward-regexp "[[:space:]\n\r]*£$comma$£" end 'noerror)
+        (replace-match ","))
+      (goto-char end))))
+
+
+(defun hs-buffer-to-konsole ()
+"Send current buffer to GHCi running in konsole."
+    (interactive)
+    (call-process "konsole"
+                  nil  ;; INFILE
+                  0    ;; DESTINATION: 0 means discard and don't wait
+                  nil  ;; DISPLAY
+                  "--hide-tabbar"
+                  "--hide-menubar"
+                  "-e" "ghci" (buffer-file-name)))
+
+
+(require 'emmet-mode)
+(add-hook 'sgml-mode-hook 'emmet-mode) ;; Auto-start on any markup modes
+(add-hook 'html-mode-hook 'emmet-mode)
+(add-hook 'css-mode-hook  'emmet-mode)
+
+(require 'rainbow-delimiters)
+;; (global-rainbow-delimiters-mode)
+(global-visual-line-mode)
+;;(add-hook 'after-init-hook 'centered-window-mode)
+
+(require 'yasnippet)
+(yas-global-mode 1)
+;; next fixes: "term-send-raw: Wrong type argument: characterp, tab" YAS interfering
+;; https://github.com/capitaomorte/yasnippet/issues/289 -- well, now tab completion should work in any Emacs-Terminal (not only multi-term)
+(add-hook 'term-mode-hook (lambda()
+                (yas-minor-mode -1)))
+
+;;(speedbar-add-supported-extension ".hs")
+;;(speedbar 1)
+(server-mode 1)
+(require 'iso-transl)
+;;(global-set-key [S-dead-grave] "`")
+;;(global-set-key [dead-circumflex] "^")
+(global-set-key [f10] 'helm-show-kill-ring)
+(global-set-key [f11] 'save-buffer)
+(global-set-key [f12] 'kill-this-buffer)
+(global-set-key [f4] 'helm-imenu)
+(global-set-key [f5] 'helm-projectile-find-file)
+(global-set-key (kbd "M-SPC") 'ido-switch-buffer)
+(global-set-key (kbd "M-1") 'ido-switch-buffer)
+(global-set-key (kbd "M-2") 'ibuffer)
+(global-set-key (kbd "M-q") 'ido-switch-buffer)
+
+(defun bind-ido-keys ()
+  "Keybindings for ido mode."
+  (define-key ido-completion-map (kbd "M-j") 'ido-next-match)
+  (define-key ido-completion-map (kbd "M-2") 'ido-next-match)
+  (define-key ido-completion-map (kbd "ESC k") 'ido-next-match)
+  (define-key ido-completion-map (kbd "ESC .") 'ido-next-match)
+  (define-key ido-completion-map (kbd "M-k") 'ido-prev-match)
+  (define-key ido-completion-map (kbd "M-3") 'ido-prev-match)
+  (define-key ido-completion-map (kbd "ESC j") 'ido-prev-match)
+  (define-key ido-completion-map (kbd "SPC") 'ido-exit-minibuffer)
+  (define-key ido-completion-map (kbd "ESC ,") 'ido-prev-match))
+
+(add-hook 'ido-setup-hook #'bind-ido-keys)
+
+;;(lazy-highlight-cleanup nil)
+
+;;; describe this point lisp only
+(defun describe-foo-at-point ()
+  "Show the documentation of the Elisp function and variable near point.
+   This checks in turn:
+   -- for a function name where point is
+   -- for a variable name where point is
+   -- for a surrounding function call
+   "
+  (interactive)
+  (let (sym)
+    ;; sigh, function-at-point is too clever.  we want only the first half.
+    (cond ((setq sym (ignore-errors
+                       (with-syntax-table emacs-lisp-mode-syntax-table
+                         (save-excursion
+                           (or (not (zerop (skip-syntax-backward "_w")))
+                               (eq (char-syntax (char-after (point))) ?w)
+                               (eq (char-syntax (char-after (point))) ?_)
+                               (forward-sexp -1))
+                           (skip-chars-forward "`'")
+                           (let ((obj (read (current-buffer))))
+                             (and (symbolp obj) (fboundp obj) obj))))))
+           (describe-function sym))
+          ((setq sym (variable-at-point)) (describe-variable sym))
+          ;; now let it operate fully -- i.e. also check the
+          ;; surrounding sexp for a function call.
+          ((setq sym (function-at-point)) (describe-function sym)))))
+
+(define-key emacs-lisp-mode-map [(f1)] 'describe-foo-at-point)
+(define-key emacs-lisp-mode-map [(control f1)] 'describe-function)
+(define-key emacs-lisp-mode-map [(shift f1)] 'describe-variable)
+
+;; funktioniert mit visual-star!
+;; (require 'evil-search-highlight-persist)
+;; (global-evil-search-highlight-persist t)
+
+(require 'evil-nerd-commenter)
+;; in here evil-normal-state-map keys defined like those for visual below
+(evilnc-default-hotkeys)
+(define-key evil-visual-state-map ",ci" 'evilnc-comment-or-uncomment-lines)
+(define-key evil-visual-state-map ",cl" 'evilnc-comment-or-uncomment-to-the-line)
+(define-key evil-visual-state-map ",cc" 'evilnc-copy-and-comment-lines)
+(define-key evil-visual-state-map ",cp" 'evilnc-comment-or-uncomment-paragraphs)
+(define-key evil-visual-state-map ",cr" 'comment-or-uncomment-region)
+
+;; TODO: not yet for visual-block-mode! (takes only the last marked number)
+(require 'evil-numbers)
+;; (define-key evil-normal-state-map (kbd "C-c +") 'evil-numbers/inc-at-pt)
+(define-key evil-visual-state-map (kbd "C-q +") 'evil-numbers/inc-at-pt)
+
+
+;; (define-key evil-normal-state-map (kbd "C-c -") 'evil-numbers/dec-at-pt)
+(define-key evil-visual-state-map (kbd "C-q -") 'evil-numbers/dec-at-pt)
+; ===== Turn off tab character =====
+
+;;
+;; Emacs normally uses both tabs and spaces to indent lines. If you
+;; prefer, all indentation can be made from spaces only. To request this,
+;; set `indent-tabs-mode' to `nil'. This is a per-buffer variable;
+;; altering the variable affects only the current buffer, but it can be
+;; disabled for all buffers.
+
+;;
+;; Use (setq ...) to set value locally to a buffer
+;; Use (setq-default ...) to set value globally
+;;
+(setq-default indent-tabs-mode nil)
+
+;; ========== Set the fill column ==========
+(setq-default fill-column 72)
+
+;; ===== Turn on Auto Fill mode automatically in all modes =====
+
+;; Auto-fill-mode the the automatic wrapping of lines and insertion of
+;; newlines when the cursor goes over the column limit.
+
+;; This should actually turn on auto-fill-mode by default in all major
+;; modes. The other way to do this is to turn on the fill for specific modes
+;; via hooks.
+;; WORKS?!
+(setq auto-fill-mode 1)
+
+ ;; ===== Set standard indent to 2 rather that 4 ====
+(setq standard-indent 2)
+(setq c-basic-offset 2
+      tab-width 2)
+
+;; default: (setq desktop-restore-frames t)
+;; (desktop-save-mode 1)
+(require 'desktop-menu)
+(setq desktop-menu-directory "~/.emacs.d/desktops/")
+
+;; (load "~/.emacs.d/plugins/bmkp-config/bmkp-config.el")
+;; Chinese
+(autoload 'eim-use-package "eim" "Another emacs input method")
+;; Tooltip 暂时还不好用
+(setq eim-use-tooltip nil)
+
+(register-input-method
+ "eim-wb" "euc-cn" 'eim-use-package
+ "五笔" "汉字五笔输入法" "wb.txt")
+(register-input-method
+ "eim-py" "euc-cn" 'eim-use-package
+ "拼音" "汉字拼音输入法" "py.txt")
+
+;; (set-input-method 'chinese-sisheng)
+
+;; 用 ; 暂时输入英文
+(require 'eim-extra)
+(global-set-key ";" 'eim-insert-ascii)
+
+;; with fcitx now working (LC_CTYPE=zh_CN.UTF-8)
+(require 'fcitx)
+(fcitx-evil-turn-on)
+;; following does not include helm-M-x
+(fcitx-M-x-turn-on)
+(fcitx-shell-command-turn-on)
+(fcitx-eval-expression-turn-on)
+
+
+(require 'flycheck)
+;; macht Probleme?
+(add-hook 'after-init-hook #'global-flycheck-mode)
+
+(flycheck-define-checker my-php
+  "A PHP syntax checker using the PHP command line interpreter.
+   See URL `http://php.net/manual/en/features.commandline.php'."
+  :command ("php" "-l" "-d" "error_reporting=E_ALL" "-d" "display_errors=1"
+            "-d" "log_errors=0" source)
+  :error-patterns
+  ((error line-start (or "Parse" "Fatal" "syntax") " error" (any ":" ",") " "
+          (message) " in " (file-name) " on line " line line-end))
+  :modes (web-mode))
+
+(add-to-list 'flycheck-checkers 'my-php)
+;;(add-to-list 'auto-mode-alist '("\\.php\\'" . web-mode))
+
+;; recognize file indentation and adapt
+;; weiß noch nicht, ob es das Ding bringt...
+;; vllt lieber Tabs komplett ausschalten (hab ich schon?!) und manuelles Indenting mit Tab?
+;; (require 'dtrt-indent)
+;; (dtrt-indent-mode 1)
+
+;; php -DEV
+;; (defun my-setup-php ()
+;;   ;; enable web mode
+;;   (web-mode)
+;;   (flycheck-mode)
+
+;;   ;; make these variables local
+;;   (make-local-variable 'web-mode-code-indent-offset)
+;;   (make-local-variable 'web-mode-markup-indent-offset)
+;;   (make-local-variable 'web-mode-css-indent-offset)
+
+;;   ;; set indentation, can set different indentation level for different code type
+;;   (setq web-mode-code-indent-offset 4)
+;;   (setq web-mode-css-indent-offset 2)
+;;   (setq web-mode-markup-indent-offset 2)
+;;   (flycheck-select-checker my-php)
+;;   )
+(defun pear/php-mode-init ()
+  "Set some buffer-local variables."
+  (setq case-fold-search t)
+  (setq indent-tabs-mode nil)
+  (setq fill-column 78)
+  (setq c-basic-offset 2)
+  (setq evil-shift-width 2)
+  (c-set-offset 'arglist-cont 0)
+  (c-set-offset 'arglist-intro '+)
+  (c-set-offset 'case-label 2)
+  (c-set-offset 'arglist-close 0))
+
+(add-hook 'php-mode-hook 'pear/php-mode-init)
+
+
+(require 'helm-misc)
+(require 'helm-locate)
+(require 'helm-ag)
+
+;; funktioniert gut, aber geöffnetes Fenster allzu klein
+;;(require 'popwin)
+;;(setq display-buffer-function 'popwin:display-buffer)
+;;(push '("^\*helm .+\*$" :regexp t) popwin:special-display-config)
+;;(push '("^\*helm-.+\*$" :regexp t) popwin:special-display-config) 
+
+(setq helm-quick-update t)
+(setq helm-bookmark-show-location t)
+(setq helm-buffers-fuzzy-matching t)
+
+(require 'projectile)
+(require 'helm-projectile)
+
+(global-set-key (kbd "M-x") 'helm-M-x)
+
+(defun projectile-helm-ag ()
+  (interactive)
+  (helm-ag (projectile-project-root)))
+
+(defun helm-my-buffers ()
+  (interactive)
+  (let ((helm-ff-transformer-show-only-basename nil))
+  (helm-other-buffer '(helm-c-source-buffers-list
+                       helm-c-source-elscreen
+                       helm-c-source-projectile-files-list
+                       helm-c-source-ctags
+                       helm-c-source-recentf
+                       helm-c-source-locate)
+                     "*helm-my-buffers*")))
+
+;; http://blog.jenkster.com/2013/10/a-tip-for-navigating-clojure-files-in-emacs.html
+;; leider funktioniert es nicht (schon alle möglichen REGE)
+(defun helm-php-functions ()
+  "Display headlines for the current Clojure file."
+  (interactive)
+  (helm-mode t)
+  (helm :sources '(((name . "PHP functions of buffer")
+                    (volatile)
+                    (headline "^\\s-function")))))
+(defun delete-this-buffer-and-file ()
+  "Removes file connected to current buffer and kills buffer."
+  (interactive)
+  (let ((filename (buffer-file-name))
+        (buffer (current-buffer))
+        (name (buffer-name)))
+    (if (not (and filename (file-exists-p filename)))
+        (error "Buffer '%s' is not visiting a file!" name)
+      (when (yes-or-no-p "Are you sure you want to remove this file? ")
+        (delete-file filename)
+        (kill-buffer buffer)
+        (message "File '%s' successfully removed" filename)))))
+
+(global-set-key (kbd "C-<f11>") 'desktop-menu)
+(global-set-key (kbd "C-<f12>") 'delete-this-buffer-and-file)
+
+(require 'edbi)
+(require 'edbi-minor-mode)
+(add-hook 'sql-mode-hook 'edbi-minor-mode)
+(evil-leader/set-key-for-mode 'sql-mode
+    "x" 'edbi-minor-mode-execute-buffer)
+
+(add-to-list 'evil-intercept-maps '(list (edbi-minor-mode . normal)))
+;; keybindings messed up with e2wm
+(autoload 'e2wm:dp-edbi "e2wm-edbi" nil t)
+;; (eval-after-load 'dired
+;;   '(progn
+;;     (evil-add-hjkl-bindings)
+;;     (evil-define-key 'normal dired-mode-map "h" 'my-dired-up-directory)
+;;     (evil-define-key 'normal dired-mode-map "l" 'dired-find-alternate-file)
+;;     (evil-define-key 'normal dired-mode-map "o" 'dired-find-file-other-window)
+;;     (evil-define-key 'normal dired-mode-map "s" 'dired-sort-toggle-or-edit)
+;;     (evil-define-key 'normal dired-mode-map "t" 'dired-toggle-marks)
+;;     (evil-define-key 'normal dired-mode-map "m" 'dired-mark)
+;;     (evil-define-key 'normal dired-mode-map "u" 'dired-unmark)
+;;     (evil-define-key 'normal dired-mode-map "U" 'dired-unmark-all-marks)
+;;     (evil-define-key 'normal dired-mode-map "c" 'dired-create-directory)
+;;     (evil-define-key 'normal dired-mode-map "n" 'evil-search-next)
+;;     (evil-define-key 'normal dired-mode-map "N" 'evil-search-previous)
+;;     (evil-define-key 'normal dired-mode-map "q" 'kill-this-buffer)))
+
+;; (global-set-key (kbd "<f9>") 'e2wm:dp-edbi)
+(global-set-key (kbd "<f9>") 'toggle-input-method)
+;; (eval-after-load 'dired
+;; TODO: folgendes muss nicht über Hook laufen, sonder Eval!
+(add-hook 'Custom-mode-hook #'rtb/customWithMouseClick)
+(defun rtb/customWithMouseClick ()
+    (with-eval-after-load 'evil
+        (define-key evil-motion-state-local-map
+        ;; statt kbd: so kann man auch "keychords" definieren
+        ;; http://stackoverflow.com/questions/25463369/mode-specific-or-buffer-local-text-objects-in-evil
+            (kbd "<down-mouse-1>") 'widget-button-click)))
+
+(defun rtb/fundamentalWithMouseClick ()
+    (with-eval-after-load 'fundamental-mode
+        (define-key evil-normal-state-local-map
+        ;; statt kbd: so kann man auch "keychords" definieren
+        ;; http://stackoverflow.com/questions/25463369/mode-specific-or-buffer-local-text-objects-in-evil
+            (kbd "<down-mouse-1>") 'widget-button-click)))
+
+;; source: http://steve.yegge.googlepages.com/my-dot-emacs-file
+(defun rename-file-and-buffer (new-name)
+  "Renames both current buffer and file it's visiting to NEW-NAME."
+  (interactive "sNew name: ")
+  (let ((name (buffer-name))
+        (filename (buffer-file-name)))
+    (if (not filename)
+        (message "Buffer '%s' is not visiting a file!" name)
+      (if (get-buffer new-name)
+          (message "A buffer named '%s' already exists!" new-name)
+        (progn
+          (rename-file name new-name 1)
+          (rename-buffer new-name)
+          (set-visited-file-name new-name)
+          (set-buffer-modified-p nil))))))
+
+;;(require 'perspective)
+;;(persp-mode)
+;; (require 'nav)
+;; (nav-disable-overeager-window-splitting)
+(require 'sr-speedbar)
+(require 'projectile-speedbar)
+;; (require 'linum-relative)
+;; (global-linum-mode -1)
+;; (setq redisplay-dont-pause t)
+;; (global-set-key ( kbd "C-<mouse-5>" ) 'shrink-window-if-larger-than-buffer)
+;; (global-set-key ( kbd "C-<mouse-4>" ) 'balance-windows)
+;; on Linux, make Control+wheel do increase/decrease font size
+(global-set-key (kbd "<C-mouse-4>") 'text-scale-increase)
+(global-set-key (kbd "<C-mouse-5>") 'text-scale-decrease)
+(setq helm-debug nil)
+(setq mouse-autoselect-window t)
+
+;; keine Nachfrage mehr in dired bei `l'
+(put 'dired-find-alternate-file 'disabled nil)
+
+(require 'cal-china-x)
+(setq mark-holidays-in-calendar t)
+(setq cal-china-x-important-holidays cal-china-x-chinese-holidays)
+(setq calendar-holidays (append cal-china-x-important-holidays calendar-holidays))
+
+(setq mouse-wheel-scroll-amount '(1 ((shift) . 1)))
+(setq auto-hscroll-mode t) ;; also set in custom...
+;; default: 1.2 (zoomed zuviel)
+(setq text-scale-mode-step 1.1)
+
+;; for smooth scrolling and disabling the automatical recentering of emacs when moving the cursor
+(setq scroll-margin 2
+      scroll-conservatively 1
+      scroll-step           1
+      scroll-up-aggressively 0.01
+      scroll-down-aggressively 0.01)
+;; also needed?!
+(require 'smooth-scrolling)
+(setq smooth-scroll-margin 0)
+
+
+(defvar hexcolour-keywords
+   '(("#[[:xdigit:]]\\{6\\}"
+      (0 (put-text-property (match-beginning 0)
+                            (match-end 0)
+			    'face (list :background 
+				        (match-string-no-properties 0)))))))
+(defun hexcolour-add-to-font-lock ()
+   (font-lock-add-keywords nil hexcolour-keywords))
+
+(defun hexcolour-add-to-font-lock ()
+    (interactive)
+    (font-lock-add-keywords nil hexcolour-keywords t))
+
+(add-to-list 'load-path "/usr/local/share/emacs/site-lisp/urweb-mode")
+(load "urweb-mode-startup")
+
+;; replace a char (probably "s") with long s
+(global-set-key (kbd "M-s")
+                (lambda () (interactive)
+                              (progn
+                                (delete-char 1)
+                                (insert "ſ"))))
+(global-set-key (kbd "M-8")
+                (lambda () (interactive)
+                                (insert "ſ")))
+
+;; PROBLEMATIC -- insert in search input buffer
+;;http://stackoverflow.com/questions/14051835/how-to-bind-text-insertion-in-isearch
+(define-key key-translation-map (kbd "M-s") (kbd "ſ"))
+(defun Multiply (x y)
+  "Erwartet Eingabe von zwei Zahlen (X, Y) und multipliziert diese."
+ (interactive "nErste Zahl: \nnZweite Zahl: \n")
+ (message "%d" (* x y)))
+
+(require 'org-gcal)
+(setq org-gcal-client-id "680808425312-tkmrksn5ajc0mr8pk1hk3hrgv008cjuo.apps.googleusercontent.com"
+      org-gcal-client-secret "gpOYDxfuc-xul8UUTAFITtgY"
+      org-gcal-file-alist '(("2h3st800p0t8772k54jnuf247k@group.calendar.google.com" .  "~/koze-todo.org")))
+
+(defun remove-dos-eol ()
+  "Do not show ^M in files containing mixed UNIX and DOS line endings."
+  (interactive)
+  (setq buffer-display-table (make-display-table))
+  (aset buffer-display-table ?\^M []))
+
+;; TODO: nur im Haskell-interactive-mode getestet und funktioniert da nicht!
+(defun comint-clear-buffer ()
+  (interactive)
+  (let ((comint-buffer-maximum-size 0))
+    (comint-truncate-buffer)))
+
+;; let's bind the new command to a keycombo
+(define-key comint-mode-map "\C-c\M-o" #'comint-clear-buffer)
+
+
+;; C-c f => geben-find-file mit ido!!!! :))))
+(add-to-list 'helm-completing-read-handlers-alist '(geben-find-file . ido))
+;; (setq list1 '("foo" "bar" "baz"))
+;; (setq list2 (remove "bar" list1)) --> remove funktioniert auch für Alist
+
+;; (message "list1: %s" list1)
+;; (message "list2: %s" list2)
+
+;; (setq list3 (delete "bar" list1))
+;; see recursive code for delete:
+;; (defun delete (l x)
+;;     (if (eq (car l) x))
+;;         (cdr l)
+;;       (cons (car l)
+;;             (delete (cdr l) x) ) ) )
+
+;; (message "list1: %s" list1)
+;; (message "list3: %s" list3)
 (provide '.emacs)
 ;;; .emacs ends here

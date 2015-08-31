@@ -1,6 +1,8 @@
 let ghciEscapeShellArg arg = "'" ++ concatMap (\c -> if c == '\'' then "'\"'\"'" else [c]) arg ++ "'"
 :def! search return . (":! hoogle --color " ++ ) . ghciEscapeShellArg
 :def! doc return . (":! hoogle --info " ++ ) . ghciEscapeShellArg
-:set prompt "[31;1m%s[0m\n> "
+:set prompt "[31;1m%s[0m\nλ> "
 -- :set prompt "\ESC[33m%s > \ESC[m"]]"
-:script /home/rtb/.cabal/share/x86_64-linux-ghc-7.6.3/ghc-vis-0.7.2.1/ghci
+-- :script /home/rtb/.cabal/share/x86_64-linux-ghc-7.6.3/ghc-vis-0.7.2.1/ghci
+-- :set -Wall
+-- :set -XOverloadedStrings
