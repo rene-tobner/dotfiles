@@ -655,17 +655,19 @@ With a prefix arg, changes to grouping by major mode."
                                          surround-pairs-alist))
 (setq-default surround-pairs-alist (cons '(?n "›" . "‹")
                                          surround-pairs-alist))
+(setq-default surround-pairs-alist (cons '(?i "\\inlst$" . "$")
+                                         surround-pairs-alist))
 
 ; http://ergoemacs.org/emacs/elisp_editing_basics.html
 (defun my-surround-german-guillemets ()
   "Surround word with german guillemets (chevrons = Möwchen)"
   (interactive)
-  (search-backward " ")
-  (forward-char 1)
-  (insert "»")
-  (search-forward " ")
-  (backward-char 1)
-  (insert "«"))
+    (search-backward " ")
+    (forward-char 1)
+    (insert "»")
+    (search-forward " ")
+    (backward-char 1)
+    (insert "«"))
 ;; working in terminal
 (setq x-select-enable-clipboard t)
 (setq x-select-enable-primary t)
