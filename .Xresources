@@ -19,7 +19,7 @@ XTerm*faceNameDoublesize: WenQuanYi Bitmap Song:antialias=true
 !#002B36
 !XTerm*faceName: Terminus
 XTerm*faceName: DejaVu Sans Mono Book
-XTerm*faceSize: 14
+XTerm*faceSize: 16
 !XTerm*initialFont: 2
 !
 !folgendes damit emacs ALT benutzen kann
