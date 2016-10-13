@@ -6,8 +6,13 @@ syntax enable
 "set background=dark
 colors desertEx
 "colors solarized
-"dw_green
+"colors dw_green
 "blackdust
+
+" when git-commiting: no strange highlighting?
+hi def link gitcommitSummary Normal
+hi def link gitcommitBlank Normal
+
 if has("gui_running")
   if has("gui_gtk2")
     set guifont=Source\ Code\ Pro\ Medium\ 12
@@ -111,3 +116,22 @@ inoremap <C-Space> <ESC>
 let g:ctags_statusline=1 
 
 nnoremap <C-g>f :echo cfi#format("%s", "")<CR>
+
+"set spell spelllang=de_de,en_us
+"switch spellcheck languages
+let g:myLang = 0
+let g:myLangList = [ "nospell", "de_de", "en_us" ]
+function! MySpellLang()
+  "loop through languages
+  let g:myLang = g:myLang + 1
+  if g:myLang >= len(g:myLangList) | let g:myLang = 0 | endif
+  if g:myLang == 0 | set nospell | endif
+  if g:myLang == 1 | setlocal spell spelllang=de_de | endif
+  if g:myLang == 2 | setlocal spell spelllang=en_us | endif
+  echo "language:" g:myLangList[g:myLang]
+endf
+
+map <F7> :call MySpellLang()<CR>
+imap <F7> <C-o>:call MySpellLang()<CR>
+
+

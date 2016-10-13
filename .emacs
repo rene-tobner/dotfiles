@@ -26,10 +26,14 @@
  '(centered-window-mode nil)
  '(column-number-mode t)
  '(compilation-message-face (quote default))
+ '(cua-global-mark-cursor-color "#2aa198")
+ '(cua-normal-cursor-color "#839496")
+ '(cua-overwrite-cursor-color "#b58900")
+ '(cua-read-only-cursor-color "#859900")
  '(custom-enabled-themes (quote (deep-thought)))
  '(custom-safe-themes
    (quote
-    ("46fd293ff6e2f6b74a5edf1063c32f2a758ec24a5f63d13b07a20255c074d399" "3cd28471e80be3bd2657ca3f03fbb2884ab669662271794360866ab60b6cb6e6" "0c29db826418061b40564e3351194a3d4a125d182c6ee5178c237a7364f0ff12" "4f2ede02b3324c2f788f4e0bad77f7ebc1874eff7971d2a2c9b9724a50fb3f65" "e008d9149dd39b249d4f8a9b5c1362d8f85bd11e9c08454e5728fbf0fcc11690" "c537bf460334a1eca099e05a662699415f3971b438972bed499c5efeb821086b" "7b7ef508f9241c01edaaff3e0d6f03588a6f4fddb1407a995a7a333b29e327b5" "f15a7ce08b9e13553c1f230678e9ceb5b372f8da26c9fb815eb20df3492253b7" "a27c00821ccfd5a78b01e4f35dc056706dd9ede09a8b90c6955ae6a390eb1c1e" "a0fdc9976885513b03b000b57ddde04621d94c3a08f3042d1f6e2dbc336d25c7" "e3c90203acbde2cf8016c6ba3f9c5300c97ddc63fcb78d84ca0a144d402eedc6" "8022cea21aa4daca569aee5c1b875fbb3f3248a5debc6fc8cf5833f2936fbb22" "cab317d0125d7aab145bc7ee03a1e16804d5abdfa2aa8738198ac30dc5f7b569" "b3775ba758e7d31f3bb849e7c9e48ff60929a792961a2d536edec8f68c671ca5" "58c6711a3b568437bab07a30385d34aacf64156cc5137ea20e799984f4227265" "2e1f802a1a0e64be3e8340e1ddf6b1ac92d5cae69d5d01bff01f6520fa0509ec" "6d906da85461c423a797b082dac60289c5ecb6020e36cb7c2f4e889b112ba418" "4cfad7896ff2993dafce390a729a573d794568af181100fe789f0314684347df" "c56d90af9285708041991bbc780a073182cbe91721de17c6e7a8aac1380336b3" "b9183de9666c3a16a7ffa7faaa8e9941b8d0ab50f9aaba1ca49f2f3aec7e3be9" "0ed983facae99849805b2f7be926561cb58474eb18e5296d9bb3ad7f9b088a5b" "e80932ca56b0f109f8545576531d3fc79487ca35a9a9693b62bf30d6d08c9aaf" "f66d14168cbbc5bb16f44b95e181c8e66ecd92dd11c42837edb49a94bea96f51" "ce965ad1ab1febba3a3b813376bb3bc197aa8138da2d157d118966e60ad7672f" "5523e2938d77a075377c748cf5255ddf3ad9bf336cf5b0d313ce42f0cf9e3da9" "0dfa1e8661e71b0ea99d72657ed2f8091733f260eebfb3df36fb6f04aaf91faa" "aaabb08b44f70837bb81e5f8765fbc7320aa9f194e191f7cf6991c05ab6e0bdd" "4d69ca4daa84a4fe422fc9fcdf371ea68ac78160ed8b114ee83980c26c192571" "056cc49d7892609356495b9d84cda7a3a4c4907a24fe1005be0286315e5e743a" "a5b08a032ccc87e2dcee0c6593ec7ddfb1e404484c0b31913272465411ed985f" "8a0d67242cfe61abd626f852820daf01a6c43a9a60ae1d089acd93a5d66c0aae" "cb7a467df3ac296e83871a441d397ff58dbc58cb421af058c90d36ca89a6fa60" "94a9bdbc38f38c479dd49f12576160a1f5354144b88ef92f5d5f88aa196b89ea" "8917968eb3da797036c303eb03102248447953d479e33ef91aea1eabf33f5741" "dce1c195114880942abf49757ccbcffcf28a11c64e89e7065dbcbf0d6de84926" "299164bc6ba7b154403cf90a305b38a0c5cf6d6fd8c2074bb6163ae213773484" "c96831947ff9377cec694b3510c2fa3eec9cdf58ac1c58a711450d38284a51a3" "08269693f826b4dac039e70700a469c204ad54ac98b06ea3a512b2ce239852c9" "6915f9b0d1aed1121e9f47725cae7f2f7e7128716afad8ec511d8519693e0df0" "3ec7e0747a871644d2a5ae7af865d9fbb9ca38245af35aad43b6b75490b7ce3f" "cc0dbb53a10215b696d391a90de635ba1699072745bf653b53774706999208e3" "08851585c86abcf44bb1232bced2ae13bc9f6323aeda71adfa3791d6e7fea2b6" "39dd7106e6387e0c45dfce8ed44351078f6acd29a345d8b22e7b8e54ac25bac4" "868f73b5cf78e72ca2402e1d48675e49cc9a9619c5544af7bf216515d22b58e7" "8f1cedf54f137f71382e3367e1843d10e173add99abe3a5f7d3285f5cc18f1a9" "2a86b339554590eb681ecf866b64ce4814d58e6d093966b1bf5a184acf78874d" "4e262566c3d57706c70e403d440146a5440de056dfaeb3062f004da1711d83fc" "c5a044ba03d43a725bd79700087dea813abcb6beb6be08c7eb3303ed90782482" "ef08e77c67344f23154fd8cb9f3b8b1b4bb1799c0bf9d05dfd4b792557e0e401" "4cf3221feff536e2b3385209e9b9dc4c2e0818a69a1cdb4b522756bcdf4e00a4" "4c41d3e6fb19438b23899ffcb64cec224f995866911974f274b9c3771630ae96" "c14901c2292ec32e2718ec0324bf238dc2fe72466de3800977ad46a4cf32034a" "130dde3591d54f11db5f5c78185556b5b122b18d4e1dbaf9251666587e440b57" "5beea8d4fc82da6bc88094f2faa22750096c90674e4156d7a9ead6b9c0392b26" "aba5c6a53bd439fd531d9c91a7a50228c90ce40926225047f81b03f11ad05c51" "6d637708c89f256c7de050148ad75acb8b1cd653ae23e175542e27cdccb99d43" "3b0ac518cb44e09dbde90f828ae3ec97d69a164b825bc31b8eeb43c4ceb87656" "456ac8176c7c01680384356cbdc568a7683d1bada9c83ae3d7294809ddda4014" "c87cc60d01cf755375759d165c1d60d9586c6a31f0b5437a0378c2a93cfc8407" "ed5af4af1d148dc4e0e79e4215c85e7ed21488d63303ddde27880ea91112b07e" "1177fe4645eb8db34ee151ce45518e47cc4595c3e72c55dc07df03ab353ad132" "7bf64a1839bf4dbc61395bd034c21204f652185d17084761a648251041b70233" "62c9339d5cac3a49688abb34e98f87a6ee82003a11251f12e0ada1788090c40f" "cbef37d6304f12fb789f5d80c2b75ea01465e41073c30341dc84c6c0d1eb611d" "8cf56691a70156f611ac86d0bbcbc7dee7673df195de5918f34bfdc6814ffd39" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" "a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" "756597b162f1be60a12dbd52bab71d40d6a2845a3e3c2584c6573ee9c332a66e" "6a37be365d1d95fad2f4d185e51928c789ef7a4ccf17e7ca13ad63a8bf5b922f" "e26780280b5248eb9b2d02a237d9941956fc94972443b0f7aeec12b5c15db9f3" "c7359bd375132044fe993562dfa736ae79efc620f68bab36bd686430c980df1c" "c4e6fe8f5728a5d5fd0e92538f68c3b4e8b218bcfb5e07d8afff8731cc5f3df0" "e16a771a13a202ee6e276d06098bc77f008b73bbac4d526f160faa2d76c1dd0e" "53c542b560d232436e14619d058f81434d6bbcdc42e00a4db53d2667d841702e" "1989847d22966b1403bab8c674354b4a2adf6e03e0ffebe097a6bd8a32be1e19" "bf648fd77561aae6722f3d53965a9eb29b08658ed045207fe32ffed90433eb52" "ce79400f46bd76bebeba655465f9eadf60c477bd671cbcd091fe871d58002a88" "0ebe0307942b6e159ab794f90a074935a18c3c688b526a2035d14db1214cf69c" "33c5a452a4095f7e4f6746b66f322ef6da0e770b76c0ed98a438e76c497040bb" "9bcb8ee9ea34ec21272bb6a2044016902ad18646bd09fdd65abae1264d258d89" "90b5269aefee2c5f4029a6a039fb53803725af6f5c96036dee5dc029ff4dff60" "7d4d00a2c2a4bba551fcab9bfd9186abe5bfa986080947c2b99ef0b4081cb2a6" "a774c5551bc56d7a9c362dca4d73a374582caedb110c201a09b410c0ebbb5e70" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
+    ("96998f6f11ef9f551b427b8853d947a7857ea5a578c75aa9c4e7c73fe04d10b4" "987b709680284a5858d5fe7e4e428463a20dfabe0a6f2a6146b3b8c7c529f08b" "3020dc2250c069e54f2b511a8ebd1f7cb32bcfc656052d338e5edaafe15b63ce" "94c5bc8fc704ae14be32ae431b0ea69401b86cced60bfc2dd61b59b5752aa548" "762052e64a1afe2858cbdb74e235923b1325dae3fb6d1863eaebfffa4e6d01b6" "5a121632ba70f6ad6579d56046fd4d1a7d636183dcccfab60f3d9f19a1590bf1" "3189a4f0f158218f036f31974f70209d7aca4ef0657b59c8f9af588c25fb9157" "2dfc88456d75733816c47d9cbc76577b1834a2edfeeb26ba5c971a83a70698fa" "abac85c5290c454e2aee3e7dec431c9320bc2009345fa5f6b80ca290180c39c1" "0024424ff9d06038246914144e7eee9812ee4597ddde76f53564fabcb39e3feb" "ad97202c92f426a867e83060801938acf035921d5d7e78da3041a999082fb565" "47e37fa090129214330d13a68549d5c86ccc2c41f4979cb4be130ff945a9859a" "3cc2385c39257fed66238921602d8104d8fd6266ad88a006d0a4325336f5ee02" "e9776d12e4ccb722a2a732c6e80423331bcb93f02e089ba2a4b02e85de1cf00e" "1a85b8ade3d7cf76897b338ff3b20409cb5a5fbed4e45c6f38c98eee7b025ad4" "3d5ef3d7ed58c9ad321f05360ad8a6b24585b9c49abcee67bdcbb0fe583a6950" "7bde52fdac7ac54d00f3d4c559f2f7aa899311655e7eb20ec5491f3b5c533fe8" "46fd293ff6e2f6b74a5edf1063c32f2a758ec24a5f63d13b07a20255c074d399" "3cd28471e80be3bd2657ca3f03fbb2884ab669662271794360866ab60b6cb6e6" "0c29db826418061b40564e3351194a3d4a125d182c6ee5178c237a7364f0ff12" "4f2ede02b3324c2f788f4e0bad77f7ebc1874eff7971d2a2c9b9724a50fb3f65" "e008d9149dd39b249d4f8a9b5c1362d8f85bd11e9c08454e5728fbf0fcc11690" "c537bf460334a1eca099e05a662699415f3971b438972bed499c5efeb821086b" "7b7ef508f9241c01edaaff3e0d6f03588a6f4fddb1407a995a7a333b29e327b5" "f15a7ce08b9e13553c1f230678e9ceb5b372f8da26c9fb815eb20df3492253b7" "a27c00821ccfd5a78b01e4f35dc056706dd9ede09a8b90c6955ae6a390eb1c1e" "a0fdc9976885513b03b000b57ddde04621d94c3a08f3042d1f6e2dbc336d25c7" "e3c90203acbde2cf8016c6ba3f9c5300c97ddc63fcb78d84ca0a144d402eedc6" "8022cea21aa4daca569aee5c1b875fbb3f3248a5debc6fc8cf5833f2936fbb22" "cab317d0125d7aab145bc7ee03a1e16804d5abdfa2aa8738198ac30dc5f7b569" "b3775ba758e7d31f3bb849e7c9e48ff60929a792961a2d536edec8f68c671ca5" "58c6711a3b568437bab07a30385d34aacf64156cc5137ea20e799984f4227265" "2e1f802a1a0e64be3e8340e1ddf6b1ac92d5cae69d5d01bff01f6520fa0509ec" "6d906da85461c423a797b082dac60289c5ecb6020e36cb7c2f4e889b112ba418" "4cfad7896ff2993dafce390a729a573d794568af181100fe789f0314684347df" "c56d90af9285708041991bbc780a073182cbe91721de17c6e7a8aac1380336b3" "b9183de9666c3a16a7ffa7faaa8e9941b8d0ab50f9aaba1ca49f2f3aec7e3be9" "0ed983facae99849805b2f7be926561cb58474eb18e5296d9bb3ad7f9b088a5b" "e80932ca56b0f109f8545576531d3fc79487ca35a9a9693b62bf30d6d08c9aaf" "f66d14168cbbc5bb16f44b95e181c8e66ecd92dd11c42837edb49a94bea96f51" "ce965ad1ab1febba3a3b813376bb3bc197aa8138da2d157d118966e60ad7672f" "5523e2938d77a075377c748cf5255ddf3ad9bf336cf5b0d313ce42f0cf9e3da9" "0dfa1e8661e71b0ea99d72657ed2f8091733f260eebfb3df36fb6f04aaf91faa" "aaabb08b44f70837bb81e5f8765fbc7320aa9f194e191f7cf6991c05ab6e0bdd" "4d69ca4daa84a4fe422fc9fcdf371ea68ac78160ed8b114ee83980c26c192571" "056cc49d7892609356495b9d84cda7a3a4c4907a24fe1005be0286315e5e743a" "a5b08a032ccc87e2dcee0c6593ec7ddfb1e404484c0b31913272465411ed985f" "8a0d67242cfe61abd626f852820daf01a6c43a9a60ae1d089acd93a5d66c0aae" "cb7a467df3ac296e83871a441d397ff58dbc58cb421af058c90d36ca89a6fa60" "94a9bdbc38f38c479dd49f12576160a1f5354144b88ef92f5d5f88aa196b89ea" "8917968eb3da797036c303eb03102248447953d479e33ef91aea1eabf33f5741" "dce1c195114880942abf49757ccbcffcf28a11c64e89e7065dbcbf0d6de84926" "299164bc6ba7b154403cf90a305b38a0c5cf6d6fd8c2074bb6163ae213773484" "c96831947ff9377cec694b3510c2fa3eec9cdf58ac1c58a711450d38284a51a3" "08269693f826b4dac039e70700a469c204ad54ac98b06ea3a512b2ce239852c9" "6915f9b0d1aed1121e9f47725cae7f2f7e7128716afad8ec511d8519693e0df0" "3ec7e0747a871644d2a5ae7af865d9fbb9ca38245af35aad43b6b75490b7ce3f" "cc0dbb53a10215b696d391a90de635ba1699072745bf653b53774706999208e3" "08851585c86abcf44bb1232bced2ae13bc9f6323aeda71adfa3791d6e7fea2b6" "39dd7106e6387e0c45dfce8ed44351078f6acd29a345d8b22e7b8e54ac25bac4" "868f73b5cf78e72ca2402e1d48675e49cc9a9619c5544af7bf216515d22b58e7" "8f1cedf54f137f71382e3367e1843d10e173add99abe3a5f7d3285f5cc18f1a9" "2a86b339554590eb681ecf866b64ce4814d58e6d093966b1bf5a184acf78874d" "4e262566c3d57706c70e403d440146a5440de056dfaeb3062f004da1711d83fc" "c5a044ba03d43a725bd79700087dea813abcb6beb6be08c7eb3303ed90782482" "ef08e77c67344f23154fd8cb9f3b8b1b4bb1799c0bf9d05dfd4b792557e0e401" "4cf3221feff536e2b3385209e9b9dc4c2e0818a69a1cdb4b522756bcdf4e00a4" "4c41d3e6fb19438b23899ffcb64cec224f995866911974f274b9c3771630ae96" "c14901c2292ec32e2718ec0324bf238dc2fe72466de3800977ad46a4cf32034a" "130dde3591d54f11db5f5c78185556b5b122b18d4e1dbaf9251666587e440b57" "5beea8d4fc82da6bc88094f2faa22750096c90674e4156d7a9ead6b9c0392b26" "aba5c6a53bd439fd531d9c91a7a50228c90ce40926225047f81b03f11ad05c51" "6d637708c89f256c7de050148ad75acb8b1cd653ae23e175542e27cdccb99d43" "3b0ac518cb44e09dbde90f828ae3ec97d69a164b825bc31b8eeb43c4ceb87656" "456ac8176c7c01680384356cbdc568a7683d1bada9c83ae3d7294809ddda4014" "c87cc60d01cf755375759d165c1d60d9586c6a31f0b5437a0378c2a93cfc8407" "ed5af4af1d148dc4e0e79e4215c85e7ed21488d63303ddde27880ea91112b07e" "1177fe4645eb8db34ee151ce45518e47cc4595c3e72c55dc07df03ab353ad132" "7bf64a1839bf4dbc61395bd034c21204f652185d17084761a648251041b70233" "62c9339d5cac3a49688abb34e98f87a6ee82003a11251f12e0ada1788090c40f" "cbef37d6304f12fb789f5d80c2b75ea01465e41073c30341dc84c6c0d1eb611d" "8cf56691a70156f611ac86d0bbcbc7dee7673df195de5918f34bfdc6814ffd39" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" "a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" "756597b162f1be60a12dbd52bab71d40d6a2845a3e3c2584c6573ee9c332a66e" "6a37be365d1d95fad2f4d185e51928c789ef7a4ccf17e7ca13ad63a8bf5b922f" "e26780280b5248eb9b2d02a237d9941956fc94972443b0f7aeec12b5c15db9f3" "c7359bd375132044fe993562dfa736ae79efc620f68bab36bd686430c980df1c" "c4e6fe8f5728a5d5fd0e92538f68c3b4e8b218bcfb5e07d8afff8731cc5f3df0" "e16a771a13a202ee6e276d06098bc77f008b73bbac4d526f160faa2d76c1dd0e" "53c542b560d232436e14619d058f81434d6bbcdc42e00a4db53d2667d841702e" "1989847d22966b1403bab8c674354b4a2adf6e03e0ffebe097a6bd8a32be1e19" "bf648fd77561aae6722f3d53965a9eb29b08658ed045207fe32ffed90433eb52" "ce79400f46bd76bebeba655465f9eadf60c477bd671cbcd091fe871d58002a88" "0ebe0307942b6e159ab794f90a074935a18c3c688b526a2035d14db1214cf69c" "33c5a452a4095f7e4f6746b66f322ef6da0e770b76c0ed98a438e76c497040bb" "9bcb8ee9ea34ec21272bb6a2044016902ad18646bd09fdd65abae1264d258d89" "90b5269aefee2c5f4029a6a039fb53803725af6f5c96036dee5dc029ff4dff60" "7d4d00a2c2a4bba551fcab9bfd9186abe5bfa986080947c2b99ef0b4081cb2a6" "a774c5551bc56d7a9c362dca4d73a374582caedb110c201a09b410c0ebbb5e70" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
  '(default-input-method "chinese-py")
  '(electric-indent-mode nil)
  '(electric-pair-mode t)
@@ -40,6 +44,11 @@
  '(global-hl-line-mode nil)
  '(help-window-select t)
  '(highlight-changes-colors (quote ("#d33682" "#6c71c4")))
+ '(highlight-symbol-colors
+   (--map
+    (solarized-color-blend it "#002b36" 0.25)
+    (quote
+     ("#b58900" "#2aa198" "#dc322f" "#6c71c4" "#859900" "#cb4b16" "#268bd2"))))
  '(highlight-symbol-foreground-color "#93a1a1")
  '(highlight-tail-colors
    (quote
@@ -51,6 +60,12 @@
      ("#8B2C02" . 70)
      ("#93115C" . 85)
      ("#073642" . 100))))
+ '(hl-bg-colors
+   (quote
+    ("#7B6000" "#8B2C02" "#990A1B" "#93115C" "#3F4D91" "#00629D" "#00736F" "#546E00")))
+ '(hl-fg-colors
+   (quote
+    ("#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36")))
  '(ibus-python-shell-command-name "python2")
  '(ido-mode (quote both) nil (ido))
  '(inhibit-startup-screen t)
@@ -98,7 +113,7 @@
                         #("1" 0 1
                           (name "Magister"))))))
  '(save-place t nil (saveplace))
- '(scroll-bar-mode t)
+ '(scroll-bar-mode nil)
  '(scss-compile-at-save nil)
  '(smartrep-mode-line-active-bg (solarized-color-blend "#859900" "#073642" 0.2))
  '(syslog-debug-face
@@ -116,8 +131,10 @@
  '(syslog-warn-face
    (quote
     ((t :background unspecified :foreground "#cb4b16" :weight bold))))
- '(tabbar-mode t nil (tabbar))
+ '(tabbar-mode nil nil (tabbar))
  '(tabbar-separator (quote (0.5)))
+ '(term-default-bg-color "#002b36")
+ '(term-default-fg-color "#839496")
  '(tool-bar-mode nil)
  '(uniquify-buffer-name-style (quote post-forward) nil (uniquify))
  '(vc-annotate-background nil)
@@ -165,18 +182,19 @@
  '(helm-selection ((t (:background "#206080" :foreground "black"))))
  '(helm-source-header ((t (:background "#22083397778B" :foreground "#93a1a1" :weight bold :height 1.3 :family "Sans Serif"))))
  '(linum-relative-current-face ((t (:inherit linum :background "chocolate" :foreground "firebrick" :weight bold))))
+ '(mode-line ((t (:height 0.8))))
  '(popup-tip-face ((t (:background "chocolate4" :foreground "dark gray"))))
  '(whitespace-indentation ((t (:background "dark magenta" :foreground "deep sky blue"))))
  '(whitespace-space-after-tab ((t (:background "dark magenta" :foreground "cyan")))))
 
 
-(add-to-list 'default-frame-alist '(font . "Droid Sans Mono 11"))
+(add-to-list 'default-frame-alist '(font . "Droid Sans Mono 10"))
+;; (add-to-list 'default-frame-alist '(font . "Monoid 10"))
+;;(load "/home/rtb/git/dotfiles/cjk-font.el")
 ;;(set-face-attribute 'default t :font "Droid Sans Mono 14" )
 ;;(set-default-font "Droid Sans Mono 10")
 
 (setq undo-tree-auto-save-history t)
-
-;; (savehist-mode t)
 
 ;; für Terminal?!
 (setq-default cursor-type 'hbar)
@@ -195,6 +213,10 @@
 ;; sollte in custom stehen:
 (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
 
+;; does not work: (comint input ring is not saved)
+;; (savehist-mode t)
+;; instead see here: https://oleksandrmanzyuk.wordpress.com/2011/10/23/a-persistent-command-history-in-emacs/ 
+;; there also is an article for ghci completion!! (refound)
 (require 'savehist)
 (savehist-mode t)
 (eval-after-load 'company
@@ -260,11 +282,6 @@
 (recentf-mode 1)
 (setq recentf-max-menu-items 1000)
 
-;; does not work: (comint input ring is not saved)
-;; (savehist-mode t)
-;; instead see here: https://oleksandrmanzyuk.wordpress.com/2011/10/23/a-persistent-command-history-in-emacs/ 
-;; there also is an article for ghci completion!! (refound)
-
 (scroll-bar-mode -1)
 (electric-pair-mode)
 (global-set-key (kbd "C-ö") 'other-window)
@@ -320,9 +337,10 @@
 
 ;;(setq evil-search-module 'evil-search)
 ;; modes without evil
-(add-to-list 'evil-emacs-state-modes 'interactive-haskell-mode)
+(add-to-list 'evil-emacs-state-modes 'interactive-haskell-mode 'artist-mode)
 ;; Emacs modes to Motion modes
 (setq evil-motion-state-modes (append evil-emacs-state-modes evil-motion-state-modes))
+(setq evil-motion-state-modes (delete 'debugger-mode evil-motion-state-modes))
 ;; (setq evil-emacs-state-modes (list 'desktop-menu-mode))
 (setq evil-motion-state-modes (delete 'desktop-menu-mode evil-motion-state-modes))
 (add-to-list 'evil-overriding-maps 'desktop-menu-mode-map)
@@ -344,8 +362,10 @@
 (define-key evil-normal-state-map (kbd "k") 'evil-previous-visual-line)
 (define-key evil-visual-state-map (kbd "j") 'evil-next-visual-line)
 (define-key evil-visual-state-map (kbd "k") 'evil-previous-visual-line)
-(define-key evil-normal-state-map (kbd "C-8") 'evil-switch-to-windows-last-buffer)
-(define-key evil-motion-state-map (kbd "C-8") 'evil-switch-to-windows-last-buffer)
+(define-key evil-normal-state-map (kbd "C-0") 'evil-switch-to-windows-last-buffer)
+(define-key evil-normal-state-map (kbd "<f2>") 'evil-switch-to-windows-last-buffer)
+(define-key evil-motion-state-map (kbd "C-0") 'evil-switch-to-windows-last-buffer)
+(define-key evil-motion-state-map (kbd "<f2>") 'evil-switch-to-windows-last-buffer)
 
 ;; Make C-g work like <esc>
 (define-key evil-normal-state-map "\C-g" 'evil-normal-state)
@@ -441,38 +461,39 @@ Should investigate further (TODO)."
   (evil-define-key 'normal comint-mode-map (kbd "C-d") 'evil-scroll-down))
 
 
-(require 'neotree)
-(global-set-key [f8] 'neotree-toggle)
+;; (require 'neotree)
+;; (global-set-key [f8] 'neotree-toggle)
+(global-set-key [f8] 'eval-buffer)
 ;; when opening neotree switch to dir of current buffer
-(setq neo-smart-open t)
-(add-hook 'neotree-mode-hook
-           (lambda ()
-             ;; DONE: truncate does work now with visual-line disabled
-             (visual-line-mode -1)
-             (setq truncate-lines t)
-             (define-key evil-normal-state-local-map (kbd "TAB") 'neotree-enter)
-             (define-key evil-normal-state-local-map (kbd "SPC") 'neotree-enter)
-             (define-key evil-normal-state-local-map (kbd "l") 'neotree-enter)
-             (define-key evil-normal-state-local-map (kbd "h") 'neotree-enter)
-             (define-key evil-normal-state-local-map (kbd "q") 'neotree-hide)
-             (define-key evil-normal-state-local-map (kbd "RET") 'neotree-enter)
+;; (setq neo-smart-open t)
+;; (add-hook 'neotree-mode-hook
+;;            (lambda ()
+;;              ;; DONE: truncate does work now with visual-line disabled
+;;              (visual-line-mode -1)
+;;              (setq truncate-lines t)
+;;              (define-key evil-normal-state-local-map (kbd "TAB") 'neotree-enter)
+;;              (define-key evil-normal-state-local-map (kbd "SPC") 'neotree-enter)
+;;              (define-key evil-normal-state-local-map (kbd "l") 'neotree-enter)
+;;              (define-key evil-normal-state-local-map (kbd "h") 'neotree-enter)
+;;              (define-key evil-normal-state-local-map (kbd "q") 'neotree-hide)
+;;              (define-key evil-normal-state-local-map (kbd "RET") 'neotree-enter)
 
-             (define-key evil-normal-state-local-map (kbd "g") 'neotree-refresh)
-             (define-key evil-normal-state-local-map (kbd "A") 'neotree-stretch-toggle)
-             (define-key evil-normal-state-local-map (kbd "u") 'neotree-select-up-node)
-             (define-key evil-normal-state-local-map (kbd "D") 'neotree-select-down-node)
-             (define-key evil-normal-state-local-map (kbd "H") 'neotree-hidden-file-toggle)
-             (define-key evil-normal-state-local-map (kbd "S") 'neotree-select-previous-sibling-node)
-             (define-key evil-normal-state-local-map (kbd "s") 'neotree-select-next-sibling-node)
-             (define-key evil-normal-state-local-map (kbd "C") 'neotree-change-root)
-             (define-key evil-normal-state-local-map (kbd "c") 'neotree-create-node)
-             (define-key evil-normal-state-local-map (kbd "+") 'neotree-create-node)
-             (define-key evil-normal-state-local-map (kbd "d") 'neotree-delete-node)
-             (define-key evil-normal-state-local-map (kbd "r") 'neotree-rename-node)
-))
+;;              (define-key evil-normal-state-local-map (kbd "g") 'neotree-refresh)
+;;              (define-key evil-normal-state-local-map (kbd "A") 'neotree-stretch-toggle)
+;;              (define-key evil-normal-state-local-map (kbd "u") 'neotree-select-up-node)
+;;              (define-key evil-normal-state-local-map (kbd "D") 'neotree-select-down-node)
+;;              (define-key evil-normal-state-local-map (kbd "H") 'neotree-hidden-file-toggle)
+;;              (define-key evil-normal-state-local-map (kbd "S") 'neotree-select-previous-sibling-node)
+;;              (define-key evil-normal-state-local-map (kbd "s") 'neotree-select-next-sibling-node)
+;;              (define-key evil-normal-state-local-map (kbd "C") 'neotree-change-root)
+;;              (define-key evil-normal-state-local-map (kbd "c") 'neotree-create-node)
+;;              (define-key evil-normal-state-local-map (kbd "+") 'neotree-create-node)
+;;              (define-key evil-normal-state-local-map (kbd "d") 'neotree-delete-node)
+;;              (define-key evil-normal-state-local-map (kbd "r") 'neotree-rename-node)
+;; ))
 
-(setq neo-dont-be-alone nil)
-(setq neo-theme 'arrow)
+;; (setq neo-dont-be-alone nil)
+;; (setq neo-theme 'arrow)
 
 ;; Chinese-Input
 (define-key evil-insert-state-map (kbd "M-SPC") 'toggle-input-method)
@@ -657,6 +678,14 @@ With a prefix arg, changes to grouping by major mode."
                                          surround-pairs-alist))
 (setq-default surround-pairs-alist (cons '(?i "\\inlst$" . "$")
                                          surround-pairs-alist))
+(setq-default surround-pairs-alist (cons '(?z "\\hspace{0.2em}「" . "」\\hspace{0.2em}")
+                                         surround-pairs-alist))
+(setq-default surround-pairs-alist (cons '(?t "「" . "」")
+                                         surround-pairs-alist))
+(setq-default surround-pairs-alist (cons '(?p "\\xp{" . "}")
+                                         surround-pairs-alist))
+(setq-default surround-pairs-alist (cons '(?e "`" . "'")
+                                         surround-pairs-alist))
 
 ; http://ergoemacs.org/emacs/elisp_editing_basics.html
 (defun my-surround-german-guillemets ()
@@ -798,6 +827,10 @@ With a prefix arg, changes to grouping by major mode."
                            (reftex-parse-all)))
 
 (add-hook 'org-mode-hook 'na-org-mode-reftex-setup)
+;;     (evil-define-key 'normal dired-mode-map "h" 'my-dired-up-directory)
+;; (add-hook 'org-mode-hook (lambda ()
+;;                            (evil-define-key 'normal org-mode-map "J" 'evil-join)))
+
 
 ;; (setq org-latex-pdf-process
 ;;       '("xelatex -shell-escape -interaction nonstopmode -output-directory %o %f"
@@ -805,8 +838,10 @@ With a prefix arg, changes to grouping by major mode."
 ;;         "xelatex -shell-escape -interaction nonstopmode -output-directory %o %f"
 ;;         "xelatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
 (setq org-latex-pdf-process
-      '("xelatex -shell-escape -no-pdf -interaction nonstopmode -output-directory %o %f"
-        "biber %b"
+      '(
+        ;; "/home/rtb/datatooltk/bin/datatooltk --map-tex-specials --sep ';' --nocsvheader --csv tests/eng_chi3.csv --output tests/eng_chi3.dbtex"
+        "xelatex -shell-escape -no-pdf -interaction nonstopmode -output-directory %o %f"
+        ;; "biber %b"
         "xelatex -shell-escape -no-pdf -interaction nonstopmode -output-directory %o %f"
         "xdvipdfmx %b"
         ))
@@ -884,8 +919,8 @@ With a prefix arg, changes to grouping by major mode."
                 "\\end{frame}")))
 
 (add-to-list 'org-latex-classes
-             '("cn-article"
-               "\\documentclass[12pt,a4paper,twoside]{report}
+             '("cn-mag"
+               "\\documentclass[12pt,twopage, a4paper]{report}
 \\usepackage[babel,german=guillemets]{csquotes}
 \\usepackage[xetex,colorlinks=false,CJKbookmarks=true,linkcolor=blue,urlcolor=blue,menucolor=blue]{hyperref}
 \\usepackage[xindy={language=german-duden, codepage=utf8}, style=altlist, section, numberedsection=false, toc, nopostdot]{glossaries}
@@ -899,6 +934,7 @@ With a prefix arg, changes to grouping by major mode."
 \\usepackage{appendix}
 \\usepackage{xunicode}
 \\usepackage[indentfirst=false]{xeCJK}
+\\xeCJKsetup{PunctStyle=quanjiao}
 \\usepackage{lmodern}
 \\usepackage{verbatim}
 \\usepackage{fixltx2e}
@@ -909,13 +945,16 @@ With a prefix arg, changes to grouping by major mode."
 \\usetikzlibrary{positioning, matrix,fit, arrows.meta}
 \\usepackage{framed}
 \\usepackage{wrapfig}
+\\usepackage{array}
+\\usepackage{booktabs}
 \\usepackage{soul}
 \\usepackage{textcomp}
 \\usepackage{listings}
-\\usepackage[margin=1.3in]{geometry}
+\\usepackage[margin=1.5in]{geometry}
 \\usepackage{algorithm}
 \\usepackage{algorithmic}
 \\usepackage{marvosym}
+\\usepackage{datatool}
 \\usepackage{wasysym}
 \\usepackage{latexsym}
 \\usepackage[citestyle=authoryear-ibid, bibstyle=authortitle, natbib=true, isbn=false, backend=biber]{biblatex}
@@ -926,9 +965,15 @@ With a prefix arg, changes to grouping by major mode."
 \\BeforeBeginEnvironment{Verbatim}{\\def\\baselinestretch{0.7}}
 %\\defaultfontfeatures{Mapping=tex-text}
 \\usepackage{fontspec}
+\\usepackage[flushmargin]{footmisc}
+\\usepackage{chngcntr}
+\\counterwithout{footnote}{chapter}
 \\usepackage{emptypage}
 \\usepackage{fancyvrb}
+\\usepackage{xpinyin}
+\\xpinyinsetup{ratio={.5}}
 \\setCJKmainfont[Scale=1]{Adobe Song Std}   % 设置缺省中文字体
+%\\setCJKmainfont[Scale=1]{SimHei}   % 设置缺省中文字体
 \\setCJKmonofont[Scale=0.8]{AR PL New Sung Mono}  %xelatex 細明體
 \\setmainfont[Numbers={Proportional, OldStyle}]{Linux Libertine}
 \\setsansfont[BoldFont=WenQuanYi Zen Hei Sharp]{AR PL UKai CN}
@@ -962,15 +1007,121 @@ With a prefix arg, changes to grouping by major mode."
 \\makeatother
 
 \\fancyhf{}
-\\fancyhead[LO,RE]{\\fancyplain{}{\\itshape\\thepage}}
-\\fancyhead[RO]{\\fancyplain{}{\\itshape\\nouppercase  \\leftmark}}
-\\fancyhead[LE]{\\fancyplain{}{\\itshape\\nouppercase  \\rightmark}}
+\\fancyhead[LO,RE]{\\fancyplain{}{\\thepage}}
+\\fancyhead[RO]{\\fancyplain{}{\\nouppercase  \\leftmark}}
+\\fancyhead[LE]{\\fancyplain{}{\\nouppercase  \\rightmark}}
 \\fancyfoot[C]{}
 \\tolerance=1000
 [NO-DEFAULT-PACKAGES]
 [NO-PACKAGES]"
 
 ("\\chapter{%s}" . "\\chapter*{%s}")
+("\\section{%s}" . "\\section*{%s}")
+("\\subsection{%s}" . "\\subsection*{%s}")
+("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+("\\paragraph{%s}" . "\\paragraph*{%s}")
+("\\subparagraenumitem{%s}" . "\\subparagraph*{%s}")))
+
+(add-to-list 'org-latex-classes
+             '("cn-article"
+               "\\documentclass[12pt,a4paper]{article}
+\\usepackage[ngerman]{babel}
+\\usepackage[babel,german=guillemets]{csquotes}
+\\usepackage[xetex,colorlinks=false,CJKbookmarks=true,linkcolor=blue,urlcolor=blue,menucolor=blue]{hyperref}
+%\\usepackage[xindy={language=german-duden, codepage=utf8}, style=altlist, section, numberedsection=false, toc, nopostdot]{glossaries}
+%\\usepackage[xindy, splitindex]{imakeidx}
+\\usepackage{graphicx}
+\\usepackage{setspace}
+%\\onehalfspacing
+\\usepackage{parskip}
+\\usepackage{enumitem}
+\\usepackage{xcolor}
+\\usepackage{appendix}
+\\usepackage{xunicode}
+\\usepackage[indentfirst=false]{xeCJK}
+\\xeCJKsetup{PunctStyle=quanjiao}
+\\usepackage{lmodern}
+\\usepackage{verbatim}
+\\usepackage{fixltx2e}
+\\usepackage{longtable}
+\\usepackage{tabularx}
+\\usepackage{float}
+\\usepackage{tikz}
+\\usepackage{tikz-cd}
+\\usetikzlibrary{positioning, matrix,fit, arrows.meta}
+\\usepackage{framed}
+\\usepackage{wrapfig}
+\\usepackage{array}
+\\usepackage{booktabs}
+\\usepackage{soul}
+\\usepackage{textcomp}
+\\usepackage{listings}
+\\usepackage[margin=0.8in]{geometry}
+\\usepackage{algorithm}
+\\usepackage{algorithmic}
+\\usepackage{marvosym}
+\\usepackage{datatool}
+\\usepackage{wasysym}
+\\usepackage{latexsym}
+\\usepackage[citestyle=authoryear-ibid, bibstyle=authortitle, natbib=true, isbn=false, backend=biber]{biblatex}
+\\usepackage{fancyhdr}
+\\usepackage{xspace}
+\\usepackage{metalogo}
+\\usepackage{etoolbox}
+\\BeforeBeginEnvironment{Verbatim}{\\def\\baselinestretch{0.7}}
+%\\defaultfontfeatures{Mapping=tex-text}
+\\usepackage{fontspec}
+\\usepackage[flushmargin]{footmisc}
+\\usepackage{chngcntr}
+\\counterwithout{footnote}{chapter}
+\\usepackage{emptypage}
+\\usepackage{fancyvrb}
+\\usepackage{xpinyin}
+\\xpinyinsetup{ratio={.5}}
+\\setCJKmainfont[Scale=1]{Adobe Song Std}   % 设置缺省中文字体
+%\\setCJKmainfont[Scale=1]{SimHei}   % 设置缺省中文字体
+\\setCJKmonofont[Scale=0.8]{AR PL New Sung Mono}  %xelatex 細明體
+\\setmainfont[Numbers={Proportional, OldStyle}]{Linux Libertine}
+\\setsansfont[BoldFont=WenQuanYi Zen Hei Sharp]{AR PL UKai CN}
+\\setmonofont[Scale=0.8]{DejaVu Sans Mono}
+\\newcommand\\fontnamemono{WenQuanYi Micro Hei} %等宽字体
+\\newfontinstance\\MONO{\\fontnamemono}
+\\newcommand{\\mono}[1]{{\\MONO #1}}
+\\hypersetup{unicode=true}
+\\geometry{a4paper, textwidth=6.5in, textheight=10in, marginparsep=7pt, marginparwidth=.6in}
+\\usepackage[font=footnotesize]{caption}
+\\definecolor{foreground}{RGB}{220,220,204}%浅灰
+\\definecolor{background}{RGB}{62,62,62}%浅黑
+\\definecolor{preprocess}{RGB}{250,187,249}%浅紫
+\\definecolor{var}{RGB}{239,224,174}%浅肉色
+\\definecolor{string}{RGB}{154,150,230}%浅紫色
+\\definecolor{type}{RGB}{225,225,116}%浅黄
+\\definecolor{function}{RGB}{140,206,211}%浅天蓝
+\\definecolor{keyword}{RGB}{239,224,174}%浅肉色
+\\definecolor{comment}{RGB}{180,98,4}%深褐色
+\\definecolor{doc}{RGB}{175,215,175}%浅铅绿
+\\definecolor{comdil}{RGB}{111,128,111}%深灰
+\\definecolor{constant}{RGB}{220,162,170}%粉红
+\\definecolor{buildin}{RGB}{127,159,127}%深铅绿
+\\punctstyle{kaiming}
+\\title{}
+
+%\\pagestyle{fancyplain}
+%\\makeatletter
+%\\renewcommand{\\sectionmark}[1]{\\markright{\\thesection~~#1}}
+%\\renewcommand{\\chaptermark}[1]{\\markboth{\\if@mainmatter\\thechapter~~\\fi#1}{}}
+%\\makeatother
+%
+%\\fancyhf{}
+%\\fancyhead[LO,RE]{\\fancyplain{}{\\thepage}}
+%\\fancyhead[RO]{\\fancyplain{}{\\nouppercase  \\leftmark}}
+%\\fancyhead[LE]{\\fancyplain{}{\\nouppercase  \\rightmark}}
+%\\fancyfoot[C]{}
+%\\tolerance=1000
+[NO-DEFAULT-PACKAGES]
+[NO-PACKAGES]"
+
+;; ("\\chapter{%s}" . "\\chapter*{%s}")
 ("\\section{%s}" . "\\section*{%s}")
 ("\\subsection{%s}" . "\\subsection*{%s}")
 ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
@@ -985,8 +1136,31 @@ With a prefix arg, changes to grouping by major mode."
   ;; ("aboveskip" "-4ex")
   ("captionpos" "b")
   ("numbers" "left")
+  ("mathescape" "true")
   ("numberstyle" "\\tiny")
+  ("showstringspaces" "false")
     ))
+
+;; Anpassung für die Listen in cn-arcticle (aus ox-latex.el),
+;; dass immer "[itemsep=0pt,parsep=0pt]"
+(defun org-latex-plain-list (plain-list contents info)
+  "Transcode a PLAIN-LIST element from Org to LaTeX.
+CONTENTS is the contents of the list.  INFO is a plist holding
+contextual information."
+  (let* ((type (org-element-property :type plain-list))
+	 (attr (org-export-read-attribute :attr_latex plain-list))
+	 (latex-type (let ((env (plist-get attr :environment)))
+		       (cond (env (format "%s" env))
+			     ((eq type 'ordered) "enumerate")
+			     ((eq type 'descriptive) "description")
+			     (t "itemize")))))
+    (org-latex--wrap-label
+     plain-list
+     (format "\\begin{%s}%s\n%s\\end{%s}"
+	     latex-type
+	     (or (plist-get attr :options) "[itemsep=0pt,parsep=0pt]")
+	     contents
+	     latex-type))))
 
 ;; deprecated variable (not existent anymore)
 ;; (setq org-export-latex-listings-options
@@ -1254,7 +1428,10 @@ contain any instance of \"£$comma$£\"."
 
 ;;(speedbar-add-supported-extension ".hs")
 ;;(speedbar 1)
-(server-mode 1)
+;;(unless (server-running-p)
+  (server-start)
+;;)
+
 (require 'iso-transl)
 ;;(global-set-key [S-dead-grave] "`")
 ;;(global-set-key [dead-circumflex] "^")
@@ -1366,9 +1543,10 @@ contain any instance of \"£$comma$£\"."
 (setq auto-fill-mode 1)
 
  ;; ===== Set standard indent to 2 rather that 4 ====
-(setq standard-indent 2)
-(setq c-basic-offset 2
-      tab-width 2)
+(setq standard-indent 4)
+(setq-default standard-indent 4)
+(setq c-basic-offset 4
+      tab-width 4)
 
 ;; default: (setq desktop-restore-frames t)
 ;; (desktop-save-mode 1)
@@ -1419,6 +1597,7 @@ contain any instance of \"£$comma$£\"."
 
 (add-to-list 'flycheck-checkers 'my-php)
 ;;(add-to-list 'auto-mode-alist '("\\.php\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("/\\(views\\|html\\|templates\\)/.*\\.php\\'" . web-mode))
 
 ;; recognize file indentation and adapt
 ;; weiß noch nicht, ob es das Ding bringt...
@@ -1673,9 +1852,11 @@ contain any instance of \"£$comma$£\"."
 ;; let's bind the new command to a keycombo
 (define-key comint-mode-map "\C-c\M-o" #'comint-clear-buffer)
 
+(global-set-key (kbd "C-<f9>") 'indent-pp-sexp)
 
 ;; C-c f => geben-find-file mit ido!!!! :))))
 (require 'helm-mode)
+(helm-mode 1)
 (add-to-list 'helm-completing-read-handlers-alist '(geben-find-file . ido))
 ;; (setq list1 '("foo" "bar" "baz"))
 ;; (setq list2 (remove "bar" list1)) --> remove funktioniert auch für Alist
@@ -1693,5 +1874,59 @@ contain any instance of \"£$comma$£\"."
 
 ;; (message "list1: %s" list1)
 ;; (message "list3: %s" list3)
+;;(set-frame-parameter (selected-frame) 'alpha '(<active> [<inactive>]))
+(set-frame-parameter (selected-frame) 'alpha '(80 70))
+(add-to-list 'default-frame-alist '(alpha 100 70))
+(setq org-list-allow-alphabetical t)
+
+(defun match-strings-all (&optional string)
+    "Return the list of all expressions matched in last search.
+  
+  STRING is optionally what was given to `string-match'."
+    (let ((n-matches (1- (/ (length (match-data)) 2))))
+      (mapcar (lambda (i) (match-string i string))
+              (number-sequence 0 n-matches))))
+
+(defun re-seq (regexp string)
+  "Get a list of all regexp matches in a string."
+  (save-match-data
+    (let ((pos 0)
+          matches)
+      (while (string-match regexp string pos)
+        (push (match-string 0 string) matches)
+        (setq pos (match-end 0)))
+      matches)))
+
+;; Set your lisp system and, optionally, some contribs
+(setq inferior-lisp-program "/usr/bin/sbcl")
+(setq-default flycheck-disabled-checkers
+  (append flycheck-disabled-checkers
+    '(javascript-jshint)))
+
+(setq-default rng-nxml-auto-validate-flag nil)
+
+(defun jmi/set-buffer-local-family (font-family)
+  "Set font in current buffer using FONT-FAMILY."
+  (interactive "sFont Family: ")
+  (defface tmp-buffer-local-face 
+    '((t :family font-family))
+    "Temporary buffer-local face")
+  (buffer-face-set 'tmp-buffer-local-face))
+
+(beacon-mode 1)
+(setq beacon-push-mark 35)
+(setq beacon-color "#aa6600")
+
+(add-to-list 'auto-mode-alist '("\\.hl" . clojure-mode))
+(setq debug-ignored-errors (delete 'search-failed debug-ignored-errors))
+
+(defun indent-defun ()
+  "Indent the current defun."
+  (interactive)
+  (save-excursion
+    (mark-defun)
+    (indent-region (region-beginning) (region-end))))
+
+
 (provide '.emacs)
 ;;; .emacs ends here

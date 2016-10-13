@@ -1,6 +1,9 @@
 # Start a D-Bus session
 source /etc/X11/xinit/xinitrc.d/30-dbus
 
+# notify-send didn't work without this
+source /etc/X11/xinit/xinitrc.d/50-systemd-user.sh 
+
 xrdb -merge .Xresources 
 # Farbtemperatur runter:
 redshift -O 4000
@@ -11,8 +14,10 @@ trayer --edge top --align right --SetDockType true --SetPartialStrut true --expa
 #muss aber neu ausgeführt werden, wenn z.B. hdmionly aufgerufen wird :(
 
 xsetroot -cursor_name left_ptr
+xcompmgr &
 firefox &
 urxvt &
+fcitx &
 #ibus-daemon &
 #parcellite &
 #skype &
