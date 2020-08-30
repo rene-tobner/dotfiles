@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 dotdir=~/dotfiles
 olddir=~/dotfiles_old
@@ -10,7 +10,7 @@ mkdir -p $olddir
 echo "done"
 
 for dfile in $dfiles; do
-	mv ~/$dfile $olddir
+	mv -f ~/$dfile $olddir
 	echo "Creating symlink for $dfile in ~"
 	ln -s $dotdir/$dfile ~/$dfile
 done

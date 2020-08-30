@@ -326,8 +326,8 @@
   ;; "<" 'tabbar-switch-grouping-method
 )
 
-;; (require 'evil)
-(load "~/elisp/evil/evil")
+(require 'evil)
+;; (load "~/elisp/evil/evil")
 (setq evil-jumps-cross-buffers nil)
 (evil-mode 1)
 (setq evil-want-Y-yank-to-eol t)
