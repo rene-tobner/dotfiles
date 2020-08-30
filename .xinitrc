@@ -6,16 +6,17 @@ source /etc/X11/xinit/xinitrc.d/50-systemd-user.sh
 
 xrdb -merge .Xresources 
 # Farbtemperatur runter:
-redshift -O 4000
+redshift -O 6000
 trayer --edge top --align right --SetDockType true --SetPartialStrut true --expand true --width 5 --transparent false --tint 0xff0000 --height 16 &
 
 #setting the background with feh: feh --bg-scale LagunaColorado.jpg
+#feh --bg-scale /usr/share/slim/themes/defaultdark/background.jpg
 #eval $(cat ~/.fehbg)
 #muss aber neu ausgeführt werden, wenn z.B. hdmionly aufgerufen wird :(
 
 xsetroot -cursor_name left_ptr
 xcompmgr &
-firefox &
+#firefox &
 urxvt &
 fcitx &
 #ibus-daemon &

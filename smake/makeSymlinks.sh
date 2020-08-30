@@ -1,7 +1,7 @@
 #!/bin/bash
 
-dotdir=~/git/dotfiles
-olddir=~/.dotfiles_old
+dotdir=~/dotfiles
+olddir=~/dotfiles_old
 dfiles=$(ls -lA ../ |grep -v ^[di] | sed 's/\s\s*/ /g' | cut -d ' ' -f9)
 
 # backup place for maybe existing dot files

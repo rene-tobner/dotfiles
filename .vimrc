@@ -1,13 +1,16 @@
-source ~/.vim/vimrc
-call pathogen#helptags()
+"source ~/.vim/vimrc
+"call pathogen#helptags()
 "set t_Co=256
 "let g:solarized_termcolors=256
 syntax enable
 "set background=dark
-colors desertEx
+"colors desertEx
 "colors solarized
 "colors dw_green
 "blackdust
+
+" cwd follows current buffer
+set autochdir
 
 " when git-commiting: no strange highlighting?
 hi def link gitcommitSummary Normal
@@ -35,9 +38,9 @@ noremap <A-v> "+p
 nnoremap N Nzz
 nnoremap n nzz
 nnoremap <Space> <C-D>
-au FileType haskell nnoremap <buffer> <F5> :HdevtoolsType<CR>
-au FileType haskell nnoremap <buffer> <silent> <F6> :HdevtoolsClear<CR>
-au FileType haskell nnoremap <buffer> <silent> <F7> :SyntasticToggleMode<CR>
+"au FileType haskell nnoremap <buffer> <F5> :HdevtoolsType<CR>
+"au FileType haskell nnoremap <buffer> <silent> <F6> :HdevtoolsClear<CR>
+"au FileType haskell nnoremap <buffer> <silent> <F7> :SyntasticToggleMode<CR>
 map <F4> :GhciFile<CR>
 
 "ignore case when searching
@@ -135,3 +138,35 @@ map <F7> :call MySpellLang()<CR>
 imap <F7> <C-o>:call MySpellLang()<CR>
 
 
+" ## added by OPAM user-setup for vim / base ## 93ee63e278bdfc07d1139a748ed3fff2 ## you can edit, but keep this line
+let s:opam_share_dir = system("opam config var share")
+let s:opam_share_dir = substitute(s:opam_share_dir, '[\r\n]*$', '', '')
+
+let s:opam_configuration = {}
+
+function! OpamConfOcpIndent()
+  execute "set rtp^=" . s:opam_share_dir . "/ocp-indent/vim"
+endfunction
+let s:opam_configuration['ocp-indent'] = function('OpamConfOcpIndent')
+
+function! OpamConfOcpIndex()
+  execute "set rtp+=" . s:opam_share_dir . "/ocp-index/vim"
+endfunction
+let s:opam_configuration['ocp-index'] = function('OpamConfOcpIndex')
+
+function! OpamConfMerlin()
+  let l:dir = s:opam_share_dir . "/merlin/vim"
+  execute "set rtp+=" . l:dir
+endfunction
+let s:opam_configuration['merlin'] = function('OpamConfMerlin')
+
+let s:opam_packages = ["ocp-indent", "ocp-index", "merlin"]
+let s:opam_check_cmdline = ["opam list --installed --short --safe --color=never"] + s:opam_packages
+let s:opam_available_tools = split(system(join(s:opam_check_cmdline)))
+for tool in s:opam_packages
+  " Respect package order (merlin should be after ocp-index)
+  if count(s:opam_available_tools, tool) > 0
+    call s:opam_configuration[tool]()
+  endif
+endfor
+" ## end of OPAM user-setup addition for vim / base ## keep this line

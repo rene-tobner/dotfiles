@@ -32,7 +32,6 @@
  '(cua-normal-cursor-color "#839496")
  '(cua-overwrite-cursor-color "#b58900")
  '(cua-read-only-cursor-color "#859900")
- '(custom-enabled-themes (quote (deep-thought)))
  '(custom-safe-themes
    (quote
     ("3c83b3676d796422704082049fc38b6966bcad960f896669dfc21a7a37a748fa" "96998f6f11ef9f551b427b8853d947a7857ea5a578c75aa9c4e7c73fe04d10b4" "987b709680284a5858d5fe7e4e428463a20dfabe0a6f2a6146b3b8c7c529f08b" "3020dc2250c069e54f2b511a8ebd1f7cb32bcfc656052d338e5edaafe15b63ce" "94c5bc8fc704ae14be32ae431b0ea69401b86cced60bfc2dd61b59b5752aa548" "762052e64a1afe2858cbdb74e235923b1325dae3fb6d1863eaebfffa4e6d01b6" "5a121632ba70f6ad6579d56046fd4d1a7d636183dcccfab60f3d9f19a1590bf1" "3189a4f0f158218f036f31974f70209d7aca4ef0657b59c8f9af588c25fb9157" "2dfc88456d75733816c47d9cbc76577b1834a2edfeeb26ba5c971a83a70698fa" "abac85c5290c454e2aee3e7dec431c9320bc2009345fa5f6b80ca290180c39c1" "0024424ff9d06038246914144e7eee9812ee4597ddde76f53564fabcb39e3feb" "ad97202c92f426a867e83060801938acf035921d5d7e78da3041a999082fb565" "47e37fa090129214330d13a68549d5c86ccc2c41f4979cb4be130ff945a9859a" "3cc2385c39257fed66238921602d8104d8fd6266ad88a006d0a4325336f5ee02" "e9776d12e4ccb722a2a732c6e80423331bcb93f02e089ba2a4b02e85de1cf00e" "1a85b8ade3d7cf76897b338ff3b20409cb5a5fbed4e45c6f38c98eee7b025ad4" "3d5ef3d7ed58c9ad321f05360ad8a6b24585b9c49abcee67bdcbb0fe583a6950" "7bde52fdac7ac54d00f3d4c559f2f7aa899311655e7eb20ec5491f3b5c533fe8" "46fd293ff6e2f6b74a5edf1063c32f2a758ec24a5f63d13b07a20255c074d399" "3cd28471e80be3bd2657ca3f03fbb2884ab669662271794360866ab60b6cb6e6" "0c29db826418061b40564e3351194a3d4a125d182c6ee5178c237a7364f0ff12" "4f2ede02b3324c2f788f4e0bad77f7ebc1874eff7971d2a2c9b9724a50fb3f65" "e008d9149dd39b249d4f8a9b5c1362d8f85bd11e9c08454e5728fbf0fcc11690" "c537bf460334a1eca099e05a662699415f3971b438972bed499c5efeb821086b" "7b7ef508f9241c01edaaff3e0d6f03588a6f4fddb1407a995a7a333b29e327b5" "f15a7ce08b9e13553c1f230678e9ceb5b372f8da26c9fb815eb20df3492253b7" "a27c00821ccfd5a78b01e4f35dc056706dd9ede09a8b90c6955ae6a390eb1c1e" "a0fdc9976885513b03b000b57ddde04621d94c3a08f3042d1f6e2dbc336d25c7" "e3c90203acbde2cf8016c6ba3f9c5300c97ddc63fcb78d84ca0a144d402eedc6" "8022cea21aa4daca569aee5c1b875fbb3f3248a5debc6fc8cf5833f2936fbb22" "cab317d0125d7aab145bc7ee03a1e16804d5abdfa2aa8738198ac30dc5f7b569" "b3775ba758e7d31f3bb849e7c9e48ff60929a792961a2d536edec8f68c671ca5" "58c6711a3b568437bab07a30385d34aacf64156cc5137ea20e799984f4227265" "2e1f802a1a0e64be3e8340e1ddf6b1ac92d5cae69d5d01bff01f6520fa0509ec" "6d906da85461c423a797b082dac60289c5ecb6020e36cb7c2f4e889b112ba418" "4cfad7896ff2993dafce390a729a573d794568af181100fe789f0314684347df" "c56d90af9285708041991bbc780a073182cbe91721de17c6e7a8aac1380336b3" "b9183de9666c3a16a7ffa7faaa8e9941b8d0ab50f9aaba1ca49f2f3aec7e3be9" "0ed983facae99849805b2f7be926561cb58474eb18e5296d9bb3ad7f9b088a5b" "e80932ca56b0f109f8545576531d3fc79487ca35a9a9693b62bf30d6d08c9aaf" "f66d14168cbbc5bb16f44b95e181c8e66ecd92dd11c42837edb49a94bea96f51" "ce965ad1ab1febba3a3b813376bb3bc197aa8138da2d157d118966e60ad7672f" "5523e2938d77a075377c748cf5255ddf3ad9bf336cf5b0d313ce42f0cf9e3da9" "0dfa1e8661e71b0ea99d72657ed2f8091733f260eebfb3df36fb6f04aaf91faa" "aaabb08b44f70837bb81e5f8765fbc7320aa9f194e191f7cf6991c05ab6e0bdd" "4d69ca4daa84a4fe422fc9fcdf371ea68ac78160ed8b114ee83980c26c192571" "056cc49d7892609356495b9d84cda7a3a4c4907a24fe1005be0286315e5e743a" "a5b08a032ccc87e2dcee0c6593ec7ddfb1e404484c0b31913272465411ed985f" "8a0d67242cfe61abd626f852820daf01a6c43a9a60ae1d089acd93a5d66c0aae" "cb7a467df3ac296e83871a441d397ff58dbc58cb421af058c90d36ca89a6fa60" "94a9bdbc38f38c479dd49f12576160a1f5354144b88ef92f5d5f88aa196b89ea" "8917968eb3da797036c303eb03102248447953d479e33ef91aea1eabf33f5741" "dce1c195114880942abf49757ccbcffcf28a11c64e89e7065dbcbf0d6de84926" "299164bc6ba7b154403cf90a305b38a0c5cf6d6fd8c2074bb6163ae213773484" "c96831947ff9377cec694b3510c2fa3eec9cdf58ac1c58a711450d38284a51a3" "08269693f826b4dac039e70700a469c204ad54ac98b06ea3a512b2ce239852c9" "6915f9b0d1aed1121e9f47725cae7f2f7e7128716afad8ec511d8519693e0df0" "3ec7e0747a871644d2a5ae7af865d9fbb9ca38245af35aad43b6b75490b7ce3f" "cc0dbb53a10215b696d391a90de635ba1699072745bf653b53774706999208e3" "08851585c86abcf44bb1232bced2ae13bc9f6323aeda71adfa3791d6e7fea2b6" "39dd7106e6387e0c45dfce8ed44351078f6acd29a345d8b22e7b8e54ac25bac4" "868f73b5cf78e72ca2402e1d48675e49cc9a9619c5544af7bf216515d22b58e7" "8f1cedf54f137f71382e3367e1843d10e173add99abe3a5f7d3285f5cc18f1a9" "2a86b339554590eb681ecf866b64ce4814d58e6d093966b1bf5a184acf78874d" "4e262566c3d57706c70e403d440146a5440de056dfaeb3062f004da1711d83fc" "c5a044ba03d43a725bd79700087dea813abcb6beb6be08c7eb3303ed90782482" "ef08e77c67344f23154fd8cb9f3b8b1b4bb1799c0bf9d05dfd4b792557e0e401" "4cf3221feff536e2b3385209e9b9dc4c2e0818a69a1cdb4b522756bcdf4e00a4" "4c41d3e6fb19438b23899ffcb64cec224f995866911974f274b9c3771630ae96" "c14901c2292ec32e2718ec0324bf238dc2fe72466de3800977ad46a4cf32034a" "130dde3591d54f11db5f5c78185556b5b122b18d4e1dbaf9251666587e440b57" "5beea8d4fc82da6bc88094f2faa22750096c90674e4156d7a9ead6b9c0392b26" "aba5c6a53bd439fd531d9c91a7a50228c90ce40926225047f81b03f11ad05c51" "6d637708c89f256c7de050148ad75acb8b1cd653ae23e175542e27cdccb99d43" "3b0ac518cb44e09dbde90f828ae3ec97d69a164b825bc31b8eeb43c4ceb87656" "456ac8176c7c01680384356cbdc568a7683d1bada9c83ae3d7294809ddda4014" "c87cc60d01cf755375759d165c1d60d9586c6a31f0b5437a0378c2a93cfc8407" "ed5af4af1d148dc4e0e79e4215c85e7ed21488d63303ddde27880ea91112b07e" "1177fe4645eb8db34ee151ce45518e47cc4595c3e72c55dc07df03ab353ad132" "7bf64a1839bf4dbc61395bd034c21204f652185d17084761a648251041b70233" "62c9339d5cac3a49688abb34e98f87a6ee82003a11251f12e0ada1788090c40f" "cbef37d6304f12fb789f5d80c2b75ea01465e41073c30341dc84c6c0d1eb611d" "8cf56691a70156f611ac86d0bbcbc7dee7673df195de5918f34bfdc6814ffd39" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" "a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" "756597b162f1be60a12dbd52bab71d40d6a2845a3e3c2584c6573ee9c332a66e" "6a37be365d1d95fad2f4d185e51928c789ef7a4ccf17e7ca13ad63a8bf5b922f" "e26780280b5248eb9b2d02a237d9941956fc94972443b0f7aeec12b5c15db9f3" "c7359bd375132044fe993562dfa736ae79efc620f68bab36bd686430c980df1c" "c4e6fe8f5728a5d5fd0e92538f68c3b4e8b218bcfb5e07d8afff8731cc5f3df0" "e16a771a13a202ee6e276d06098bc77f008b73bbac4d526f160faa2d76c1dd0e" "53c542b560d232436e14619d058f81434d6bbcdc42e00a4db53d2667d841702e" "1989847d22966b1403bab8c674354b4a2adf6e03e0ffebe097a6bd8a32be1e19" "bf648fd77561aae6722f3d53965a9eb29b08658ed045207fe32ffed90433eb52" "ce79400f46bd76bebeba655465f9eadf60c477bd671cbcd091fe871d58002a88" "0ebe0307942b6e159ab794f90a074935a18c3c688b526a2035d14db1214cf69c" "33c5a452a4095f7e4f6746b66f322ef6da0e770b76c0ed98a438e76c497040bb" "9bcb8ee9ea34ec21272bb6a2044016902ad18646bd09fdd65abae1264d258d89" "90b5269aefee2c5f4029a6a039fb53803725af6f5c96036dee5dc029ff4dff60" "7d4d00a2c2a4bba551fcab9bfd9186abe5bfa986080947c2b99ef0b4081cb2a6" "a774c5551bc56d7a9c362dca4d73a374582caedb110c201a09b410c0ebbb5e70" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
@@ -90,7 +89,7 @@
      ("melpa" . "http://melpa.milkbox.net/packages/"))))
  '(package-selected-packages
    (quote
-    (evil-magit magit nodejs-repl flymake-json js2-mode json-mode merlin tuareg nim-mode evil rust-mode loop poker parsec zotelo zenburn-theme zen-and-art-theme yaxception yasnippet xquery-mode warm-night-theme typescript-mode tern tabbar sublime-themes sr-speedbar solarized-theme smooth-scrolling sml-mode smartparens smart-mode-line slime shm scss-mode sass-mode rainbow-mode rainbow-delimiters projectile-speedbar project-explorer powerline-evil pos-tip popwin php-mode perspective ox-reveal ox-pandoc ox-html5slide org-plus-contrib org-pandoc org-gcal nyan-prompt nyan-mode noflet neotree multiple-cursors multi-term monokai-theme monochrome-theme molokai-theme mkdown minimap minimal-theme linum-relative levenshtein less-css-mode key-chord js3-mode jazz-theme hl-anything hipster-theme hide-comnt heroku-theme helm-idris helm-hoogle helm-ghc gotham-theme ghci-completion geben flymake-jshint flycheck fcitx evil-visualstar evil-search-highlight-persist evil-org esxml esqlite epresent emmet-mode elm-mode edbi e2wm dtrt-indent debbugs dark-souls csv-mode company-ghci company-ghc company-cabal color-theme-sanityinc-solarized color-theme cider centered-window-mode boron-theme bookmark+ birds-of-paradise-plus-theme beacon base16-theme auto-virtualenv auto-highlight-symbol auto-complete apache-mode ample-zen-theme)))
+    (idris-mode nix-mode reason-mode lsp-mode evil-magit magit nodejs-repl flymake-json js2-mode json-mode merlin tuareg nim-mode evil rust-mode loop poker parsec zotelo zenburn-theme zen-and-art-theme yaxception yasnippet xquery-mode warm-night-theme typescript-mode tern tabbar sublime-themes sr-speedbar solarized-theme smooth-scrolling sml-mode smartparens smart-mode-line slime shm scss-mode sass-mode rainbow-mode rainbow-delimiters projectile-speedbar project-explorer powerline-evil pos-tip popwin php-mode perspective ox-reveal ox-pandoc ox-html5slide org-plus-contrib org-pandoc org-gcal nyan-prompt nyan-mode noflet neotree multiple-cursors multi-term monokai-theme monochrome-theme molokai-theme mkdown minimap minimal-theme linum-relative levenshtein less-css-mode key-chord js3-mode jazz-theme hl-anything hipster-theme hide-comnt heroku-theme helm-idris helm-hoogle helm-ghc gotham-theme ghci-completion geben flymake-jshint flycheck fcitx evil-visualstar evil-search-highlight-persist evil-org esxml esqlite epresent emmet-mode elm-mode edbi e2wm dtrt-indent debbugs dark-souls csv-mode company-ghci company-ghc company-cabal color-theme-sanityinc-solarized color-theme cider centered-window-mode boron-theme bookmark+ birds-of-paradise-plus-theme beacon base16-theme auto-virtualenv auto-highlight-symbol auto-complete apache-mode ample-zen-theme)))
  '(pos-tip-background-color "#073642")
  '(pos-tip-foreground-color "#93a1a1")
  '(powerline-color1 "#191919")
@@ -174,13 +173,13 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background nil :foreground nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 140 :width normal :foundry "unknown" :family "Droid Sans Mono"))))
+ '(default ((t (:background nil))))
  '(ahs-definition-face ((t (:foreground "moccasin" :underline t))))
  '(ahs-face ((t (:foreground "dark orange"))))
  '(ahs-plugin-defalt-face ((t (:foreground "magenta"))))
  '(custom-variable-tag ((t (:foreground "#1057f0" :weight bold))))
  '(evil-search-highlight-persist-highlight-face ((t (:background "indian red"))))
- '(fringe ((t (:background "#002b36"))))
+ '(fringe ((t (:background unspecified))))
  '(google-translate-translation-face ((t nil)))
  '(helm-candidate-number ((t (:background "#b58900" :foreground "black"))))
  '(helm-selection ((t (:background "#206080" :foreground "black"))))
@@ -192,7 +191,8 @@
  '(whitespace-space-after-tab ((t (:background "dark magenta" :foreground "cyan")))))
 
 
-(add-to-list 'default-frame-alist '(font . "Droid Sans Mono 10"))
+;;(add-to-list 'default-frame-alist '(font . "Droid Sans Mono 18"))
+(add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono 16"))
 ;; (add-to-list 'default-frame-alist '(font . "Monoid 10"))
 ;;(load "/home/rtb/git/dotfiles/cjk-font.el")
 ;;(set-face-attribute 'default t :font "Droid Sans Mono 14" )
@@ -202,6 +202,7 @@
 
 ;; für Terminal?!
 (setq-default cursor-type 'hbar)
+(normal-erase-is-backspace-mode 1)
 ;;(setq evil-default-cursor t)
 (setq evil-move-cursor-back nil)
 (show-paren-mode t)
@@ -289,7 +290,10 @@
 
 (scroll-bar-mode -1)
 (electric-pair-mode)
+;;TODO: mk work in xterm
 (global-set-key (kbd "C-ö") 'other-window)
+(global-set-key (kbd "M-ö") 'other-window)
+(global-set-key (kbd "M-j") 'other-window)
 
 (require 'evil-leader)
 (global-evil-leader-mode)
@@ -304,7 +308,8 @@
   "f" 'ido-find-file
   ;;"f" 'helm-find-files
   "<SPC>" 'ido-switch-buffer
-  "d" 'helm-mini
+  ;; "d" 'helm-mini
+  "d" 'ido-switch-buffer
   "ö" 'other-window
   "l" 'evil-search-forward
   "m" 'evil-search-backward
@@ -313,12 +318,12 @@
   "j" 'outline-next-visible-heading
   "k" 'outline-previous-visible-heading
   "i" 'my-save-word
-  "g" 'my-surround-german-guillemets
+  "g" 'my-surround-backtick
   "r" 'describe-char
   "q" 'evil-jump-to-tag
   ;; "t" 'toggle-input-method
   "s" 'evil-search-highlight-persist-remove-all
-  "<" 'tabbar-switch-grouping-method
+  ;; "<" 'tabbar-switch-grouping-method
 )
 
 ;; (require 'evil)
@@ -347,7 +352,7 @@
 (add-to-list 'evil-emacs-state-modes 'artist-mode)
 (add-to-list 'evil-emacs-state-modes 'haskell-error-mode)
 ;; Emacs modes to Motion modes
-(setq evil-motion-state-modes (append evil-emacs-state-modes evil-motion-state-modes))
+;; (setq evil-motion-state-modes (append evil-emacs-state-modes evil-motion-state-modes))
 (setq evil-motion-state-modes (delete 'debugger-mode evil-motion-state-modes))
 ;; (setq evil-emacs-state-modes (list 'desktop-menu-mode))
 ;; (setq evil-motion-state-modes (delete 'desktop-menu-mode evil-motion-state-modes))
@@ -362,9 +367,11 @@
 ;;(define-key evil-normal-state-map (kbd "C-v") 'evil-visual-block)
 (define-key evil-normal-state-map (kbd "<f3>") 'helm-do-ag)
 (define-key evil-normal-state-map (kbd "C-SPC") 'helm-mini)
+(define-key evil-normal-state-map (kbd "M-.") 'xref-find-definitions)
 
 (define-key evil-normal-state-map (kbd "C-u") 'evil-scroll-up)
 (define-key evil-normal-state-map (kbd "SPC") 'evil-scroll-down)
+;;TODO: mk work in xterm
 (define-key evil-normal-state-map (kbd "S-SPC") 'evil-scroll-up)
 (define-key evil-motion-state-map (kbd "C-u") 'evil-scroll-up)
 (define-key evil-motion-state-map (kbd "SPC") 'evil-scroll-down)
@@ -516,24 +523,6 @@ Should investigate further (TODO)."
 ;; Chinese-Input
 ;; (define-key evil-insert-state-map (kbd "M-SPC") 'toggle-input-method)
 
-;; (define-key evil-insert-state-map "j" #'cofi/maybe-exit)
-
-;; (evil-define-command cofi/maybe-exit ()
-;;   :repeat change
-;;   (interactive)
-;;   (let ((modified (buffer-modified-p)))
-;;     (insert "j")
-;;     (let ((evt (read-event (format "Insert %c to exit insert state" ?k)
-;;                nil 0.5)))
-;;       (cond
-;;        ((null evt) (message ""))
-;;        ((and (integerp evt) (char-equal evt ?k))
-;;     (delete-char -1)
-;;     (set-buffer-modified-p modified)
-;;     (push 'escape unread-command-events))
-;;        (t (setq unread-command-events (append unread-command-events
-;;                           (list evt))))))))
-
 ;; esc quits
 ;; http://juanjoalvarez.net/es/detail/2014/sep/19/vim-emacsevil-chaotic-migration-guide/
 (defun minibuffer-keyboard-quit ()
@@ -553,136 +542,6 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 (define-key minibuffer-local-must-match-map [escape] 'minibuffer-keyboard-quit)
 (define-key minibuffer-local-isearch-map [escape] 'minibuffer-keyboard-quit)
 (global-set-key [escape] 'evil-exit-emacs-state)
-
-;; (setq tabbar-use-images nil)
-;; (load "~/.emacs.d/plugins/tabbar/tabbar-tweak.el")
-
-(global-set-key (kbd "C-,") 'tabbar-backward)
-(global-set-key (kbd "<M-dead-circumflex>") 'other-window)
-(global-set-key (kbd "C-.") 'tabbar-forward)
-
-(define-key evil-normal-state-map (kbd "C-.") 'tabbar-forward)
-(define-key evil-motion-state-map (kbd "C-.") 'tabbar-forward)
-(define-key evil-motion-state-map (kbd "C-,") 'tabbar-backward)
-
-(define-key evil-normal-state-map (kbd "C-p") 'tabbar-backward-group)
-(define-key evil-motion-state-map (kbd "C-p") 'tabbar-backward-group)
-(define-key evil-normal-state-map (kbd "C-n") 'tabbar-forward-group)
-(define-key evil-motion-state-map (kbd "C-n") 'tabbar-forward-group)
-
-(defun rtb/tabbar-buffer-groups-by-dir ()
-       "Put all files in the same directory into the same tab bar"
-       (with-current-buffer (current-buffer)
-          (let ((dir (expand-file-name default-directory)))
-            (cond ;; assign group name until one clause succeeds, so the order is important
-             ((eq major-mode 'dired-mode)
-              (list "Dired"))
-             ((memq major-mode
-                    '(help-mode apropos-mode Info-mode Man-mode))
-              (list "Help"))
-             ((string-match-p "\*edbi.*\*" (buffer-name))
-              (list "edbi"))
-             ((string-match-p "\*.*\*" (buffer-name))
-              (list "Misc"))
-             (t (list dir))))))
-
-;; (defun rtb/tabbar-buffer-groups-working-dirs ()
-;;   "List only real directories by dir -- no internal buffers"
-;;   (with-current-buffer (current-buffer)
-;;     (let ((dir (expand-file-name default-directory)))
-;;         (list dir))))
-;; (setq tabbar-buffer-groups-function 'rtb/tabbar-buffer-groups-working-dirs)
-(setq tabbar-buffer-groups-function 'rtb/tabbar-buffer-groups-by-dir)
-
-(defun tabbar-switch-grouping-method (&optional arg)
-  "Changes grouping method of tabbar to grouping by dir.
-With a prefix arg, changes to grouping by major mode."
-  (interactive "P")
-  (ignore-errors
-    (if arg
-      (setq tabbar-buffer-groups-function 'tabbar-buffer-groups) ;; the default setting
-        (setq tabbar-buffer-groups-function 'rtb/tabbar-buffer-groups-by-dir))))
-
-(setq ido-enable-flex-matching t)
-
-;; bound in evil-leader
-(defun ido-jump-to-tab-group ()
-  "Jump to a tabbar group."
-  (interactive)
-  (if (< emacs-major-version 24)
-      (ido-common-initialization))
-  (unless (and (featurep 'tabbar)
-               tabbar-mode)
-    (error "Error: tabbar-mode not turned on."))  
-  (set tabbar-tabsets-tabset (tabbar-map-tabsets 'tabbar-selected-tab)) ;; refresh groups
-  (let* ( (groups (mapcar #'(lambda (group)
-                              (format "%s" (cdr group)))
-                          (tabbar-tabs tabbar-tabsets-tabset)))
-          (group-name (ido-completing-read "Groups: " groups)))
-    (mapc #'(lambda (group)
-              (when (string= group-name (format "%s" (cdr group)))
-                  (message "Switch to group '%s', current buffer: %s" (cdr group) (car group))
-                  (switch-to-buffer (car group))))
-          (tabbar-tabs tabbar-tabsets-tabset))))
-
-;; for use in different frames
-(defun ido-switch-tab-group ()
-  "Switch tab groups using ido."
-    (interactive)
-    (let* (
-        (tab-buffer-list (mapcar
-            #'(lambda (b)
-                (with-current-buffer b
-                    (list (current-buffer)
-                        (buffer-name)
-                        (funcall tabbar-buffer-groups-function) )))
-            (funcall tabbar-buffer-list-function)))
-        (groups (delete-dups
-            (mapcar #'(lambda (group)
-            (car (car (cdr (cdr group))))) tab-buffer-list)))
-        (group-name (ido-completing-read "Groups: " groups)) )
-        (catch 'done
-        (mapc
-            #'(lambda (group)
-            (when (equal group-name (car (car (cdr (cdr group)))))
-                (throw 'done (switch-to-buffer (car (cdr group))))))
-            tab-buffer-list) )))
-
-(defun switch-tab-group (group-name)
-  "Switch to a specific tab group."
-  (let ((tab-buffer-list (mapcar
-          #'(lambda (b)
-              (with-current-buffer b
-                (list (current-buffer)
-                      (buffer-name)
-                      (funcall tabbar-buffer-groups-function) )))
-               (funcall tabbar-buffer-list-function))))
-    (catch 'done
-      (mapc
-        #'(lambda (group)
-          (when (equal group-name (format "%s" (car (car (cdr (cdr group))))))
-            (throw 'done (switch-to-buffer (car (cdr group))))))
-        tab-buffer-list) )))
-;; thanks to: http://stackoverflow.com/questions/17914945/tabbar-2-0-custom-function-switching-to-a-specific-tab-group
-;; 
-(defun switch-to-tab-group-dired ()
-"Switch to a predefined existing tab group named `N`."
-    (interactive)
-    (switch-tab-group "Dired"))
-
-(global-set-key (kbd "C-9") 'switch-to-tab-group-dired)
-
-(defun switch-to-tab-group-a ()
-"Switch to a predefined existing tab group named `A`."
-    (interactive)
-    (switch-tab-group "A"))
-
-;;Exit insert mode by pressing j and then j quickly
-;;(setq key-chord-two-keys-delay 0.5)
-;;(key-chord-define evil-insert-state-map "饥渴" 'evil-normal-state)
-;; (key-chord-mode -1)
-;; hallo was gibt es hier denn zu schreiben??
-;; Ich glaube ohne keychord, schreibt es ich um einges besser!
 
 (require 'evil-org)
 
@@ -717,6 +576,17 @@ With a prefix arg, changes to grouping by major mode."
     (search-forward " ")
     (backward-char 1)
     (insert "«"))
+
+(defun my-surround-backtick ()
+  "Surround word with german guillemets (chevrons = Möwchen)"
+  (interactive)
+    (search-backward " ")
+    (forward-char 1)
+    (insert "`")
+    (search-forward " ")
+    (backward-char 1)
+    (insert "`"))
+
 ;; working in terminal
 (setq x-select-enable-clipboard t)
 (setq x-select-enable-primary t)
@@ -1472,11 +1342,14 @@ contain any instance of \"£$comma$£\"."
   (define-key ido-completion-map (kbd "M-2") 'ido-next-match)
   (define-key ido-completion-map (kbd "ESC k") 'ido-next-match)
   (define-key ido-completion-map (kbd "ESC .") 'ido-next-match)
+  (define-key ido-completion-map (kbd "C-.") 'ido-next-match)
   (define-key ido-completion-map (kbd "M-k") 'ido-prev-match)
   (define-key ido-completion-map (kbd "M-3") 'ido-prev-match)
   (define-key ido-completion-map (kbd "ESC j") 'ido-prev-match)
   (define-key ido-completion-map (kbd "SPC") 'ido-exit-minibuffer)
-  (define-key ido-completion-map (kbd "ESC ,") 'ido-prev-match))
+  (define-key ido-completion-map (kbd "ESC ,") 'ido-prev-match)
+  (define-key ido-completion-map (kbd "C-,") 'ido-prev-match)
+  )
 
 (add-hook 'ido-setup-hook #'bind-ido-keys)
 
@@ -1602,24 +1475,24 @@ contain any instance of \"£$comma$£\"."
 (fcitx-eval-expression-turn-on)
 
 
-(require 'flycheck)
+;; (require 'flycheck)
 ;; macht Probleme?
-(add-hook 'after-init-hook #'global-flycheck-mode)
+;; (add-hook 'after-init-hook #'global-flycheck-mode)
 ;; gcc
-(setq flycheck-gcc-include-path '("/usr/include/libxml2"))
-(add-hook 'c-mode-hook
-          (lambda () (setq flycheck-clang-include-path
-                           (list "/usr/include/libxml2"))))
+;; (setq flycheck-gcc-include-path '("/usr/include/libxml2"))
+;; (add-hook 'c-mode-hook
+;;           (lambda () (setq flycheck-clang-include-path
+;;                            (list "/usr/include/libxml2"))))
 
-(flycheck-define-checker my-php
-  "A PHP syntax checker using the PHP command line interpreter.
-   See URL `http://php.net/manual/en/features.commandline.php'."
-  :command ("php56" "-l" "-d" "error_reporting=E_ALL" "-d" "display_errors=1"
-            "-d" "log_errors=0" source)
-  :error-patterns
-  ((error line-start (or "Parse" "Fatal" "syntax") " error" (any ":" ",") " "
-          (message) " in " (file-name) " on line " line line-end))
-  :modes (web-mode))
+;; (flycheck-define-checker my-php
+;;   "A PHP syntax checker using the PHP command line interpreter.
+;;    See URL `http://php.net/manual/en/features.commandline.php'."
+;;   :command ("php56" "-l" "-d" "error_reporting=E_ALL" "-d" "display_errors=1"
+;;             "-d" "log_errors=0" source)
+;;   :error-patterns
+;;   ((error line-start (or "Parse" "Fatal" "syntax") " error" (any ":" ",") " "
+;;           (message) " in " (file-name) " on line " line line-end))
+;;   :modes (web-mode))
 
 ;; (add-to-list 'flycheck-checkers 'my-php)
 ;;(add-to-list 'auto-mode-alist '("\\.php\\'" . web-mode))
@@ -1804,10 +1677,10 @@ contain any instance of \"£$comma$£\"."
 ;; keine Nachfrage mehr in dired bei `l'
 (put 'dired-find-alternate-file 'disabled nil)
 
-(require 'cal-china-x)
-(setq mark-holidays-in-calendar t)
-(setq cal-china-x-important-holidays cal-china-x-chinese-holidays)
-(setq calendar-holidays (append cal-china-x-important-holidays calendar-holidays))
+;; (require 'cal-china-x)
+;; (setq mark-holidays-in-calendar t)
+;; (setq cal-china-x-important-holidays cal-china-x-chinese-holidays)
+;; (setq calendar-holidays (append cal-china-x-important-holidays calendar-holidays))
 
 (setq mouse-wheel-scroll-amount '(1 ((shift) . 1)))
 (setq auto-hscroll-mode t) ;; also set in custom...
@@ -1860,9 +1733,9 @@ contain any instance of \"£$comma$£\"."
  (message "%d" (* x y)))
 
 (require 'org-gcal)
-(setq org-gcal-client-id "680808425312-tkmrksn5ajc0mr8pk1hk3hrgv008cjuo.apps.googleusercontent.com"
-      org-gcal-client-secret "gpOYDxfuc-xul8UUTAFITtgY"
-      org-gcal-file-alist '(("2h3st800p0t8772k54jnuf247k@group.calendar.google.com" .  "~/koze-todo.org")))
+;; (setq org-gcal-client-id "680808425312-tkmrksn5ajc0mr8pk1hk3hrgv008cjuo.apps.googleusercontent.com"
+;;       org-gcal-client-secret "gpOYDxfuc-xul8UUTAFITtgY"
+;;       org-gcal-file-alist '(("2h3st800p0t8772k54jnuf247k@group.calendar.google.com" .  "~/koze-todo.org")))
 
 (defun remove-dos-eol ()
   "Do not show ^M in files containing mixed UNIX and DOS line endings."
@@ -1926,9 +1799,9 @@ contain any instance of \"£$comma$£\"."
 
 ;; Set your lisp system and, optionally, some contribs
 (setq inferior-lisp-program "/usr/bin/sbcl")
-(setq-default flycheck-disabled-checkers
-  (append flycheck-disabled-checkers
-    '(javascript-jshint)))
+;; (setq-default flycheck-disabled-checkers
+;;   (append flycheck-disabled-checkers
+;;     '(javascript-jshint)))
 
 (setq-default rng-nxml-auto-validate-flag nil)
 
@@ -1940,9 +1813,9 @@ contain any instance of \"£$comma$£\"."
     "Temporary buffer-local face")
   (buffer-face-set 'tmp-buffer-local-face))
 
-(beacon-mode 1)
-(setq beacon-push-mark 35)
-(setq beacon-color "#aa6600")
+;; (beacon-mode 1)
+;; (setq beacon-push-mark 35)
+;; (setq beacon-color "#aa6600")
 
 (add-to-list 'auto-mode-alist '("\\.hl" . clojure-mode))
 (setq debug-ignored-errors (delete 'search-failed debug-ignored-errors))
@@ -2001,5 +1874,55 @@ contain any instance of \"£$comma$£\"."
 (require 'evil-magit)
 (require 'tramp)
 (setq password-cache-expiry nil)
+
+(defun restore-allegro-neu ()
+  (interactive)
+  (shell-command
+   "cp /home/rtb/doks/cusanus/allegro-neu/brlmt/bak/* /home/rtb/doks/cusanus/allegro-neu/brlmt"))
+
+(require 'lsp-mode)
+(add-hook 'reason-mode #'lsp)
+
+(lsp-register-client
+   (make-lsp-client
+    :new-connection (lsp-stdio-connection
+                     '("/home/rtb/reason/rls-linux/reason-language-server"))
+    :major-modes '(reason-mode)
+    :notification-handlers (ht ("client/registerCapability" 'ignore))
+    :priority 1
+    :server-id 'reason-ls
+    ))
+
+(define-ibuffer-sorter filename-or-dired
+  "Sort the buffers by their pathname."
+  (:description "filenames plus dired")
+  (string-lessp 
+   (with-current-buffer (car a)
+     (or (file-name-extension (if (buffer-file-name)
+                                  (buffer-file-name)
+                                "a.000")
+                              )
+         (if (eq major-mode 'dired-mode)
+             (expand-file-name dired-directory))
+         ;; so that all non pathnames are at the end
+         "~"))
+   (with-current-buffer (car b)
+     (or (file-name-extension (if (buffer-file-name)
+                                  (buffer-file-name)
+                                "a.000"))
+         (if (eq major-mode 'dired-mode)
+             (expand-file-name dired-directory))
+         ;; so that all non pathnames are at the end
+         "~"))))
+
+(define-key ibuffer-mode-map (kbd "s p") 'ibuffer-do-sort-by-filename-or-dired)
+
+(defun term-here ()
+  (interactive)
+  (start-process "" nil "xterm"))
+
+;; TERMINAL / KONSOLE here
+(global-set-key (kbd "M-k") 'term-here)
+
 (provide '.emacs)
 ;;; .emacs ends here
