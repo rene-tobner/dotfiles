@@ -1,0 +1,243 @@
+# You can edit this file by hand, but it's recommended not to do that.
+
+# Marks:
+'H
+	/root/
+	..
+1587996864
+'b
+	/root/bin/
+	..
+1587996864
+'h
+	/root/
+	..
+1587996864
+
+# Bookmarks:
+
+# TUI:
+al
+q0
+v2
+oh
+m-1
+l10,2
+r2
+
+# Left window history (oldest to newest):
+d/nix/store/244gl9ws7q3vdzypr7ad5cqbvqm3m17s-nixexprs.tar.xz
+	README.md
+14
+d/home/rtb
+	fb-bak
+12
+d/nix/store
+	244gl9ws7q3vdzypr7ad5cqbvqm3m17s-nixexprs.tar.xz
+4
+d/nix/store/244gl9ws7q3vdzypr7ad5cqbvqm3m17s-nixexprs.tar.xz
+	nixos
+6
+d/root
+	.urxvt
+3
+d/root/.urxvt
+	urxvtd-nixos
+1
+d/root
+	.config
+7
+d/root/.config
+	vifm
+3
+d/root/.config/vifm
+	scripts
+1
+d/root/.config/vifm/scripts
+	README
+1
+d/root/.config/vifm
+	colors
+2
+d/root/.config/vifm/colors
+	Default.vifm
+3
+d/root/.config/vifm
+	scripts
+1
+d/root/.config
+	vifm
+3
+d/root
+	.config
+7
+d/root/.config
+	vifm
+3
+d/root/.config/vifm
+	colors
+2
+d/root/.config/vifm/colors
+	Default.vifm
+3
+d/home/rtb
+	fb-bak
+6
+d/root
+	.emacs.d
+6
+d/root/.emacs.d
+	auto-save-list
+1
+d/root/.emacs.d/auto-save-list
+	..
+0
+d/root/.emacs.d
+	auto-save-list
+1
+d/root
+	.emacs.d
+6
+d/root/.emacs.d
+	url
+5
+d/home/rtb
+	fb-bak
+6
+d/home
+	rtb
+1
+d/
+	dev
+9
+d/dev
+	input
+9
+d/dev/input
+	by-path
+2
+d/dev/input/by-path
+	platform-i8042-serio-0-event-kbd
+2
+d/home/rtb
+	fb-bak
+4
+d/home
+	rtb
+1
+d/
+	media
+8
+d/media
+	sdd1-usb-Sony_Card_R_W_-S
+1
+d/media/sdd1-usb-Sony_Card_R_W_-S
+	Android
+3
+d/media/sdd1-usb-Sony_Card_R_W_-S/Android
+	..
+0
+d/media/sdd1-usb-Sony_Card_R_W_-S
+	Sounds
+2
+d/media/sdd1-usb-Sony_Card_R_W_-S/Sounds
+	..
+0
+d/media/sdd1-usb-Sony_Card_R_W_-S
+	Sounds
+2
+d/media
+	root
+2
+d/media/root
+	..
+0
+d/media
+	root
+2
+d
+
+# Right window history (oldest to newest):
+D/home/rtb
+	.config
+4
+D/home/rtb/.config
+	vifm
+11
+D/home/rtb/.config/vifm
+	colors
+1
+D/home/rtb/.config/vifm/colors
+	Default.vifm~
+3
+D/run
+	user
+7
+D/run/user
+	1000
+1
+D/run/user/1000
+	..
+0
+D/run/user
+	1000
+1
+D/run
+	..
+0
+D/
+	dev
+3
+D/dev
+	.mdadm
+1
+D/
+	run
+6
+D/run
+	..
+0
+D
+
+# Command line history (oldest to newest):
+:cd /nix/store/
+:only
+:sp
+:cd /home/root
+:cd /root
+:cd /run
+
+# Search history (oldest to newest):
+/nixexprs
+
+# Prompt history (oldest to newest):
+
+# Local filter history (oldest to newest):
+
+# Registers:
+""/.vifm-Trash-0/000_.emacs.d
+
+# Directory stack (oldest to newest):
+
+# Trash content:
+t/home/rtb/.local/share/vifm/Trash/000_proton-verified-by-gmail_end-of-line
+	/home/rtb/keys/proton-verified-by-gmail_end-of-line
+t/home/rtb/.local/share/vifm/Trash/000_proton-verified-by-gmail_end.of.line
+	/home/rtb/keys/proton-verified-by-gmail_end.of.line
+t/home/rtb/.local/share/vifm/Trash/000_musik
+	/home/rtb/musik/musik
+t/home/rtb/.local/share/vifm/Trash/000_ffplay-20200503-182931.log
+	/home/rtb/ultraschall/ffplay-20200503-182931.log
+t/.vifm-Trash-0/000_.emacs.d
+	/root/.emacs.d
+
+# State:
+f
+i1
+[.0
+[F
+F
+I1
+].0
+]F
+s0

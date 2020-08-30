@@ -1,0 +1,734 @@
+# You can edit this file by hand, but it's recommended not to do that.
+
+# Marks:
+'H
+	/run
+	booted-system
+1593331965
+'b
+	/home/rtb/bin/
+	..
+1598799674
+'h
+	/home/rtb/
+	..
+1598799674
+'j
+	/run
+	blkid
+1593331956
+'m
+	/run/media/rtb
+	..
+1593421851
+'q
+	/run
+	booted-system
+1593331988
+
+# Bookmarks:
+
+# TUI:
+al
+q1
+v2
+ov
+m-1
+l2
+r2
+
+# Left window history (oldest to newest):
+d/home/rtb
+	.ssh
+12
+d/home/rtb/.ssh
+	x200s.pub
+5
+d/home/rtb
+	Downloads
+4
+d/home/rtb/Downloads
+	test.tdp
+9
+d/home/rtb
+	Downloads
+4
+d/home
+	rtb
+1
+d/
+	home
+5
+d/home/rtb
+	doks
+5
+d/home/rtb/doks
+	fp
+1
+d/home/rtb/doks/fp
+	idris
+1
+d/home/rtb/doks/fp/idris
+	TypeDD-Samples
+1
+d/home/rtb/doks/fp/idris/TypeDD-Samples
+	Chapter1
+2
+d/home/rtb/doks/fp/idris/TypeDD-Samples/Chapter1
+	Hello.idr
+3
+d/home/rtb/doks/fp/idris/TypeDD-Samples
+	Chapter1
+2
+d/home/rtb/doks/fp/idris/TypeDD-Samples/Chapter1
+	Hello.idr
+3
+d/home/rtb/doks/fp/idris/TypeDD-Samples
+	Chapter1
+2
+d/home/rtb/doks/fp/idris
+	TypeDD-Samples
+1
+d/home/rtb/doks/fp/idris/TypeDD-Samples
+	Chapter1
+2
+d/home/rtb/doks/fp/idris
+	Type-Driven_Development_with_Idris.pdf
+3
+d/nix/store/q7dn9qnarz0xl0zamfb1jx9zj8hw6s00-nixos-20.09pre229574.0a146054bdf/nixos/pkgs/applications/misc
+	hello
+19
+d/nix/store/q7dn9qnarz0xl0zamfb1jx9zj8hw6s00-nixos-20.09pre229574.0a146054bdf/nixos/pkgs/applications/misc/hello
+	default.nix
+1
+d/nix/store/q7dn9qnarz0xl0zamfb1jx9zj8hw6s00-nixos-20.09pre229574.0a146054bdf/nixos/pkgs/applications/misc
+	hdate
+4
+d/home/rtb
+	musik
+13
+d/home/rtb/musik
+	ulver
+16
+d/home/rtb/musik/ulver
+	..
+0
+d/home/rtb/musik
+	Beastie Boys
+2
+d/home/rtb/musik/Beastie Boys
+	..
+0
+d/home/rtb/musik
+	ulver
+12
+d/etc/nixos
+	configuration.nix
+2
+d/home/rtb/musik
+	ulver
+19
+d/home/rtb
+	doks
+5
+d/home/rtb/doks
+	linux
+2
+d/home/rtb/doks/linux
+	..
+0
+d/home/rtb/doks
+	linux
+3
+d/home/rtb
+	lm
+14
+d/home/rtb/lm
+	2018_KoEG
+5
+d/home/rtb/lm/2018_KoEG
+	~$-eg-Prüfnotizen_2018-10-18.docx
+23
+d/home/rtb/lm
+	aindex
+15
+d/home/rtb/lm/aindex
+	Makefile.am
+2
+d/home/rtb/lm
+	aindex
+15
+d/home/rtb
+	Baldurs Gate EE
+4
+d/home/rtb/Baldurs Gate EE
+	..
+0
+d/home/rtb
+	Downloads
+5
+d/home/rtb/Downloads
+	replicant
+1
+d/home/rtb
+	keys
+14
+d/home/rtb/keys
+	rtbtobi2@gmail
+7
+d/home/rtb
+	doks
+6
+d/home/rtb/doks
+	linux
+3
+d/home/rtb/doks/linux
+	Linux Shell Scripting with Bash - Sams.pdf
+1
+d/home/rtb/doks
+	linux
+3
+d/home/rtb
+	keys
+14
+d/home/rtb/keys
+	wissens-werker@gitlab
+10
+d/home/rtb
+	doks
+6
+d/home/rtb/doks
+	linux
+3
+d/home/rtb/doks/linux
+	Advanced.Programming.in.the.UNIX.Environment.3rd.Edition.0321637739.pdf
+1
+d/home/rtb
+	prog
+19
+d/home/rtb/prog
+	c
+1
+d/home/rtb
+	keys
+14
+d/home/rtb/keys
+	fb-tobi-tob-chan
+4
+d/home/rtb
+	fotos
+12
+d/home/rtb/fotos
+	Camera
+1
+d/home/rtb/fotos/Camera
+	IMG_20200224_145032.jpg
+18
+d/home/rtb/fotos
+	feh_009851_000001_IMG_20181225_123655.jpg
+2
+d/home/rtb
+	fotos
+4
+d/home/rtb/fotos
+	ebay
+2
+d/home/rtb/fotos/ebay
+	matias-ergo.jpeg
+1
+d/home/rtb/fotos
+	ebay
+2
+d/home/rtb
+	keys
+6
+d/home/rtb/keys
+	mkDigitPW.sh
+6
+d/etc/nixos
+	configuration.nix
+2
+d/home/rtb
+	elisp
+19
+d/home/rtb/elisp
+	evil
+1
+d/home/rtb/elisp/evil
+	evil-commands.el
+12
+d/home/rtb/elisp
+	evil
+1
+d/home/rtb/elisp/evil
+	lib
+3
+d/home/rtb/elisp/evil/lib
+	..
+0
+d/home/rtb/elisp/evil
+	scripts
+4
+d/home/rtb/elisp/evil/scripts
+	..
+0
+d/home/rtb/elisp/evil
+	scripts
+4
+d/home/rtb/elisp
+	evil
+1
+d/home/rtb
+	.emacs.d
+9
+d/home/rtb/.emacs.d
+	graphene
+9
+d/home/rtb/.emacs.d/graphene
+	..
+0
+d/home/rtb/.emacs.d
+	elpa
+6
+d/home/rtb
+	.emacs.d
+9
+d/home/rtb/.emacs.d
+	elpa
+6
+d/home/rtb/.emacs.d/elpa
+	caml-20151009.845
+15
+d/home/rtb/dotfiles/.config_of_root
+	chromium
+1
+d/home/rtb/dotfiles/.config_of_root/chromium
+	..
+0
+d/home/rtb/dotfiles/.config_of_root
+	chromium
+1
+d/home/rtb/dotfiles/.config_of_root/vifm
+	scripts
+2
+d/home/rtb/dotfiles/.config_of_root/vifm/scripts
+	README
+1
+d/home/rtb/dotfiles/.config_of_root/vifm
+	colors
+1
+d/home/rtb/dotfiles/.config_of_root/vifm/colors
+	Default.vifm
+2
+d/home/rtb/dotfiles/.config_of_root/vifm
+	vifm-help.txt
+3
+d/home/rtb/dotfiles
+	.config-of-root
+2
+d/home/rtb/dotfiles/.config-of-root
+	vifm
+1
+d/home/rtb/dotfiles/.config-of-root/vifm
+	scripts
+2
+d/home/rtb/dotfiles/.config-of-root
+	vifm
+1
+d/home/rtb/dotfiles
+	.config-of-root
+2
+d
+
+# Right window history (oldest to newest):
+D/run/media/rtb/nixos/home/rtb
+	fotos
+14
+D/run/media/rtb/nixos/home/rtb/fotos
+	Camera
+1
+D/run/media/rtb/nixos/home/rtb/fotos/Camera
+	IMG_20181226_132812.jpg
+7
+D/run/media/rtb/nixos/home/rtb/fotos
+	feh_009851_000001_IMG_20181225_123655.jpg
+2
+D/run/media/rtb/nixos/home/rtb
+	doks
+12
+D/run/media/rtb/nixos/home/rtb/doks
+	nix-shell-workshop
+4
+D/run/media/rtb/nixos/home/rtb/doks/nix-shell-workshop
+	..
+0
+D/run/media/rtb/nixos/home/rtb/doks
+	linux
+2
+D/run/media/rtb/nixos/home/rtb/doks/linux
+	grundkurs-linux.pdf
+1
+D/run/media/rtb/nixos/home/rtb/doks
+	.emacs
+5
+D/run/media/rtb/nixos/home/rtb
+	git
+15
+D/run/media/rtb/nixos/home/rtb/git
+	dotfiles
+1
+D/run/media/rtb/nixos/home/rtb/git/dotfiles
+	..
+0
+D/run/media/rtb/nixos/home/rtb/git
+	dotfiles
+1
+D/run/media/rtb/nixos/home/rtb
+	lm
+17
+D/run/media/rtb/nixos/home/rtb/lm
+	Arbeitsfortschritt.xlsx
+16
+D/run/media/rtb/nixos/home/rtb
+	vid
+19
+D/run/media/rtb/nixos/home/rtb/vid
+	..
+0
+D/run/media/rtb/nixos/home/rtb
+	Downloads
+15
+D/run/media/rtb/nixos/home/rtb/Downloads
+	..
+0
+D/run/media/rtb/nixos/home/rtb
+	Desktop
+14
+D/run/media/rtb/nixos/home/rtb/Desktop
+	gog_com-Baldurs_Gate_Enhanced_Edition_1.desktop
+1
+D/run/media/rtb/nixos/home/rtb
+	lm
+13
+D/run/media/rtb/nixos/home/rtb/lm
+	Arbeitsfortschritt.xlsx
+16
+D/run/media/rtb/nixos/home/rtb
+	GOG Games
+6
+D/run/media/rtb/nixos/home/rtb/GOG Games
+	Baldurs Gate Enhanced Edition
+1
+D/run/media/rtb/nixos/home/rtb/GOG Games/Baldurs Gate Enhanced Edition
+	..
+0
+D/run/media/rtb/nixos/home/rtb/GOG Games
+	Baldurs Gate Enhanced Edition
+1
+D/run/media/rtb/nixos/home/rtb
+	Grim Fandango Remastered
+7
+D/run/media/rtb/nixos/home/rtb/Grim Fandango Remastered
+	..
+0
+D/run/media/rtb/nixos/home/rtb
+	Downloads
+5
+D/run/media/rtb/nixos/home/rtb/Downloads
+	Grim Fandango
+2
+D/run/media/rtb/nixos/home/rtb/Downloads/Grim Fandango
+	gog_grim_fandango_remastered_2.3.0.7.7z.002
+2
+D/run/media/rtb/nixos/home/rtb/Downloads
+	Baldurs Gate EE
+1
+D/run/media/rtb/nixos/home/rtb/Downloads/Baldurs Gate EE
+	..
+0
+D/run/media/rtb/nixos/home/rtb/Downloads
+	Grim Fandango
+2
+D/run/media/rtb/nixos/home/rtb/Downloads/Grim Fandango
+	gog_grim_fandango_remastered_2.3.0.7.sh
+4
+D/run/media/rtb
+	4A11-2326
+1
+D/run/media/rtb/4A11-2326
+	roms
+19
+D/run/media/rtb/4A11-2326/roms
+	..
+0
+D/run/media/rtb/4A11-2326
+	downloads
+13
+D/run/media/rtb/4A11-2326/downloads
+	BIOS_Acer_3212_A_A.zip
+3
+D/run/media/rtb/4A11-2326
+	keys
+16
+D/run/media/rtb/4A11-2326/keys
+	rtbtobi2@gmail
+2
+D/run/media/rtb
+	4A11-2326
+1
+D/run/media/rtb/4A11-2326
+	keys
+16
+D/run/media/rtb/4A11-2326/keys
+	rtbtobi2@gmail_NEU.txt
+2
+D/run/media/rtb/4A11-2326
+	keys
+16
+D/run/media/rtb
+	FDA3-90D8
+2
+D/run/media/rtb/FDA3-90D8
+	keys
+7
+D/run/media/rtb/FDA3-90D8/keys
+	web-de
+8
+D/run/media/rtb
+	..
+0
+D/run/media
+	rtb
+1
+D/run/media/rtb
+	..
+0
+D/run/media
+	rtb
+1
+D/run/media/rtb
+	..
+0
+D/run/media
+	rtb
+1
+D/run/media/rtb
+	..
+0
+D/run/media
+	rtb
+1
+D/run
+	media
+13
+D/run/media
+	rtb
+1
+D/run/media/rtb
+	..
+0
+D/run/media
+	rtb
+1
+D/run
+	mount
+14
+D/run/mount
+	utab
+1
+D/run
+	media
+13
+D/run/media
+	rtb
+1
+D/run/media/rtb
+	..
+0
+D/run/media
+	rtb
+1
+D/run
+	media
+13
+D/run/media
+	rtb
+1
+D/run/media/rtb
+	disk
+1
+D/run/media/rtb/disk
+	Sounds
+3
+D/run/media/rtb/disk/Sounds
+	CallRecord
+2
+D/run/media/rtb/disk
+	keys
+5
+D/run/media/rtb/disk/keys
+	ebay-with-rtbtobi2@gmail
+1
+D/run
+	media
+9
+D/run/media
+	rtb
+1
+D/run/media/rtb
+	FDA3-90D8
+1
+D/run/media/rtb/FDA3-90D8
+	.emacs
+8
+D/run/media/rtb
+	FDA3-90D8
+1
+D/run/media/rtb/FDA3-90D8
+	.emacs.d
+1
+D/run/media/rtb/FDA3-90D8/.emacs.d
+	geben
+2
+D/run/media/rtb/FDA3-90D8/.emacs.d/geben
+	.storage
+1
+D/run/media/rtb/FDA3-90D8/.emacs.d
+	geben
+2
+D/run/media/rtb/FDA3-90D8
+	.emacs.d
+1
+D/run/media/rtb/FDA3-90D8/.emacs.d
+	geben
+2
+D/run/media/rtb/FDA3-90D8/.emacs.d/geben
+	.storage
+1
+D/run/media/rtb/FDA3-90D8/.emacs.d
+	url
+2
+D/run/media/rtb/FDA3-90D8
+	.emacs.d
+1
+D/run/media/rtb/FDA3-90D8/.emacs.d
+	url
+4
+D/run/media/rtb/FDA3-90D8
+	.emacs.d
+1
+D/run/media/rtb/FDA3-90D8/.emacs.d
+	url
+7
+D/run/media/rtb/FDA3-90D8
+	.emacs.d
+1
+D/run/media/rtb/FDA3-90D8/.emacs.d
+	url
+7
+D/run/media/rtb/FDA3-90D8
+	.emacs.d
+1
+D/run/media/rtb/FDA3-90D8/.emacs.d
+	url
+7
+D/run/media/rtb/FDA3-90D8
+	.emacs.d
+1
+D/run/media/rtb/FDA3-90D8/.emacs.d
+	url
+16
+D/run/media/rtb
+	..
+0
+D
+
+# Command line history (oldest to newest):
+:cd /run
+:cd -
+:sync
+:dlfa
+:view
+:help
+:explore
+:exph
+:history
+:e 
+:!rm Aphex\ Twin\ –\ Printworks,\ London\ 14_09_19-5yQRp4j2RQM.opus
+:cd ~/musik/
+:mkdir spiele
+:!rm -f  %f
+:mkdir prog
+:mkdir c
+:mkdir keys
+:cd /etc/nixos/
+
+# Search history (oldest to newest):
+/xresour
+/zsh
+/prezto
+/git
+/sync
+/eamcs
+/emacs
+/promp
+/fire
+/zath
+/media
+/ocaml
+/cow
+/todo
+/down
+/hello
+/doks
+/conf
+/surroun
+/surround
+
+# Prompt history (oldest to newest):
+pebay-with-rtbtobi2@gmail.txt
+pEbay-with-rtbtobi2.txt
+pmatias-ergo.jpeg
+pusers
+
+# Local filter history (oldest to newest):
+
+# Registers:
+""/run/media/rtb/FDA3-90D8/.vifm-Trash-1000/000_.emacs.d
+
+# Directory stack (oldest to newest):
+
+# Trash content:
+t/home/rtb/.local/share/vifm/Trash/000_proton-verified-by-gmail_end-of-line
+	/home/rtb/keys/proton-verified-by-gmail_end-of-line
+t/home/rtb/.local/share/vifm/Trash/000_proton-verified-by-gmail_end.of.line
+	/home/rtb/keys/proton-verified-by-gmail_end.of.line
+t/home/rtb/.local/share/vifm/Trash/000_musik
+	/home/rtb/musik/musik
+t/home/rtb/.local/share/vifm/Trash/000_ffplay-20200503-182931.log
+	/home/rtb/ultraschall/ffplay-20200503-182931.log
+t/home/rtb/.local/share/vifm/Trash/000_terminator
+	/home/rtb/.config/terminator
+t/home/rtb/.local/share/vifm/Trash/000_fish
+	/home/rtb/.config/fish
+t/home/rtb/.local/share/vifm/Trash/000_ocaml-ora-book.pdf
+	/home/rtb/Downloads/ocaml-ora-book.pdf
+t/home/rtb/.local/share/vifm/Trash/000_3.jpeg
+	/home/rtb/fotos/ebay/3.jpeg
+t/run/media/rtb/FDA3-90D8/.vifm-Trash-1000/000_geben
+	/run/media/rtb/FDA3-90D8/.emacs.d/geben
+t/home/rtb/.local/share/vifm/Trash/000_geben
+	/home/rtb/.emacs.d/geben
+t/run/media/rtb/FDA3-90D8/.vifm-Trash-1000/000_.emacs.d
+	/run/media/rtb/FDA3-90D8/.emacs.d
+
+# State:
+f
+i1
+[.0
+[F
+F
+I1
+].0
+]F
+s0
