@@ -47,3 +47,23 @@ alias caps='xmodmap ~/.Xmodmap'
 #screenshot by selected area
 alias shots2="scrot '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/shots/' -s"
 
+alias ls="ls --ignore-backups --group-directories-first --color=auto"
+alias ll="ls --ignore-backups --group-directories-first --color=auto -al"
+alias m="vifm"
+alias mm="vifm ."
+alias sm="sudo vifm"
+alias e="emacsclient -a '' -t"
+alias szs="systemctl"
+alias gws="git status"
+alias gwd="git diff "
+alias gwdw="git diff --word-diff"
+alias gcm="git commit -m "
+alias gl="git log"
+alias glp="git log -p"
+alias giu="git add -u"
+alias gia="git add "
+alias gp="git push"
+
+alias ..="cd .."
+alias ...="cd ../.."
+alias open=xdg-open

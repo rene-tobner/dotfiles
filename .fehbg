@@ -1,2 +1,2 @@
 #!/bin/sh
-feh --no-fehbg --bg-scale '/usr/share/slim/themes/defaultdark/background.jpg' 
+feh --bg-scale '/home/rtb/Downloads/fog-tree-reflection.jpg' 

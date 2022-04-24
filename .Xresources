@@ -81,7 +81,7 @@ xterm*backarrowKeyIsErase:      true
 !*font: 7x13
 !*font: -xos4-terminus-medium-*-normal-*-24-*-72-72-*-*-iso10646-1
 *faceName: terminus
-*faceSize: 22
+*faceSize: 20
 *renderFont: true
 *.scaleHeight: 1.25
 

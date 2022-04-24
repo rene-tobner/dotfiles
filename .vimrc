@@ -47,10 +47,10 @@ map <F4> :GhciFile<CR>
 set ic
 
 " Tab specific option
-set tabstop=4                   "A tab is 8 spaces
+set tabstop=2                   "A tab is 8 spaces
 set expandtab                   "Always uses spaces instead of tabs
-set softtabstop=4               "Insert 4 spaces when tab is pressed
-set shiftwidth=4                "An indent is 4 spaces
+set softtabstop=2               "Insert 4 spaces when tab is pressed
+set shiftwidth=2                "An indent is 4 spaces
 set shiftround                  "Round indent to nearest shiftwidth multiple
 
 set noswapfile
@@ -136,6 +136,13 @@ endf
 
 map <F7> :call MySpellLang()<CR>
 imap <F7> <C-o>:call MySpellLang()<CR>
+set wildmenu
+set wildmode=longest:full,full
+inoremap <C-g> <ESC>
+nnoremap öe $
+nnoremap <S-l> zz
+map! <C-g> <ESC>
+" TODO: kMonad?!/ xterm and umlauts .... map <C-ö> <C-w>w
 
 
 " ## added by OPAM user-setup for vim / base ## 93ee63e278bdfc07d1139a748ed3fff2 ## you can edit, but keep this line
