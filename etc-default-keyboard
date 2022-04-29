@@ -1,0 +1,15 @@
+# KEYBOARD CONFIGURATION FILE
+
+# Consult the keyboard(5) manual page.
+# ctrl:swapcaps for console
+# run: sudo setupcon
+# see: /usr/share/X11/xkb/rules/xorg.lst
+#
+# TODO: not honored by WMs, had to setxkbmap -option "ctrl:swapcaps" in .bashrc :/
+
+XKBMODEL="pc105"
+XKBLAYOUT="de"
+XKBVARIANT=""
+XKBOPTIONS="ctrl:swapcaps"
+
+BACKSPACE="guess"
