@@ -1,3 +1,18 @@
+
+#!/bin/sh
+
+# SLIM: sessiondir disabled
+# and from: https://wiki.archlinux.org/title/SLiM#Environments
+# this:
+#if [ -d /etc/X11/xinit/xinitrc.d ] ; then
+# for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
+#  [ -x "$f" ] && . "$f"
+# done
+# unset f
+#fi
+#exec $1
+
+
 # Start a D-Bus session
 #source /etc/X11/xinit/xinitrc.d/30-dbus
 
@@ -5,9 +20,9 @@
 #source /etc/X11/xinit/xinitrc.d/50-systemd-user.sh 
 
 #xrdb -merge .Xresources 
-setxkbmap -option "ctrl:swapcaps"
+#setxkbmap -option "ctrl:swapcaps"
 #exec spectrwm
-exec herbstluftwm
+#exec herbstluftwm
 # Farbtemperatur runter:
 #redshift -O 6000
 #trayer --edge top --align right --SetDockType true --SetPartialStrut true --expand true --width 5 --transparent false --tint 0xff0000 --height 16 &

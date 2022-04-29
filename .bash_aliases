@@ -1,4 +1,10 @@
-alias shots='scrot  '\''%Y-%m-%d_$wx$h.jpg'\'' -e '\''mv $f ~/shots/'\'' -s -q100'
+# alias shots='scrot  '\''%Y-%m-%d_$wx$h.jpg'\'' -e '\''mv $f ~/shots/'\'' -s -q100'
+# dmenu_recent_aliases from https://github.com/jukil/dmenu-scripts-collection/tree/master/dmenu-recent-aliases DOES NOT handle complicated, BUT A function: no problem :)
+shots(){
+  scrot  '%Y-%m-%d--%T_$wx$h.jpg' -e 'mv $f ~/shots/' -q100
+}
+alias mmm='xterm -e vifm /media/rtb/'
+
 alias tusxstep='konsole --title "xstep" --profile xstep -e /home/tustep/start &'
 alias tustmp='konsole --title "base" --profile tustep.profile --hide-tabbar -e /home/tustep/start tmp &'
 alias tusfew='konsole --title "Französisches Etymologisches Wörterbuch" --profile tustep.profile --hide-tabbar -e /opt/tustep/start few &'

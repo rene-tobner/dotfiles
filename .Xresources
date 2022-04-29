@@ -1,5 +1,5 @@
 !xterm*termName: xterm-color
-
+xterm*saveLines: 100000
 xterm*ttyModes: erase ^?
 xterm*VT100*translations:       #override \
     <Key>BackSpace: string(0x7f)
@@ -104,10 +104,6 @@ XTerm.VT100.Translations: #override \n\
   Ctrl <Key> plus: larger-vt-font() \n\
   Ctrl <Key> minus: smaller-vt-font() \n\
   <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0)
-
-!TODO
-!Ctrl <Key> ö: smaller-vt-font() \n\
-
 
 ! Scroll by one line
 XTerm.VT100.translations: #override \

@@ -1,11 +1,12 @@
-#
+
 # ~/.bashrc
 #
-setxkbmap -option "ctrl:swapcaps"
-#set in .profile, but?
-
-#xrdb -merge .Xresources 
 #setxkbmap -option "ctrl:swapcaps"
+#set in .xsession!
+unset LD_PRELOAD
+
+xrdb -merge ~/.Xresources
+setxkbmap -option "ctrl:swapcaps"
 
 # get file in X Paste
 function xp() {
@@ -31,7 +32,11 @@ source ~/.bash_aliases
 #PS1='\[\033[1;34m[\u@\h \W\$ \[\033[m'
 export PS1="\[$(tput bold)\]\[$(tput setaf 4)\](\w)\\$ > \[$(tput sgr0)\]"
 stty lnext ^q stop undef start undef
-#export PATH=$PATH:/home/rtb/bin:/home/rtb/.cabal/bin:/home/rtb/.gem/ruby/2.3.0/bin:/home/rtb/hask/elm/.cabal-sandbox/bin:/home/rtb/.gem/ruby/2.1.0/bin:/home/rtb/.cask/bin
+
+# SET in .profile
+export PATH=$PATH:/home/rtb/bin
+#dmenu_path /home/rtb/bin
+
 #export WINEDLLOVERRIDES='winemenubuilder.exe=d'
 
 export EDITOR=/usr/bin/vim
@@ -49,7 +54,11 @@ export LESS=-Ri
 #export PYTHONPATH='/usr/lib64/libreoffice/program'
 #export PYTHONSTARTUP='/home/rtb/.pystartup'
 
+export NIX_REMOTE=daemon
+# above: wahrscheinlich auch egal weil ich ja priviligiert bin als nix-users
+
 #source /etc/profile.d/nix.sh
+#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/x86_64-linux-gnu/
 
 #NIX_GHC_VERSION=$(ghc --numeric-version)
 #export NIX_GHC="$HOME/.nix-profile/bin/ghc"

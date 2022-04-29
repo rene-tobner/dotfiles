@@ -192,7 +192,8 @@
 
 
 ;;(add-to-list 'default-frame-alist '(font . "Droid Sans Mono 18"))
-(add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono 16"))
+;; (add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono 16"))
+(add-to-list 'default-frame-alist '(font . "Terminus 20"))
 ;; (add-to-list 'default-frame-alist '(font . "Monoid 10"))
 ;;(load "/home/rtb/git/dotfiles/cjk-font.el")
 ;;(set-face-attribute 'default t :font "Droid Sans Mono 14" )
